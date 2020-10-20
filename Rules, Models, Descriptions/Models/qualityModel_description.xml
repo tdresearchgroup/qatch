@@ -1,0 +1,21 @@
+<quality_model name="Base Model">
+  <characteristics>
+    <characteristic name="Maintainability" standard="ISO/IEC 25010" description="The maintainability of the project" />
+    <characteristic name="Reliability" standard="ISO/IEC 25010" description="The reliability of the project" />
+    <characteristic name="Security" standard="ISO/IEC 25010" description="The security of the project" />
+    <characteristic name="Performance_Efficiency" standard="ISO/IEC 25010" description="The performance of the project" />
+  </characteristics>
+  <properties>
+    <property name="Bad_Function" type="1" description="Avoid bad patterns" positive_impact="false" metricName="" ruleset="./Rulesets/badFunRuleSet.xml" tool="PMD" />
+    <property name="Comprehensibility" type="1" description="Conformance to naming conventions" positive_impact="false" metricName="" ruleset="./Rulesets/compRuleSet.xml" tool="PMD" />
+    <property name="Redundancy" type="1" description="Avoid redundant code" positive_impact="false" metricName="" ruleset="./Rulesets/redundantRuleSet.xml" tool="PMD" />
+    <property name="Structurdness" type="1" description="Structured" positive_impact="false" metricName="" ruleset="./Rulesets/structRuleSet.xml" tool="PMD" />
+    <property name="Assignment" type="1" description="Evaluates how well the system conforms to the rules of JUnit API (if used)" positive_impact="false" metricName="" ruleset="./Rulesets/assignmentRuleSet.xml" tool="PMD" />
+    <property name="Resource_Handling" type="1" description="This measures evaluates the resources!" positive_impact="false" metricName="" ruleset="./Rulesets/resourceHandRuleSet.xml" tool="PMD" />
+	<property name="Cohesion" type="0" description="How cohesive is your code" positive_impact="false" metricName="LCOM" ruleset="" tool="CKJM" />
+    <property name="Coupling" type="0" description="Evaluates the total number of efferent and afferent coupling of the system." positive_impact="false" metricName="CBO" ruleset="" tool="CKJM" />
+    <property name="Complexity" type="0" description="The total complexity of the system" positive_impact="false" metricName="WMC" ruleset="" tool="CKJM" />
+    <property name="Messaging" type="0" description="The level of the API" positive_impact="false" metricName="NPM" ruleset="" tool="CKJM" />
+    <property name="Encapsulation" type="0" description="The level of the encapsulation of the system" positive_impact="false" metricName="DAM" ruleset="" tool="CKJM" />
+  </properties>
+</quality_model>

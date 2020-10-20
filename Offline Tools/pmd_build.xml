@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="PMD Static Analysis" default="pmd" basedir=".">
+
+	<!-- Src and destination directories to search for java files -->
+	<property name="src.dir" value="src"/>
+	<property name="dest.dir" value="dest"/>
+	<!-- PMDs home folder. Nedded for adding the needed APIs (.jars) to the classpath-->
+	<property name="pmd.dir" value="./tools/pmd-bin-5.4.1"/>
+	
+	<!-- The name of the result xml file -->
+	<property name="ruleset.path" value="ruleset.path"/>
+	<property name="filename" value="filename"/>
+	
+	<!-- The pmd classpath containing all the needed libraries in order to function -->
+	<path id="pmd.classpath">
+		<fileset dir="${pmd.dir}\lib">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!-- Create the destination folder -->
+	<!-- Den einai upoxrewtiko vhma    -->
+	<target name="init">
+		<mkdir dir="${dest.dir}" />
+	</target>
+	
+	<!-- Execute Static Analysis for all the java files under src subtree -->
+	<target name="pmd" depends="init">
+		<!-- Define the task that you are going to use -->
+		<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath" />
+		
+		
+		<pmd shortFilenames="true">
+		    <ruleset>${ruleset.path}</ruleset>
+			<formatter type="xml" toFile="${dest.dir}\${filename}.xml"></formatter> <!-- e.g. "C:\Users\Miltos\Desktop\pmd_report.csv"-->
+			<fileset dir="${src.dir}"> <!-- C:\Users\Miltos\Desktop\pmd workspace\HelloWorld -->
+				<include name="**/*.java"/>
+				<!--exclude name="**/*Test*.java"/-->
+			</fileset>
+		</pmd>
+	</target>
+	
+	<!-- Find Duplicated code -->
+	<target name="cpd" depends="init">
+		<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask" classpathref="pmd.classpath" />
+		<cpd minimumTokenCount="5" format="xml" outputFile="${dest.dir}\CPDResults.xml" ignoreLiterals="true">
+        <fileset dir="${src.dir}">
+            <include name="**/*.java"/>
+        </fileset>
+    </cpd>
+	</target>
+	<!-- Delete dest folder -->
+	<target name="cleanup" description="Delete the folder with the report">
+		<delete dir="${dest.dir}"/>
+	</target>
+</project>

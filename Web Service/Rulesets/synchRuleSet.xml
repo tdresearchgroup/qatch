@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="synchRuleset" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd" >
+
+<rule ref="rulesets/java/basic.xml/AvoidThreadGroup"/>
+
+<rule ref="rulesets/java/basic.xml/DoubleCheckedLocking"/>
+
+<rule ref="rulesets/java/basic.xml/DontCallThreadRun"/>
+
+<rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel"/>
+
+<rule ref="rulesets/java/design.xml/UseNotifyAllInsteadOfNotify"/>
+
+<rule ref="rulesets/java/design.xml/NonThreadSafeSingleton"/>
+
+<rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter"/>
+
+<rule ref="rulesets/java/controversial.xml/UseConcurrentHashMap"/>
+
+<rule ref="rulesets/java/j2ee.xml/DoNotUseThreads"/>
+</ruleset>

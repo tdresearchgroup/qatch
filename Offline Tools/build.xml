@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project name="Ckjm analysis" default="ckjm" basedir=".">
+	<description>
+
+	</description>
+	
+	<!-- Define global properties -->
+	<!-- The src folder is where the ant task should search for .java and .class files for compilation and static analysis respectively -->
+	<!-- The dest folder is where the bin folder should be created in order to store the results -->
+	<!-- If they are not defined by the user, the basedir is the default option -->
+	<property name="src.dir" value="src" />
+	<property name="dest.dir" value="dest" />
+	
+	<!-- Set the classpath with all the APIs needed for the compilation -->
+	<path id="ckjm.classpath">
+		<fileset dir="C:\Users\Miltos\.m2"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!-- Create the desired directories -->
+	<target name="init">
+		<tstamp />
+		<!--mkdir dir="${src}\bin"/-->
+		<mkdir dir="${dest.dir}"/> <!-- dest = The path were to create dest folder. default=basedir (where the command is executed) -->
+	</target>
+	
+	<!-- The target responsible for the static alalysis of a desired project -->
+	<target name="ckjm" depends="init">
+	
+	  <!-- Configure the ckjm task by setting its classpath -->
+	  <taskdef name="ckjm" classname="gr.spinellis.ckjm.ant.CkjmTask">
+		<classpath>
+		  <pathelement location="./tools/ckjm_ext.jar"/>
+		</classpath>
+	  </taskdef>
+	  
+	  <!-- Apply ckjm to the compiled files of the desired project -->
+	  <ckjm outputfile="${dest.dir}\ckjmResults.xml" format="xml" classdir="${src.dir}">
+		<include name="**/*.class"/>
+		<!--include name="**/*.jar"/-->
+		<!--exclude name="**/*Test*.class"/-->
+	  </ckjm>
+	</target>
+	
+	<!-- Delete the bin and dest folders that contain the compiled files and the results respectively -->
+	<target name="cleanup">
+		<!--delete dir="${src}\bin"/-->
+		<delete dir="${dest.dir}"/>
+	</target>
+</project>

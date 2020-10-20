@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="670.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miltos.diploma.gui.CentralConsoleController2">
+   <children>
+      <Text layoutX="22.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Central Console">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please provide the path of the directory where you would like the results of the analysis to be placed :" wrappingWidth="550.0" />
+      <HBox layoutX="3.0" layoutY="274.0" prefHeight="25.0" prefWidth="501.0">
+         <children>
+            <Label fx:id="label1" />
+            <Region prefHeight="25.0" prefWidth="17.0" />
+            <Label fx:id="label2" />
+         </children>
+      </HBox>
+      <Separator layoutY="115.0" prefHeight="17.0" prefWidth="600.0" />
+      <TextField fx:id="resultTextField" editable="false" layoutX="27.0" layoutY="76.0" onMouseClicked="#handleBrowseButtonClicked" prefHeight="25.0" prefWidth="425.0" />
+      <Button layoutX="472.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleBrowseButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Browse" />
+      <ProgressBar fx:id="prog1" disable="true" layoutX="103.0" layoutY="515.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <TextArea fx:id="console" editable="false" layoutX="22.0" layoutY="144.0" prefHeight="357.0" prefWidth="558.0" />
+      <Label layoutX="20.0" layoutY="124.0" text="Console :" />
+      <Separator layoutY="501.0" prefHeight="17.0" prefWidth="600.0" />
+      <ProgressBar fx:id="prog2" disable="true" layoutX="103.0" layoutY="539.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog3" disable="true" layoutX="103.0" layoutY="563.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog6" disable="true" layoutX="390.0" layoutY="515.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog5" disable="true" layoutX="103.0" layoutY="609.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog4" disable="true" layoutX="103.0" layoutY="585.0" prefHeight="4.0" prefWidth="152.0" progress="0.0" />
+      <Label layoutX="46.0" layoutY="516.0" text="Thread 1" />
+      <Label layoutX="46.0" layoutY="540.0" text="Thread 2" />
+      <Label layoutX="46.0" layoutY="564.0" text="Thread 3" />
+      <Label layoutX="335.0" layoutY="516.0" text="Thread 6" />
+      <Label layoutX="46.0" layoutY="610.0" text="Thread 5" />
+      <Label layoutX="46.0" layoutY="586.0" text="Thread 4" />
+      <Separator layoutX="6.0" layoutY="627.0" prefHeight="17.0" prefWidth="600.0" />
+      <HBox layoutX="533.0" layoutY="639.0" prefHeight="25.0" prefWidth="59.0">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStartButtonClicked" prefHeight="25.0" prefWidth="107.0" text="Start" />
+         </children>
+      </HBox>
+      <ProgressIndicator fx:id="progInd1" disable="true" layoutX="268.0" layoutY="507.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" rotate="-90.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ProgressIndicator>
+      <Label fx:id="progLabel" layoutX="264.0" layoutY="602.0" />
+      <ProgressIndicator fx:id="progInd2" disable="true" layoutX="268.0" layoutY="530.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <ProgressIndicator fx:id="progInd3" disable="true" layoutX="268.0" layoutY="554.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <ProgressIndicator fx:id="progInd5" disable="true" layoutX="268.0" layoutY="600.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <ProgressIndicator fx:id="progInd4" disable="true" layoutX="268.0" layoutY="576.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <ProgressIndicator fx:id="progInd6" disable="true" layoutX="557.0" layoutY="507.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <Label layoutX="13.0" layoutY="643.0" text="Total Progress : " />
+      <ProgressIndicator fx:id="totalProgInd" layoutX="111.0" layoutY="631.0" prefHeight="41.0" prefWidth="24.0" progress="0.0" rotate="-90.0" />
+      <Label fx:id="doneLabel" layoutX="150.0" layoutY="643.0" text="Done" visible="false" />
+      <ProgressIndicator fx:id="progInd7" layoutX="557.0" layoutY="531.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <Label layoutX="335.0" layoutY="540.0" text="Thread 7" />
+      <ProgressBar fx:id="prog7" layoutX="390.0" layoutY="539.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog8" layoutX="390.0" layoutY="563.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <Label layoutX="335.0" layoutY="564.0" text="Thread 8" />
+      <ProgressIndicator fx:id="progInd8" layoutX="557.0" layoutY="555.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <ProgressIndicator fx:id="progInd9" layoutX="557.0" layoutY="577.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+      <Label layoutX="335.0" layoutY="586.0" text="Thread 9" />
+      <ProgressBar fx:id="prog9" layoutX="390.0" layoutY="585.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <ProgressBar fx:id="prog10" disable="true" layoutX="390.0" layoutY="608.0" prefHeight="18.0" prefWidth="152.0" progress="0.0" />
+      <Label layoutX="335.0" layoutY="609.0" text="Thread 10" />
+      <ProgressIndicator fx:id="progInd10" disable="true" layoutX="557.0" layoutY="600.0" prefHeight="36.0" prefWidth="31.0" progress="0.0" style="-fx-rotate: 270;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ProgressIndicator>
+   </children>
+</AnchorPane>

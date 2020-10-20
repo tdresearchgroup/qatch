@@ -1,0 +1,11 @@
+
+.percentage {
+    
+	-fx-rotate: 90;
+}
+
+.percentage-null {
+    
+	-fx-fill: null;
+}
+

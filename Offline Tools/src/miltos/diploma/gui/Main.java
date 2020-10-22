@@ -26,10 +26,10 @@ import miltos.diploma.characteristics.CharacteristicSet;
 import miltos.diploma.characteristics.QualityModel;
 import miltos.diploma.characteristics.Tqi;
 import org.apache.commons.io.FileUtils;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -585,6 +585,10 @@ public class Main extends Application {
             projects = new BenchmarkProjects();
             projects = benchmarkImporter.importResults(BenchmarkAnalyzer.BENCH_RESULT_PATH);
 
+
+
+            System.out.println();
+
             // Print some informative messages to the console
             System.out.println("*");
             System.out.println("* The results are successfully imported..! ");
@@ -899,7 +903,7 @@ public class Main extends Application {
         try {
             // Import the desired xml configuration file
             SAXBuilder builder = new SAXBuilder();
-            Document doc = builder.build(new File(System.getProperty("user.dir") + "/config.xml").getAbsoluteFile());
+            Document doc = builder.build(new File(System.getProperty("user.dir") + "/Offline Tools/config.xml").getAbsoluteFile());
             Element root = (Element) doc.getRootElement();
 
             // Create a list of all the its elements

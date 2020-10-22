@@ -2,6 +2,6 @@
 <configuration>
 	<keepResults>false</keepResults>
 	<useBenchmarksResultsDir>false</useBenchmarksResultsDir>
-	<rScriptPath>C:/Program Files/R/R-3.2.3/bin/i386</rScriptPath>
+	<rScriptPath>/usr/local/bin/Rscript</rScriptPath>
 	<threadDepth>1</threadDepth>
 </configuration>

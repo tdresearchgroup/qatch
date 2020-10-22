@@ -35,13 +35,14 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 	public void analyze(String src, String dest){
 
 		//Check the OS type
-		if(System.getProperty("os.name").contains("Windows")){
+		if(System.getProperty("os.name").contains("Mac")){
 			src = "\"" + src + "\"";
 			dest = "\"" + dest + "\"";
 		}
 
 		//Configure the command that should be executed
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe","/c","ant  -Dsrc.dir="+ src +" -Ddest.dir="+ dest);
+		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline Tools/build.xml\" " +
+				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
 		builder.redirectErrorStream(true);
 
 		//Execute the command
@@ -53,6 +54,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				String line;
 				while (true) {
 					line = r.readLine();
+					System.out.println(line);
 					if (line == null) { break; }
 				}
 

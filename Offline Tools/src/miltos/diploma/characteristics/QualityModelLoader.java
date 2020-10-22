@@ -10,10 +10,10 @@ import miltos.diploma.IssueSet;
 import miltos.diploma.PropertySet;
 import miltos.diploma.Property;
 
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 
 /**
  * This class is responsible for loading the Quality Model from 

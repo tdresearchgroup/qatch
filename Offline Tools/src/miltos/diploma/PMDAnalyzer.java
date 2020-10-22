@@ -29,15 +29,17 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 	 */
 	public void analyze(String src, String dest, String ruleset, String filename) {
 
+//		System.out.println(System.getProperty("os.name"));
 		//Set the path delimiter based on the OS that is used
-		if(System.getProperty("os.name").contains("Windows")){
+		if(System.getProperty("os.name").contains("Mac")){
 			src = "\"" + src + "\"";
 			dest = "\"" + dest + "\"";
-			ruleset = "\"" + ruleset + "\"";
+			ruleset = "\""+ "/Users/guribhangu/development/research/qatch/Web Service/" + ruleset + "\"";
 		}
-		
+
 		//Create the command that should be executed
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe","/c","ant -buildfile pmd_build.xml -Dsrc.dir=" + src +" -Ddest.dir="+ dest + " -Druleset.path=" + ruleset + " -Dfilename=" + filename);
+		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline Tools/pmd_build.xml\" " +
+				"-Dsrc.dir=" + src +" -Ddest.dir="+ dest + " -Druleset.path=" + ruleset + " -Dfilename=" + filename);
 		builder.redirectErrorStream(true);
 
 		//Execute the command
@@ -48,6 +50,7 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 			    //Print the messages to the console for debugging purposes
 				while (true) {
 					line = r.readLine();
+					System.out.println(line);
 					if (line == null) { break; }
 				}
 		}catch(IOException e){

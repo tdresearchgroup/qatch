@@ -5,10 +5,10 @@ import javafx.collections.ObservableList;
 import miltos.diploma.Property;
 import miltos.diploma.PropertySet;
 import miltos.diploma.characteristics.QualityModel;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -88,6 +88,10 @@ public class QmDefinitionFXLoader {
             // Parse <properties> node
             propertyData = loadPropertiesNode(children.get(1));
 
+            System.out.println(propertyData);
+            System.out.println("\n");
+            System.out.println(charData);
+
             // Save the characteristics and the properties in Main App
             mainApp.setPropertyData(propertyData);
             mainApp.setCharData(charData);
@@ -115,7 +119,12 @@ public class QmDefinitionFXLoader {
 
             // For each property node do ...
             for(Element propNode : propNodes){
-
+                System.out.println(propNode.getAttributeValue("name"));
+                System.out.println(propNode.getAttributeValue("positive_impact"));
+                System.out.println(propNode.getAttributeValue("description"));
+                System.out.println(propNode.getAttributeValue("metricName"));
+                System.out.println(propNode.getAttributeValue("ruleset"));
+                System.out.println(propNode.getAttributeValue("type"));
                 // Create a new Property object
                 PropertyFX property = new PropertyFX();
 

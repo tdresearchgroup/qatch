@@ -11,5 +11,11 @@
     <orderEntry type="library" name="ckjm_ext" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="ckjm_ext1" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="org.jdom:jdom2:2.0.6" level="project" />
+    <orderEntry type="library" name="javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" name="org.json:json:20200518" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.2.4" level="project" />
+    <orderEntry type="library" name="org.apache.poi:poi:4.1.1" level="project" />
   </component>
 </module>

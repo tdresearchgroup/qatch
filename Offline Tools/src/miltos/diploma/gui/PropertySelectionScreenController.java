@@ -84,6 +84,8 @@ public class PropertySelectionScreenController {
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
 
+        System.out.println(mainApp.getPropertyData());
+
         // Add observable list data to the table
         propertyTable.setItems(mainApp.getPropertyData());
     }

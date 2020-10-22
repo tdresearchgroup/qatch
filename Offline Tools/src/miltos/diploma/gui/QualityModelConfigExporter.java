@@ -5,9 +5,9 @@ import miltos.diploma.PropertySet;
 import miltos.diploma.characteristics.Characteristic;
 import miltos.diploma.characteristics.CharacteristicSet;
 import miltos.diploma.characteristics.QualityModel;
-import org.jdom.Element;
-import org.jdom.output.Format;
-import org.jdom.output.XMLOutputter;
+import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 import java.io.FileWriter;
 import java.io.IOException;

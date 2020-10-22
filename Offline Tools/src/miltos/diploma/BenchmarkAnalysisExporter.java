@@ -79,7 +79,7 @@ public class BenchmarkAnalysisExporter {
 		if(INCLUDE_NAME){
 			rowhead.createCell(0).setCellValue("Project_Name");
 		}
-		
+
 		//Create the header of the xls file
 		for(int i = START; i < projects.getProject(0).getProperties().size(); i++){
 			

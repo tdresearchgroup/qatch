@@ -26,7 +26,7 @@ public class BenchmarkResultImporter {
 	 * The method that implements the whole functionality of this class.
 	 */
 	public BenchmarkProjects importResults(String path){
-		
+
 		//Create an empty BenchmarkProject object
 		BenchmarkProjects projects = new BenchmarkProjects();
 		

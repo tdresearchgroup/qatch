@@ -60,7 +60,7 @@ public class MessagesServlet extends HttpServlet {
 			System.out.println("Calling the appropriate script!");	
 			System.out.println("java  -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
 			
-			ProcessBuilder builder = new ProcessBuilder("cmd.exe","/c","java -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
+			ProcessBuilder builder = new ProcessBuilder("sh","-c","java -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
 			builder.redirectErrorStream(true);
 			
 			try{
@@ -130,7 +130,7 @@ public class MessagesServlet extends HttpServlet {
 			System.out.println("Calling the appropriate script!");
 				
 			System.out.println("java  -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
-			ProcessBuilder builder = new ProcessBuilder("cmd.exe","/c","java -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
+			ProcessBuilder builder = new ProcessBuilder("sh","-c","java -jar "+ " onlineEvaluationScript.jar "+ request.getParameter("project") +" "+ request.getParameter("email") +" " + request.getParameter("model") + " " + request.getParameter("inspection"));
 			
 			builder.redirectErrorStream(true);
 			
@@ -187,7 +187,7 @@ public class MessagesServlet extends HttpServlet {
 		if(request.getParameter("name")!=null && request.getParameter("email-us")!=null && request.getParameter("message")!=null ){
 			
 			// Call the interface jar in order to store the message
-			ProcessBuilder builder = new ProcessBuilder("cmd.exe","/c","java -jar ./interfaces/messagesDBInterface.jar " + request.getParameter("name") + " " + request.getParameter("email-us") + " \"" + request.getParameter("message")+"\"");
+			ProcessBuilder builder = new ProcessBuilder("sh","-c","java -jar ./interfaces/messagesDBInterface.jar " + request.getParameter("name") + " " + request.getParameter("email-us") + " \"" + request.getParameter("message")+"\"");
 			builder.redirectErrorStream(true);
 			
 			// TODO: Remove this print

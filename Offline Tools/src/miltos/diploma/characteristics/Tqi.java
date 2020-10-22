@@ -127,7 +127,7 @@ public class Tqi {
 	
 	//TODO: Deep Cloning - Check PropertySet class (and Property, Measure)
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 	    Tqi cloned = new Tqi();
 	    for(int i = 0; i < this.weights.size(); i++){
 	    	cloned.weights.add((Double) this.getWeights().get(i));

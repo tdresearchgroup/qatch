@@ -171,7 +171,7 @@ public class Characteristic {
 	
 	//TODO: Deep Cloning - Check PropertySet class (and Property, Measure)
 	@Override
-	protected Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException {
 	    Characteristic cloned = new Characteristic();
 	    cloned.setDescription(this.description);
 	    cloned.setName(this.name);

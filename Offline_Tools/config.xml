@@ -2,6 +2,6 @@
 <configuration>
 	<keepResults>false</keepResults>
 	<useBenchmarksResultsDir>false</useBenchmarksResultsDir>
-	<rScriptPath>/usr/local/bin/Rscript</rScriptPath>
+	<rScriptPath>/usr/local/bin</rScriptPath>
 	<threadDepth>1</threadDepth>
 </configuration>

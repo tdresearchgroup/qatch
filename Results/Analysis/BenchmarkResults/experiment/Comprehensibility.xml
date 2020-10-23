@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.4.1" timestamp="2020-10-23T14:07:12.640">
+<file name="src/HelloWorld.java">
+<violation beginline="1" endline="11" begincolumn="8" endcolumn="1" rule="NoPackage" ruleset="Naming" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#NoPackage" priority="3">
+All classes and interfaces must belong to a named package
+</violation>
+<violation beginline="1" endline="11" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="7" endline="9" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Comments" class="HelloWorld" method="main" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+</file>
+<file name="src/RankingQualityExporter.java">
+<violation beginline="8" endline="134" begincolumn="8" endcolumn="1" rule="NoPackage" ruleset="Naming" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#NoPackage" priority="3">
+All classes and interfaces must belong to a named package
+</violation>
+<violation beginline="8" endline="134" begincolumn="8" endcolumn="1" rule="CommentRequired" ruleset="Comments" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+headerCommentRequirement Required
+</violation>
+<violation beginline="11" endline="13" begincolumn="19" endcolumn="5" rule="CommentRequired" ruleset="Comments" class="RankingQualityExporter" method="main" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="15" endline="25" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" class="RankingQualityExporter" method="RankingQualityExporter" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="27" endline="33" begincolumn="12" endcolumn="5" rule="CommentRequired" ruleset="Comments" class="RankingQualityExporter" method="engine" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+publicMethodCommentRequirement Required
+</violation>
+<violation beginline="29" endline="29" begincolumn="30" endcolumn="49" rule="LongVariable" ruleset="Naming" class="RankingQualityExporter" method="engine" variable="maintainabilityRanks" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+Avoid excessively long variable names like maintainabilityRanks
+</violation>
+<violation beginline="30" endline="30" begincolumn="39" endcolumn="58" rule="LongVariable" ruleset="Naming" class="RankingQualityExporter" method="engine" variable="maintainabilityTable" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+Avoid excessively long variable names like maintainabilityTable
+</violation>
+<violation beginline="31" endline="31" begincolumn="16" endcolumn="45" rule="LongVariable" ruleset="Naming" class="RankingQualityExporter" method="engine" variable="maintainabilityMatrixFormatted" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+Avoid excessively long variable names like maintainabilityMatrixFormatted
+</violation>
+<violation beginline="37" endline="37" begincolumn="23" endcolumn="24" rule="ShortVariable" ruleset="Naming" class="RankingQualityExporter" method="formatTableToMatrix" variable="sb" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like sb
+</violation>
+<violation beginline="84" endline="84" begincolumn="56" endcolumn="76" rule="LongVariable" ruleset="Naming" class="RankingQualityExporter" method="parseInputFile" variable="qualityCharacteristic" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+Avoid excessively long variable names like qualityCharacteristic
+</violation>
+<violation beginline="85" endline="85" begincolumn="30" endcolumn="51" rule="LongVariable" ruleset="Naming" class="RankingQualityExporter" method="parseInputFile" variable="orderedQualityRankings" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#LongVariable" priority="3">
+Avoid excessively long variable names like orderedQualityRankings
+</violation>
+<violation beginline="87" endline="87" begincolumn="21" endcolumn="22" rule="ShortVariable" ruleset="Naming" class="RankingQualityExporter" method="parseInputFile" variable="in" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like in
+</violation>
+<violation beginline="90" endline="90" begincolumn="21" endcolumn="65" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="92" endline="92" begincolumn="45" endcolumn="59" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="96" endline="96" begincolumn="29" endcolumn="47" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="96" endline="96" begincolumn="52" endcolumn="70" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="98" endline="98" begincolumn="29" endcolumn="98" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="98" endline="98" begincolumn="29" endcolumn="98" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="98" endline="98" begincolumn="56" endcolumn="81" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="98" endline="98" begincolumn="56" endcolumn="81" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="100" endline="100" begincolumn="29" endcolumn="47" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="105" endline="105" begincolumn="21" endcolumn="106" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="105" endline="105" begincolumn="21" endcolumn="106" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="105" endline="105" begincolumn="48" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="105" endline="105" begincolumn="48" endcolumn="89" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputFile" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="117" endline="117" begincolumn="21" endcolumn="22" rule="ShortVariable" ruleset="Naming" class="RankingQualityExporter" method="parseInputForStructure" variable="in" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like in
+</violation>
+<violation beginline="120" endline="120" begincolumn="21" endcolumn="47" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputForStructure" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="122" endline="122" begincolumn="45" endcolumn="60" rule="LawOfDemeter" ruleset="Coupling" class="RankingQualityExporter" method="parseInputForStructure" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+</file>
+</pmd>

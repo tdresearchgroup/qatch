@@ -65,7 +65,9 @@ public class BenchmarkAnalysisExporter {
 		
 		//Set the path where the csv file will be stored and the name of the csv file
 		String filename = RInvoker.R_WORK_DIR +  "/properties.xls";
-		
+
+		System.out.println(filename);
+
 		//Create the folder
 		File dir = new File(RInvoker.R_WORK_DIR);
 		dir.mkdir();
@@ -82,7 +84,6 @@ public class BenchmarkAnalysisExporter {
 
 		//Create the header of the xls file
 		for(int i = START; i < projects.getProject(0).getProperties().size(); i++){
-			
 			//Get the i-th property
 			Property p = projects.getProject(0).getProperties().get(i);
 			

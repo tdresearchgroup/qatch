@@ -69,4 +69,4 @@ json <- toJSON(thresholds)
 write(json, "threshold.json")
 
 # Export the results in csv and json format
-# write.xlsx(thresholds,"thresholds.xls")
+write.xlsx(thresholds,"thresholds.xls")

@@ -122,16 +122,16 @@ public class BenchmarkAnalyzer {
 		/* Basic Solution */
 		// Analyze all the projects of the benchmark repository
 		double progress = 0;
-		prog.setProgress(progress);
-		progInd.setProgress(progress);
+//		prog.setProgress(progress);
+//		progInd.setProgress(progress);
 
 		//For each project in the benchmark repo do...
 		for(File project : projects){
 			//Print the progress to the console
 			//TODO: Remove this print
 			ProgressDemo.updateProgress((progress/projects.length));
-			prog.setProgress((progress/projects.length));
-			progInd.setProgress((progress/projects.length));
+//			prog.setProgress((progress/projects.length));
+//			progInd.setProgress((progress/projects.length));
 
 			//System.out.print("* Progress : " + Math.ceil(()*) + " %\r" );
 			//Call the single project analyzers sequentially
@@ -144,19 +144,19 @@ public class BenchmarkAnalyzer {
 
 		//Print the progress to the console
 		//TODO: Remove this print
-		ProgressDemo.updateProgress((progress/projects.length));
-		prog.setProgress((progress/projects.length));
-		progInd.setProgress((progress/projects.length));
+//		ProgressDemo.updateProgress((progress/projects.length));
+//		prog.setProgress((progress/projects.length));
+//		progInd.setProgress((progress/projects.length));
 
 		
 		System.out.println();
 
 		//TODO: REMOVE!!!!
-		progInd.setRotate(0);
-		Text text = (Text) progInd.lookup(".percentage");
-		text.getStyleClass().add("percentage-null");
-		progInd.setLayoutY(progInd.getLayoutY()+8);
-		progInd.setLayoutX(progInd.getLayoutX()-7);
+//		progInd.setRotate(0);
+//		Text text = (Text) progInd.lookup(".percentage");
+//		text.getStyleClass().add("percentage-null");
+//		progInd.setLayoutY(progInd.getLayoutY()+8);
+//		progInd.setLayoutX(progInd.getLayoutX()-7);
 	}
 	
 	

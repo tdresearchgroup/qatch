@@ -41,7 +41,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		}
 
 		//Configure the command that should be executed
-		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline Tools/build.xml\" " +
+		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
 		builder.redirectErrorStream(true);
 

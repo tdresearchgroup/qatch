@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<ckjm>
+	<class>
+		<name>RankingQualityExporter</name>
+		<wmc>7</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>41</rfc>
+		<lcom>21</lcom>
+		<ca>0</ca>
+		<ce>3</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>374</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.35714285714285715</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>52.42857142857143</amc>
+		<cc>
+			<method name="private java.util.List parseInputForStructure(String layerName) [Signature: (Ljava/lang/String;)Ljava/util/List_Ljava/lang/String;_;]">4</method>
+			<method name="public static void main(String[] args)">1</method>
+			<method name="public void engine(String headerStructure, String model)">1</method>
+			<method name="private java.util.Map parseInputFile(String qualityCharacteristic) [Signature: (Ljava/lang/String;)Ljava/util/Map_Ljava/lang/String;Ljava/lang/Integer;_;]">7</method>
+			<method name="private com.google.common.collect.Table getTableFromRanks(java.util.List headerOrder, java.util.Map rankings) [Signature: (Ljava/util/List_Ljava/lang/String;_;Ljava/util/Map_Ljava/lang/String;Ljava/lang/Integer;_;)Lcom/google/common/collect/Table_Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;_;]">5</method>
+			<method name="private String formatTableToMatrix(String title, java.util.List headerOrder, com.google.common.collect.Table table) [Signature: (Ljava/lang/String;Ljava/util/List_Ljava/lang/String;_;Lcom/google/common/collect/Table_Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;_;)Ljava/lang/String;]">4</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>HelloWorld</name>
+		<wmc>6</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>0</cbo>
+		<rfc>5</rfc>
+		<lcom>3</lcom>
+		<ca>0</ca>
+		<ce>0</ce>
+		<npm>4</npm>
+		<lcom3>2.0</lcom3>
+		<loc>24</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="private static void printHelloWorld()">1</method>
+			<method name="public static void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+</ckjm>

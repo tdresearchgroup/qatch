@@ -35,7 +35,6 @@ public class ThresholdImporter {
 	 *              
 	 */
 	public void importThresholdsFromJSON(PropertySet properties){
-
 		try {
 			//Create a BufferedReader in order to load the json file where the thresholds are stored
 			BufferedReader br = new BufferedReader(new FileReader(RInvoker.R_WORK_DIR + "/threshold.json"));
@@ -46,6 +45,7 @@ public class ThresholdImporter {
 			//Parse the json into an  object of type Object
 			Object obj = gson.fromJson(br,  Object.class);
 			String s = obj.toString();
+			System.out.println(s);
 			gsonParser(s,properties);
 
 			//Print the Object

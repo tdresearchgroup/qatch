@@ -22,18 +22,18 @@ for(file in files){
   # Read the xls and store its values in a dataframe
   # Read the data frame
   df <- read.xlsx(file, sheetIndex = 1, header = TRUE, stringsAsFactors=FALSE)
- 
-  
+
+
   # Keep only the values
   sub.df <- df[, -1]
   sapply(sub.df,as.numeric)
-  
+
   # Complete the main diagonal with ones
   for(i in seq(1,ncol(sub.df))){
    # print(sub.df[[i,i]])
     sub.df[[i,i]] <- as.numeric(1)
   }
-  
+
   # Complete the lower triangle with the reciprosal values of the upper
   for(i in c(2:nrow(df))){
     for(j in seq(1,i-1)){
@@ -47,14 +47,14 @@ for(file in files){
       }
     }
   }
-  
+
   # Calculate eigenvalues/eigenvectors -> weights
   eig <- eigen(data.matrix(sub.df))
   vec <- eig$vectors[,1]
   s <- sum(vec)
   weights <- vec / s
   weights <- as.numeric(weights)
-  
+
   # Add them to a list
   if(first){
     l <- list(weights)
@@ -66,11 +66,11 @@ for(file in files){
     n <- names(df)
     char.names <- c( char.names , n[[1]])
   }
-  
+
   #Calculate the consistency
   CI <- (eig$values[[1]]-nrow(sub.df))/(nrow(sub.df)-1)
   print(paste("THE CI = ", as.character(CI)))
-  
+
   if(length(weights) > 2 & length(weights) <= 10){
     print(ri[length(weights)])
     CR <- CI / ri[length(weights)]
@@ -78,7 +78,7 @@ for(file in files){
   }else{
     print("CR canno't be calculated")
   }
-  
+
 }
 
 # Set the name of each characteristic
@@ -91,3 +91,4 @@ json <- toJSON(l)
 setwd(Dir)
 setwd("./R_Working_Directory")
 write(json, "./weights.json")
+print("done")

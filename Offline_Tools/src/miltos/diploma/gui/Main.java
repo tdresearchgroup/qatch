@@ -903,7 +903,7 @@ public class Main extends Application {
         try {
             // Import the desired xml configuration file
             SAXBuilder builder = new SAXBuilder();
-            Document doc = builder.build(new File(System.getProperty("user.dir") + "/Offline Tools/config.xml").getAbsoluteFile());
+            Document doc = builder.build(new File(System.getProperty("user.dir") + "/Offline_Tools/config.xml").getAbsoluteFile());
             Element root = (Element) doc.getRootElement();
 
             // Create a list of all the its elements

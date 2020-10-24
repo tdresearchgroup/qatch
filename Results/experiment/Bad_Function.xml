@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.4.1" timestamp="2020-10-23T22:15:58.868">
+<pmd version="5.4.1" timestamp="2020-10-23T22:16:08.086">
 <file name="src/RankingQualityExporter.java">
 <violation beginline="44" endline="44" begincolumn="19" endcolumn="22" rule="AppendCharacterWithChar" ruleset="String and StringBuffer" class="RankingQualityExporter" method="formatTableToMatrix" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/strings.html#AppendCharacterWithChar" priority="3">
 Avoid appending characters as strings in StringBuffer.append.

@@ -1,10 +1,6 @@
 <quality_model name="Base Model">
   <tqi>
     <weights>
-      <weight>0.5528</weight>
-      <weight>0.1202</weight>
-      <weight>0.0583</weight>
-      <weight>0.2687</weight>
       <weight>0.2222</weight>
       <weight>0.0278</weight>
       <weight>0.0556</weight>
@@ -18,17 +14,6 @@
   <characteristics>
     <characteristic name="Maintainability" standard="ISO/IEC 25010" description="The maintainability of the project">
       <weights>
-        <weight>0.0636</weight>
-        <weight>0.2551</weight>
-        <weight>0.1271</weight>
-        <weight>0.0879</weight>
-        <weight>0.1152</weight>
-        <weight>0.0187</weight>
-        <weight>0.0608</weight>
-        <weight>0.0696</weight>
-        <weight>0.1612</weight>
-        <weight>0.0166</weight>
-        <weight>0.0242</weight>
         <weight>0.1644</weight>
         <weight>0.0836</weight>
         <weight>0.0836</weight>
@@ -44,17 +29,6 @@
     </characteristic>
     <characteristic name="Reliability" standard="ISO/IEC 25010" description="The reliability of the project">
       <weights>
-        <weight>0.1082</weight>
-        <weight>0.2267</weight>
-        <weight>0.1377</weight>
-        <weight>0.0216</weight>
-        <weight>0.1014</weight>
-        <weight>0.0958</weight>
-        <weight>0.0727</weight>
-        <weight>0.0605</weight>
-        <weight>0.0399</weight>
-        <weight>0.0456</weight>
-        <weight>0.09</weight>
         <weight>0.1358</weight>
         <weight>0.0313</weight>
         <weight>0.1044</weight>
@@ -70,17 +44,6 @@
     </characteristic>
     <characteristic name="Security" standard="ISO/IEC 25010" description="The security of the project">
       <weights>
-        <weight>0.0971</weight>
-        <weight>0.0429</weight>
-        <weight>0.0663</weight>
-        <weight>0.0519</weight>
-        <weight>0.086</weight>
-        <weight>0.1811</weight>
-        <weight>0.043</weight>
-        <weight>0.0498</weight>
-        <weight>0.0205</weight>
-        <weight>0.0231</weight>
-        <weight>0.3382</weight>
         <weight>0.0631</weight>
         <weight>0.021</weight>
         <weight>0.0635</weight>
@@ -96,17 +59,6 @@
     </characteristic>
     <characteristic name="Performance_Efficiency" standard="ISO/IEC 25010" description="The performance of the project">
       <weights>
-        <weight>0.2301</weight>
-        <weight>0.0367</weight>
-        <weight>0.0798</weight>
-        <weight>0.0688</weight>
-        <weight>0.0765</weight>
-        <weight>0.2974</weight>
-        <weight>0.0716</weight>
-        <weight>0.039</weight>
-        <weight>0.0427</weight>
-        <weight>0.0328</weight>
-        <weight>0.0246</weight>
         <weight>0.1388</weight>
         <weight>0.0637</weight>
         <weight>0.0985</weight>
@@ -118,6 +70,66 @@
         <weight>0.0403</weight>
         <weight>0.1186</weight>
         <weight>0.0719</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Compatibility" standard="ISO/IEC 25010" description="The compatibility of the project">
+      <weights>
+        <weight>0.0444</weight>
+        <weight>0.0444</weight>
+        <weight>0.0444</weight>
+        <weight>0.1556</weight>
+        <weight>0.0889</weight>
+        <weight>0.0222</weight>
+        <weight>0.1111</weight>
+        <weight>0.1111</weight>
+        <weight>0.0667</weight>
+        <weight>0.1778</weight>
+        <weight>0.1333</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Usability" standard="ISO/IEC 25010" description="The usability of the project">
+      <weights>
+        <weight>0.1822</weight>
+        <weight>0.0327</weight>
+        <weight>0.0327</weight>
+        <weight>0.0327</weight>
+        <weight>0.1573</weight>
+        <weight>0.1573</weight>
+        <weight>0.0249</weight>
+        <weight>0.0577</weight>
+        <weight>0.0826</weight>
+        <weight>0.1324</weight>
+        <weight>0.1075</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Functional_Suitability" standard="ISO/IEC 25010" description="The function suitability of the project">
+      <weights>
+        <weight>0.1403</weight>
+        <weight>0.0377</weight>
+        <weight>0.0991</weight>
+        <weight>0.1192</weight>
+        <weight>0.1586</weight>
+        <weight>0.0183</weight>
+        <weight>0.0625</weight>
+        <weight>0.0808</weight>
+        <weight>0.1202</weight>
+        <weight>0.1202</weight>
+        <weight>0.0431</weight>
+      </weights>
+    </characteristic>
+    <characteristic name="Portability" standard="ISO/IEC 25010" description="The portability of the project">
+      <weights>
+        <weight>0.034</weight>
+        <weight>0.0708</weight>
+        <weight>0.051</weight>
+        <weight>0.1614</weight>
+        <weight>0.0538</weight>
+        <weight>0.017</weight>
+        <weight>0.0878</weight>
+        <weight>0.1048</weight>
+        <weight>0.1218</weight>
+        <weight>0.1388</weight>
+        <weight>0.159</weight>
       </weights>
     </characteristic>
   </characteristics>

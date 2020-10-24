@@ -6,7 +6,7 @@
     <characteristic name="Performance_Efficiency" standard="ISO/IEC 25010" description="The performance of the project" />
     <characteristic name="Compatibility" standard="ISO/IEC 25010" description="The compatibility of the project" />
     <characteristic name="Usability" standard="ISO/IEC 25010" description="The usability of the project" />
-    <characteristic name="Function_Suitability" standard="ISO/IEC 25010" description="The function suitability of the project" />
+    <characteristic name="Functional_Suitability" standard="ISO/IEC 25010" description="The function suitability of the project" />
     <characteristic name="Portability" standard="ISO/IEC 25010" description="The portability of the project" />
   </characteristics>
   <properties>

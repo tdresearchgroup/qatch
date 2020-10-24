@@ -18,7 +18,6 @@ first <- TRUE
 
 # Iterate through each file found in the directory
 for(file in files){
-  print(file)
   # Read the xls and store its values in a dataframe
   # Read the data frame
   df <- read.xlsx(file, sheetIndex = 1, header = TRUE, stringsAsFactors=FALSE)
@@ -69,7 +68,7 @@ for(file in files){
 
   #Calculate the consistency
   CI <- (eig$values[[1]]-nrow(sub.df))/(nrow(sub.df)-1)
-  print(paste("THE CI = ", as.character(CI)))
+  #print(paste("THE CI = ", as.character(CI)))
 
   if(length(weights) > 2 & length(weights) <= 10){
     print(ri[length(weights)])
@@ -91,4 +90,4 @@ json <- toJSON(l)
 setwd(Dir)
 setwd("./R_Working_Directory")
 write(json, "./weights.json")
-print("done")
+print("Done elicitating weights.....")

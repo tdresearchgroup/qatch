@@ -50,7 +50,6 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 			    //Print the messages to the console for debugging purposes
 				while (true) {
 					line = r.readLine();
-					System.out.println(line);
 					if (line == null) { break; }
 				}
 		}catch(IOException e){

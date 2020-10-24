@@ -48,21 +48,12 @@ public class RInvoker {
 			if(System.getProperty("os.name").contains("Mac")){
 				rPath = rPath + "/RScript";
 			}
-			System.out.println(rPath + " " + scriptPath + " " + args);
 			Process process = Runtime.getRuntime().exec(rPath + " " + scriptPath + " " + args);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String line = "";
 			while ((line = reader.readLine()) != null) {
 				System.out.println(line);
 			}
-	/*		String line;
-			Process p = Runtime.getRuntime().exec(rPath + "/RScript "  + scriptPath + " " + args);
-			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			  while ((line = input.readLine()) != null) {
-				    System.out.println(line);
-				  }
-			  input.close();
-	*/
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
@@ -116,10 +107,6 @@ public class RInvoker {
 
 		//Invoke the appropriate R script for threshold extraction - Use the fixed paths
 		//TODO: Remove this prints
-		System.out.println("* R_BIN_PATH= "+ R_BIN_PATH);
-		System.out.println("* R_AHP_SCRIPT= "+ weightsScript);
-		System.out.println("* DIR= "+ BASE_DIR);
-		System.out.println("* ");
 		
 		executeRScript(RInvoker.R_BIN_PATH, RInvoker.weightsScript, BASE_DIR);
 

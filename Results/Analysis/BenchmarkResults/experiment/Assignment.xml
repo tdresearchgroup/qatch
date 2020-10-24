@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.4.1" timestamp="2020-10-23T14:07:16.137">
+<pmd version="5.4.1" timestamp="2020-10-23T22:16:02.943">
 <file name="src/HelloWorld.java">
 <violation beginline="7" endline="7" begincolumn="29" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="HelloWorld" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'args' is not assigned and could be declared final

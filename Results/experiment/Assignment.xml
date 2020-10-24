@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="5.4.1" timestamp="2020-10-23T22:16:03.781">
+<pmd version="5.4.1" timestamp="2020-10-23T22:16:11.598">
 <file name="src/HelloWorld.java">
 <violation beginline="7" endline="7" begincolumn="29" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="HelloWorld" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'args' is not assigned and could be declared final
@@ -27,6 +27,12 @@ Local variable 'maintainabilityTable' could be declared final
 <violation beginline="31" endline="31" begincolumn="9" endcolumn="115" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="engine" variable="maintainabilityMatrixFormatted" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'maintainabilityMatrixFormatted' could be declared final
 </violation>
+<violation beginline="36" endline="42" begincolumn="13" endcolumn="37" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="formatTableToMatrix" variable="header" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'header' (lines '36'-'42').
+</violation>
+<violation beginline="36" endline="49" begincolumn="17" endcolumn="87" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="formatTableToMatrix" variable="rowValue" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'rowValue' (lines '36'-'49').
+</violation>
 <violation beginline="36" endline="36" begincolumn="54" endcolumn="77" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="formatTableToMatrix" variable="headerOrder" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'headerOrder' is not assigned and could be declared final
 </violation>
@@ -42,23 +48,17 @@ Local variable 'sb' could be declared final
 <violation beginline="38" endline="38" begincolumn="9" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="formatTableToMatrix" variable="delim" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'delim' could be declared final
 </violation>
-<violation beginline="39" endline="39" begincolumn="19" endcolumn="31" rule="InefficientStringBuffering" ruleset="String and StringBuffer" class="RankingQualityExporter" method="formatTableToMatrix" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/strings.html#InefficientStringBuffering" priority="3">
-Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
-</violation>
 <violation beginline="41" endline="41" begincolumn="14" endcolumn="26" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="formatTableToMatrix" variable="header" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'header' could be declared final
-</violation>
-<violation beginline="42" endline="42" begincolumn="23" endcolumn="36" rule="InefficientStringBuffering" ruleset="String and StringBuffer" class="RankingQualityExporter" method="formatTableToMatrix" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/strings.html#InefficientStringBuffering" priority="3">
-Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
-</violation>
-<violation beginline="47" endline="47" begincolumn="23" endcolumn="61" rule="InefficientStringBuffering" ruleset="String and StringBuffer" class="RankingQualityExporter" method="formatTableToMatrix" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/strings.html#InefficientStringBuffering" priority="3">
-Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
 </violation>
 <violation beginline="48" endline="48" begincolumn="18" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="formatTableToMatrix" variable="rowValue" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'rowValue' could be declared final
 </violation>
-<violation beginline="49" endline="49" begincolumn="27" endcolumn="86" rule="InefficientStringBuffering" ruleset="String and StringBuffer" class="RankingQualityExporter" method="formatTableToMatrix" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/strings.html#InefficientStringBuffering" priority="3">
-Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+<violation beginline="57" endline="62" begincolumn="21" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="col" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'col' (lines '57'-'62').
+</violation>
+<violation beginline="57" endline="62" begincolumn="21" endcolumn="35" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="row" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 'row' (lines '57'-'62').
 </violation>
 <violation beginline="57" endline="57" begincolumn="61" endcolumn="84" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" variable="headerOrder" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'headerOrder' is not assigned and could be declared final
@@ -75,8 +75,20 @@ Local variable 'row' could be declared final
 <violation beginline="61" endline="61" begincolumn="18" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" variable="col" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'col' could be declared final
 </violation>
+<violation beginline="66" endline="66" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="rowRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'rowRank' (lines '66'-'66').
+</violation>
+<violation beginline="66" endline="82" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="rowRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'rowRank' (lines '66'-'82').
+</violation>
 <violation beginline="66" endline="66" begincolumn="21" endcolumn="51" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" variable="rowRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'rowRank' could be declared final
+</violation>
+<violation beginline="67" endline="67" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="colRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'colRank' (lines '67'-'67').
+</violation>
+<violation beginline="67" endline="82" begincolumn="25" endcolumn="51" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="colRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'colRank' (lines '67'-'82').
 </violation>
 <violation beginline="67" endline="67" begincolumn="21" endcolumn="51" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" variable="colRank" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'colRank' could be declared final
@@ -87,11 +99,8 @@ Local variable 'currentRowSpot' could be declared final
 <violation beginline="70" endline="70" begincolumn="21" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" variable="currentColSpot" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'currentColSpot' could be declared final
 </violation>
-<violation beginline="74" endline="74" begincolumn="39" endcolumn="66" rule="AvoidInstantiatingObjectsInLoops" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#AvoidInstantiatingObjectsInLoops" priority="3">
-Avoid instantiating new objects inside loops
-</violation>
-<violation beginline="74" endline="74" begincolumn="107" endcolumn="108" rule="AddEmptyString" ruleset="Optimization" class="RankingQualityExporter" method="getTableFromRanks" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#AddEmptyString" priority="3">
-Do not add empty strings
+<violation beginline="72" endline="74" begincolumn="25" endcolumn="108" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="getTableFromRanks" variable="placedValue" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'placedValue' (lines '72'-'74').
 </violation>
 <violation beginline="84" endline="84" begincolumn="49" endcolumn="76" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="parseInputFile" variable="qualityCharacteristic" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'qualityCharacteristic' is not assigned and could be declared final
@@ -108,8 +117,17 @@ Local variable 'line' could be declared final
 <violation beginline="92" endline="92" begincolumn="21" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="parseInputFile" variable="lineSplitter" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'lineSplitter' could be declared final
 </violation>
+<violation beginline="93" endline="101" begincolumn="29" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="parseInputFile" variable="orderedCounter" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'orderedCounter' (lines '93'-'101').
+</violation>
 <violation beginline="95" endline="95" begincolumn="25" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="parseInputFile" variable="current" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
 Local variable 'current' could be declared final
+</violation>
+<violation beginline="101" endline="101" begincolumn="29" endcolumn="44" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="parseInputFile" variable="orderedCounter" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'orderedCounter' (lines '101'-'101').
+</violation>
+<violation beginline="114" endline="124" begincolumn="25" endcolumn="43" rule="DataflowAnomalyAnalysis" ruleset="Controversial" class="RankingQualityExporter" method="parseInputForStructure" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'UR'-anomaly for variable 's' (lines '114'-'124').
 </violation>
 <violation beginline="114" endline="114" begincolumn="49" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" class="RankingQualityExporter" method="parseInputForStructure" variable="layerName" externalInfoUrl="https://pmd.github.io/pmd-5.4.1/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
 Parameter 'layerName' is not assigned and could be declared final

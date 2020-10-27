@@ -241,7 +241,9 @@ public class QualityModelScreenController {
                             errorMessage += "There aren't any java files inside the repository : " + project.getName() + "\n";
                             problem = true;
                             break;
-                        } else if (classFiles.length == 0 || jarFiles.length == 0) {
+                        }
+//                        else if (classFiles.length == 0 || jarFiles.length == 0) {
+                        else if (jarFiles.length == 0 ) {
                             System.out.println("There aren't any class or jar files inside the repository : " + project.getName());
                             errorMessage += "There aren't any class or jar files inside the repository : " + project.getName() + "\n";
                             problem = true;

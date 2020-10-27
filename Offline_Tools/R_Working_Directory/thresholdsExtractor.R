@@ -1,4 +1,5 @@
-##*************** Threshold Extractor *****************************
+
+#' ##*************** Threshold Extractor *****************************
 #
 #  This script is responsible for the calculation of the thresholds
 #  of the Quality Model's properties.
@@ -23,6 +24,8 @@ library("xlsx")
 
 # Read the data frame
 df <- read.xlsx("properties.xls", sheetIndex = 1, header = TRUE)
+
+print(df)
 
 #Create an empty vector
 first <- TRUE

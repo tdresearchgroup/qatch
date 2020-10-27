@@ -82,14 +82,13 @@ public class ThresholdImporter {
 	 * 
 	 */
 	public void gsonParser(String jsonLine, PropertySet properties){
-		
+
 		//Get a JsonElement by using a jsonParser
 		JsonElement jelement = new JsonParser().parse(jsonLine);
 		
 		//Typically, this json file is an array of objects
 		//Get the array of objects
 		JsonArray jarray = jelement.getAsJsonArray();
-		
 		//For each object of the json array do...
 		for(int i = 0; i < jarray.size(); i++){
 			//Get the current object

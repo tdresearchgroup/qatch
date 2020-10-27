@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import miltos.diploma.characteristics.*;
-import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -14,8 +13,7 @@ import java.io.*;
 
 public class SingleProjectEvaluator {
 
-    private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules, " +
-            "Models, Descriptions/Models/qualityModel.xml";
+    private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
     private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/test_dir";
     private static String PROJECT_PATH = "/Users/guribhangu/test_dir/experiment";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
@@ -25,6 +23,7 @@ public class SingleProjectEvaluator {
 
         // get base model information
         PropertySet properties = baseQualityModel.getProperties();
+
         CharacteristicSet characteristics = baseQualityModel.getCharacteristics();
         Tqi tqi = baseQualityModel.getTqi();
 
@@ -41,6 +40,11 @@ public class SingleProjectEvaluator {
         // aggregate
         BenchmarkAggregator benchAggregator = new BenchmarkAggregator();
         benchAggregator.aggregateProjects(projects, properties);
+
+        System.out.println(projects.size());
+        for (int i = 0; i < projects.size(); i++) {
+            System.out.println(projects.getProject(i).getName());
+        }
 
         // export benchmark results
         BenchmarkAnalysisExporter exporter = new BenchmarkAnalysisExporter();
@@ -85,11 +89,14 @@ public class SingleProjectEvaluator {
         QualityModelLoader qualityModelLoader = new QualityModelLoader(BASE_QUALITY_MODEL_PATH);
         QualityModel baseQualityModel = qualityModelLoader.importQualityModel();
 
+        System.out.println(baseQualityModel.getProperties());
 
         QualityModel qualityModel = SingleProjectEvaluator.buildQuaityModel(baseQualityModel);
 
-        File projectDir = new File(PROJECT_PATH);
+        // clear Results directory
 
+
+        File projectDir = new File(PROJECT_PATH);
         // Load project directory
         Project project = new Project();
         project.setPath(PROJECT_PATH);
@@ -168,10 +175,10 @@ public class SingleProjectEvaluator {
 
 
         JsonParser parser = new JsonParser();
-        JsonObject jsonObject = (JsonObject) parser.parse(new FileReader("/Users/guribhangu/development/research/qatch/Results/experiment_evalResults.json"));
+        JsonObject jsonObject = (JsonObject) parser.parse(new FileReader(PROJECT_RESULT_PATH + "/" + project.getName() + "_evalResults.json"));
 
 //        System.out.println(jsonObject);
-//        System.out.println(jsonObject.get("properties"));
+//        System.out.println(jsonObject.get("properties"));``
         System.out.println(jsonObject.getAsJsonObject("characteristics").get("characteristics"));
         System.out.println("Characteristics");
         JsonArray characteristicResults = jsonObject.getAsJsonObject("characteristics").get("characteristics").getAsJsonArray();

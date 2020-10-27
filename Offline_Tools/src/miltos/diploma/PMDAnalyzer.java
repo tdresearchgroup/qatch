@@ -34,21 +34,29 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 		if(System.getProperty("os.name").contains("Mac")){
 			src = "\"" + src + "\"";
 			dest = "\"" + dest + "\"";
-			ruleset = "\""+ "/Users/guribhangu/development/research/qatch/Web Service/" + ruleset + "\"";
+			ruleset = "\"" + ruleset + "\"";
 		}
+
+		System.out.println(src);
+		System.out.println(dest);
+		System.out.println(ruleset);
+		System.out.println(filename);
 
 		//Create the command that should be executed
 		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/pmd_build.xml\" " +
 				"-Dsrc.dir=" + src +" -Ddest.dir="+ dest + " -Druleset.path=" + ruleset + " -Dfilename=" + filename);
 		builder.redirectErrorStream(true);
 
+
+
 		//Execute the command
 		try{
 				Process p = builder.start();
 				BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-				String line;
+				String line = "";
 			    //Print the messages to the console for debugging purposes
 				while (true) {
+					System.out.println(line);
 					line = r.readLine();
 					if (line == null) { break; }
 				}
@@ -83,6 +91,8 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 
 			//Get the current property
 			p = iterator.next();
+
+			System.out.println("GSB " + p.getName());
 
 			//Check if it is a PMD Property
 			//TODO: Check this outside this function

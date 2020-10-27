@@ -31,7 +31,7 @@
 	  <!-- Configure the ckjm task by setting its classpath -->
 	  <taskdef name="ckjm" classname="gr.spinellis.ckjm.ant.CkjmTask">
 		<classpath>
-		  <pathelement location="./tools/ckjm_ext.jar"/>
+		  <pathelement location="ckjm_ext.jar"/>
 		</classpath>
 	  </taskdef>
 	  

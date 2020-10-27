@@ -1,0 +1,65 @@
+<quality_model name="MyQualityModel!">
+	<tqi>
+		<weights>
+				<weight>0.5</weight>
+				<weight>0.5</weight>
+		</weights>
+	</tqi>
+	<characteristics>
+		<characteristic name="Maintainability" standard="ISO/IEC 25010" description="How much maintainable is the project" >
+			<weights>
+				<weight>0.2</weight>
+				<weight>0.2</weight>
+				<weight>0.2</weight>
+				<weight>0.2</weight>
+				<weight>0.2</weight>
+			</weights>
+		</characteristic>
+		<characteristic name="Reliability" standard="ISO/IEC 25010" description="How much reliable is the project" >
+			<weights>
+				<weight>0.05</weight>
+				<weight>0.1</weight>
+				<weight>0.05</weight>
+				<weight>0.6</weight>
+				<weight>0.2</weight>
+			</weights>
+		</characteristic>
+	</characteristics>
+	<properties>
+		  <property name="Comprehensibility" type="1" description="This measures evaluates how much understandable and readable the code is!!&#xA; They derive from Spinelis book entitled : &quot; Code Quality &quot;" positive_impact="false" metricName="" ruleset="./Rulesets/compRuleSet.xml" tool="PMD">
+			<thresholds>
+			  <threshold>0.0306</threshold>
+			  <threshold>0.1239</threshold>
+			  <threshold>0.2189</threshold>
+			</thresholds>
+		  </property>
+		  <property name="Cohesion" type="0" description="This property evaluates the cohesion of the project's classes" positive_impact="false" metricName="LCOM" ruleset="" tool="CKJM">
+			<thresholds>
+			  <threshold>2.5007</threshold>
+			  <threshold>365.8247</threshold>
+			  <threshold>1571.1989</threshold>
+			</thresholds>
+		  </property>
+		  <property name="Resource_Handling" type="1" description="This measures evaluates the resources!" positive_impact="false" metricName="" ruleset="./Rulesets/resourceHandRuleSet.xml" tool="PMD">
+			<thresholds>
+			  <threshold>0.004</threshold>
+			  <threshold>0.0591</threshold>
+			  <threshold>0.1168</threshold>
+			</thresholds>
+		  </property>
+		  <property name="Coupling" type="0" description="Evaluates the total number of efferent and afferent coupling of the system." positive_impact="false" metricName="CBO" ruleset="" tool="CKJM">
+			<thresholds>
+			  <threshold>0.0</threshold>
+			  <threshold>12.8935</threshold>
+			  <threshold>42.3494</threshold>
+			</thresholds>
+		  </property>
+		  <property name="Complexity" type="0" description="Complexity of the whole System" positive_impact="false" metricName="WMC" ruleset="" tool="CKJM">
+			<thresholds>
+			  <threshold>3.1903</threshold>
+			  <threshold>24.6993</threshold>
+			  <threshold>62.3931</threshold>
+			</thresholds>
+		  </property>
+	</properties>
+</quality_model>

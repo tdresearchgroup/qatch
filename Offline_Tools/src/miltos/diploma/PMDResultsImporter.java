@@ -77,18 +77,26 @@ public class PMDResultsImporter {
 					
 					//Set the path of the class (file) that this violation belongs to
 					issue.setClassPath(el.getAttributeValue("name"));
-					
+
+					System.out.println(viol.getAttributes());
 					//Get all the information for this issue from the xml file
-					issue.setBeginLine(Integer.parseInt(viol.getAttributeValue("beginline")));
-					issue.setEndLine(Integer.parseInt(viol.getAttributeValue("endline")));
-					issue.setBeginCol(Integer.parseInt(viol.getAttributeValue("begincolumn")));
-					issue.setEndCol(Integer.parseInt(viol.getAttributeValue("endcolumn")));
-					issue.setRuleName(viol.getAttributeValue("rule"));
-					issue.setRuleSetName(viol.getAttributeValue("ruleset"));
-					issue.setPackageName(viol.getAttributeValue("package"));
-					issue.setExternalInfoUrl(viol.getAttributeValue("externalInfoUrl"));
-					issue.setPriority(Integer.parseInt(viol.getAttributeValue("priority")));
-					issue.setDescription(viol.getText());
+
+					System.out.println("GSB " + viol.getAttributeValue("beginline"));
+					try {
+						issue.setBeginLine(Integer.parseInt(viol.getAttributeValue("beginline")));
+						issue.setEndLine(Integer.parseInt(viol.getAttributeValue("endline")));
+						issue.setBeginCol(Integer.parseInt(viol.getAttributeValue("begincolumn")));
+						issue.setEndCol(Integer.parseInt(viol.getAttributeValue("endcolumn")));
+						issue.setRuleName(viol.getAttributeValue("rule"));
+						issue.setRuleSetName(viol.getAttributeValue("ruleset"));
+						issue.setPackageName(viol.getAttributeValue("package"));
+						issue.setExternalInfoUrl(viol.getAttributeValue("externalInfoUrl"));
+						issue.setPriority(Integer.parseInt(viol.getAttributeValue("priority")));
+						issue.setDescription(viol.getText());
+					}
+					catch (NumberFormatException e) {
+						System.out.println(e.getMessage());
+					}
 					
 					//Add the issue to the IssueSet
 					issues.addIssue(issue);

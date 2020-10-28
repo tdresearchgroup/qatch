@@ -7,16 +7,19 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" exported="" name="lib1" level="project" />
     <orderEntry type="library" name="ckjm_ext" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="ckjm_ext1" level="project" />
-    <orderEntry type="library" name="lib2" level="project" />
-    <orderEntry type="library" name="org.jdom:jdom2:2.0.6" level="project" />
-    <orderEntry type="library" name="javax.servlet:javax.servlet-api:4.0.1" level="project" />
-    <orderEntry type="library" name="org.json:json:20200518" level="project" />
-    <orderEntry type="library" name="com.google.code.gson:gson:2.2.4" level="project" />
-    <orderEntry type="library" name="org.apache.poi:poi:4.1.1" level="project" />
-    <orderEntry type="library" name="org.json:json:202005181" level="project" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
+    <orderEntry type="library" exported="" name="ckjm_ext1" level="project" />
+    <orderEntry type="library" exported="" name="lib2" level="project" />
+    <orderEntry type="library" exported="" name="org.jdom:jdom2:2.0.6" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" exported="" name="org.json:json:20200518" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="org.apache.poi:poi:4.1.1" level="project" />
+    <orderEntry type="library" exported="" name="org.json:json:202005181" level="project" />
+    <orderEntry type="library" name="commons-io-2.8" level="project" />
+    <orderEntry type="library" name="apache-ant-1.10" level="project" />
+    <orderEntry type="library" name="org.apache.ant:ant-apache-bcel:1.10.7" level="project" />
   </component>
 </module>

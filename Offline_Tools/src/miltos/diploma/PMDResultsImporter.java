@@ -49,7 +49,7 @@ public class PMDResultsImporter {
 			//The OS Separator should be defined for Filename class
 			//TODO: Find a better way
 			char separator;
-			if(System.getProperty("os.name").contains("Windows")){
+			if(System.getProperty("os.name").contains("Mac")){
 				separator = '\\';
 			}else{
 				separator = '/';
@@ -66,7 +66,6 @@ public class PMDResultsImporter {
 				
 				//Get the violations of the current file
 				list = el.getChildren();
-				
 				/* 
 				 * Iterate through the list of violation for this certain 
 				 * file and store them in the appropriate objects 
@@ -78,10 +77,7 @@ public class PMDResultsImporter {
 					//Set the path of the class (file) that this violation belongs to
 					issue.setClassPath(el.getAttributeValue("name"));
 
-					System.out.println(viol.getAttributes());
 					//Get all the information for this issue from the xml file
-
-					System.out.println("GSB " + viol.getAttributeValue("beginline"));
 					try {
 						issue.setBeginLine(Integer.parseInt(viol.getAttributeValue("beginline")));
 						issue.setEndLine(Integer.parseInt(viol.getAttributeValue("endline")));
@@ -125,7 +121,7 @@ public class PMDResultsImporter {
 			//The OS Separator should be defined for Filename class
 			//TODO: Find a better way
 			char separator;
-			if(System.getProperty("os.name").contains("Windows")){
+			if(System.getProperty("os.name").contains("Mac")){
 				separator = '\\';
 			}else{
 				separator = '/';

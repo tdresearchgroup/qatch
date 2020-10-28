@@ -36,7 +36,6 @@ public class CKJMResultsImporter {
 	 * @param path : The exact path to the ckjmResults.xml file
 	 */
 	public MetricSet parseMetrics(String path){
-		
 		//A MetricSet object for storing the calculated metrics
 		MetricSet metricSet = new MetricSet();
 		
@@ -51,13 +50,15 @@ public class CKJMResultsImporter {
 								
 				//Iterate through the classes and parse their metrics
 				for(Element el : classList){
-					
+					System.out.println("importing ckjm....");
 					//Create a Metrics Object
 					Metrics metrics = new Metrics();
 					
 					//Get the list of metrics of the class node
 					List<Element> list = el.getChildren();
-					
+
+					System.out.println(list.size());
+
 					//Store the metrics
 					metrics.setName(list.get(0).getText());
 					metrics.setWmc(Integer.parseInt(list.get(1).getText()));

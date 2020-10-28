@@ -7,7 +7,6 @@ args <- commandArgs(trailingOnly = TRUE)
 Dir <- args[1]
 setwd(Dir)
 
-print("GSB")
 # List the files found in this directory
 files <- dir("./Comparison_Matrices")
 setwd("./Comparison_Matrices")

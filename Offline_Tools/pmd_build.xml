@@ -13,7 +13,7 @@
 	
 	<!-- The pmd classpath containing all the needed libraries in order to function -->
 	<path id="pmd.classpath">
-		<fileset dir="guribhangu/development/research/qatch/Offline_Tools/pmd-bin-6.29.0/lib">
+		<fileset dir="guribhangu/development/research/qatch/Offline_Tools/pmd-bin-5.4.1/lib">
 			<include name="**/*.jar"/>
 		</fileset>
 	</path>

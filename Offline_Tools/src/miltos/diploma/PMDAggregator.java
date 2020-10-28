@@ -1,5 +1,6 @@
 package miltos.diploma;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class PMDAggregator {
@@ -23,13 +24,10 @@ public class PMDAggregator {
 		while(iterator.hasNext()){
 			
 			//Clear the num array
-			for(int i = 0; i < num.length; i++){
-				num[i] = 0;
-			}
+			Arrays.fill(num, 0);
 			
 			//Get the current IssueSet
 			IssueSet issueSet = iterator.next();
-			
 			//Iterate through the issues of this IssueSet and count their number per severity
 			for(int i = 0; i < issueSet.size(); i++){
 				switch (issueSet.get(i).getPriority()){
@@ -50,17 +48,20 @@ public class PMDAggregator {
 					  break;
 				}
 			}
-			
+
+			System.out.println("Aggregating..." + num.length);
 			//Calculate the value of this issue set
 		    int value = 0;
 		    for(int i = 0; i < num.length; i++){
 		    	value += WEIGHT[i] * num[i];
 		    }
-		    
+
+			System.out.println(value);
+
 		    //Find the property and set its value and its profile ...
 		    for(int i = 0; i < project.getProperties().size(); i++){
 		    	Property property = project.getProperties().get(i);
-		    	if(issueSet.getPropertyName().equals(property.getName())){
+		    	if(issueSet.getPropertyName().contains(property.getName())){
 		    		property.getMeasure().setValue(value);
 		    		property.setProfile(num.clone());
 		    		break;

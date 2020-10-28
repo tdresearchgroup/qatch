@@ -10,10 +10,10 @@
 	<!-- If they are not defined by the user, the basedir is the default option -->
 	<property name="src.dir" value="src" />
 	<property name="dest.dir" value="dest" />
-	
-	<!-- Set the classpath with all the APIs needed for the compilation -->
+<!--	-->
+	 Set the classpath with all the APIs needed for the compilation
 	<path id="ckjm.classpath">
-		<fileset dir="C:\Users\Miltos\.m2"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
+		<fileset dir="/Users/guribhangu/ckjm-1.9"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
 			<include name="**/*.jar"/>
 		</fileset>
 	</path>

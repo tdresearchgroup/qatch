@@ -37,10 +37,7 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 			ruleset = "\"" + ruleset + "\"";
 		}
 
-		System.out.println(src);
-		System.out.println(dest);
-		System.out.println(ruleset);
-		System.out.println(filename);
+		System.out.println("analyzing.... " + dest);
 
 		//Create the command that should be executed
 		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/pmd_build.xml\" " +
@@ -91,8 +88,6 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 
 			//Get the current property
 			p = iterator.next();
-
-			System.out.println("GSB " + p.getName());
 
 			//Check if it is a PMD Property
 			//TODO: Check this outside this function

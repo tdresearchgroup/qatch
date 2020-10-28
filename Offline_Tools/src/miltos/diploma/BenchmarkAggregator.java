@@ -40,14 +40,14 @@ public class BenchmarkAggregator {
 		
 		//Create an empty PMDAggregator and CKJMAggregator
 		PMDAggregator pmd = new PMDAggregator();
-		CKJMAggregator ckjm = new CKJMAggregator();
+//		CKJMAggregator ckjm = new CKJMAggregator();
 		
 		//Aggregate all the projects
 		double progress = 0;
 		for(int i = 0; i < projects.size(); i++){
 			System.out.print("* Progress : " + (int) (progress/projects.size() * 100) + " %\r");
 			pmd.aggregate(projects.getProject(i));
-			ckjm.aggregate(projects.getProject(i));
+//			ckjm.aggregate(projects.getProject(i));
 			progress++;
 		}
 		System.out.print("* Progress : " + (int) (progress/projects.size() * 100) + " %\r");
@@ -103,6 +103,8 @@ public class BenchmarkAggregator {
 			for(int i = 0; i < project.getProperties().size(); i++){
 				
 				Property property =  project.getProperties().get(i);
+				System.out.println("Normalizing... " + property.getName());
+				System.out.println("Normalizing... " + property.getMeasure().getValue());
 				property.getMeasure().calculateNormValue();
 				
 			}

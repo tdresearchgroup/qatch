@@ -37,8 +37,6 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 			ruleset = "\"" + ruleset + "\"";
 		}
 
-		System.out.println("analyzing.... " + dest);
-
 		//Create the command that should be executed
 		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/pmd_build.xml\" " +
 				"-Dsrc.dir=" + src +" -Ddest.dir="+ dest + " -Druleset.path=" + ruleset + " -Dfilename=" + filename);

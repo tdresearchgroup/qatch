@@ -67,7 +67,7 @@ public class CKJMAggregator {
 	    	
 	    	//Get the current property
 	    	Property property = project.getProperties().get(i);
-	    	
+			System.out.println("setting normalizer... " + property.getName());
 	    	//Set the property's field normalizer to the totalLOC of the project
 	    	property.getMeasure().setNormalizer(totalLoc);
 	    	

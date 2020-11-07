@@ -17,7 +17,9 @@ public class SingleProjectEvaluator {
 
     private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
     private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/test";
-    private static String PROJECT_PATH = "/Users/guribhangu/research/source_code/test/mockito-3.0.1";
+    private static String PROJECT_PATH = "/Users/guribhangu/research/source_code/test/Hystrix-1.0.1";
+//    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/test_dir";
+//    private static String PROJECT_PATH = "/Users/guribhangu/test_dir/experiment";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
     private static String CREATED_QUALITY_MODEL_PATH = PROJECT_RESULT_PATH + "/qualityModel.xml";
 
@@ -30,10 +32,10 @@ public class SingleProjectEvaluator {
         Tqi tqi = baseQualityModel.getTqi();
 
         // Benchmark analysis
-//        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
-//        benchmarkAnal.setBenchRepoPath(BENCHMARK_PROJECT_ROOT_PATH);
-//        benchmarkAnal.setProperties(properties);
-//        benchmarkAnal.analyzeBenchmarkRepo();
+        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
+        benchmarkAnal.setBenchRepoPath(BENCHMARK_PROJECT_ROOT_PATH);
+        benchmarkAnal.setProperties(properties);
+        benchmarkAnal.analyzeBenchmarkRepo();
 
         // import benchmark analysis results
         BenchmarkResultImporter benchmarkImporter = new BenchmarkResultImporter();
@@ -87,12 +89,10 @@ public class SingleProjectEvaluator {
         return new QualityModelLoader(CREATED_QUALITY_MODEL_PATH).importQualityModel();
     }
 
-    
-
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
 
         // clear contents of directory containing analysis results
-//        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
+        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
 
         QualityModelLoader qualityModelLoader = new QualityModelLoader(BASE_QUALITY_MODEL_PATH);
         QualityModel baseQualityModel = qualityModelLoader.importQualityModel();

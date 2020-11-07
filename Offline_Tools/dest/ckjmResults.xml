@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ckjm>
+	<class>
+		<name>com.google.common.base.internal.Finalizer</name>
+		<wmc>7</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>0</cbo>
+		<rfc>29</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>0</ce>
+		<npm>3</npm>
+		<lcom3>0.638888888888889</lcom3>
+		<loc>164</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.36666666666666664</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>21.571428571428573</amc>
+		<cc>
+			<method name="private void _init_(Class finalizableReferenceClass, java.lang.ref.ReferenceQueue queue, java.lang.ref.PhantomReference frqReference) [Signature: (Ljava/lang/Class_*_;Ljava/lang/ref/ReferenceQueue_Ljava/lang/Object;_;Ljava/lang/ref/PhantomReference_Ljava/lang/Object;_;)V]">1</method>
+			<method name="private java.lang.reflect.Method getFinalizeReferentMethod()">2</method>
+			<method name="private boolean cleanUp(java.lang.ref.Reference reference) [Signature: (Ljava/lang/ref/Reference_*_;)Z]">4</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public static java.lang.reflect.Field getInheritableThreadLocalsField()">1</method>
+			<method name="public static void startFinalizer(Class finalizableReferenceClass, java.lang.ref.ReferenceQueue queue, java.lang.ref.PhantomReference frqReference) [Signature: (Ljava/lang/Class_*_;Ljava/lang/ref/ReferenceQueue_Ljava/lang/Object;_;Ljava/lang/ref/PhantomReference_Ljava/lang/Object;_;)V]">3</method>
+			<method name="public void run()">2</method>
+		</cc>
+	</class>
+</ckjm>

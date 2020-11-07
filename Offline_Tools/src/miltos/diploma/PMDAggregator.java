@@ -49,20 +49,17 @@ public class PMDAggregator {
 				}
 			}
 
-			System.out.println("Aggregating..." + num.length);
 			//Calculate the value of this issue set
 		    int value = 0;
 		    for(int i = 0; i < num.length; i++){
 		    	value += WEIGHT[i] * num[i];
 		    }
 
-			System.out.println(value);
-
 		    //Find the property and set its value and its profile ...
 		    for(int i = 0; i < project.getProperties().size(); i++){
 		    	Property property = project.getProperties().get(i);
 		    	if(issueSet.getPropertyName().contains(property.getName())){
-		    		property.getMeasure().setValue(value);
+					property.getMeasure().setValue(value);
 		    		property.setProfile(num.clone());
 		    		break;
 		    	}

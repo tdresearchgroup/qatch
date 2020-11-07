@@ -50,7 +50,6 @@ public class CKJMResultsImporter {
 								
 				//Iterate through the classes and parse their metrics
 				for(Element el : classList){
-					System.out.println("importing ckjm....");
 					//Create a Metrics Object
 					Metrics metrics = new Metrics();
 					

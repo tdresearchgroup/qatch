@@ -1,48 +1,106 @@
 <?xml version="1.0"?>
-<project name="Ckjm analysis" default="ckjm" basedir=".">
-	<description>
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="Ckjm analysis" default="ckjm" basedir=".">
+	<property name="ivy.install.version" value="2.5.0" />
+	<condition property="ivy.home" value="${env.IVY_HOME}">
+		<isset property="env.IVY_HOME" />
+	</condition>
+	<property name="ivy.home" value="${user.home}/.ant" />
+	<property name="ivy.jar.dir" value="${ivy.home}/lib" />
+	<property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
 
-	</description>
-	
+	<target name="download-ivy" unless="offline">
+
+		<mkdir dir="${ivy.jar.dir}"/>
+		<!-- download Ivy from web site so that it can be used even without any special installation -->
+		<!--        http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.5.0/ivy-2.3.0.jar-->
+		<!--        <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar"-->
+		<!--             dest="${ivy.jar.file}" usetimestamp="true"/>-->
+		<get src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.5.0/ivy-2.5.0.jar"
+			 dest="${ivy.jar.file}" usetimestamp="true"/>
+	</target>
+
+	<target name="init-ivy" depends="download-ivy">
+		<!-- try to load ivy here from ivy home, in case the user has not already dropped
+                it into ant's lib dir (note that the latter copy will always take precedence).
+                We will not fail as long as local lib dir exists (it may be empty) and
+                ivy is in at least one of ant's lib dir or the local lib dir. -->
+		<path id="ivy.lib.path">
+			<fileset dir="${ivy.jar.dir}" includes="*.jar"/>
+
+		</path>
+		<taskdef resource="org/apache/ivy/ant/antlib.xml"
+				 uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
+	</target>
+
+	<target name="resolve" depends="init-ivy" description="Use ivy to resolve classpaths">
+		<ivy:cachepath pathid="compile.path">
+			<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<dependency org="com.google.guava" name="guava" rev="30.0-jre"/>
+			<dependency org="net.bytebuddy" name="byte-buddy" rev="1.10.18"/>
+			<dependency org="junit" name="junit" rev="4.13.1"/>
+			<dependency org="org.opentest4j" name="opentest4j" rev="1.2.0"/>
+			<dependency org="org.assertj" name="assertj-core" rev="3.18.0"/>
+			<dependency org="org.objenesis" name="objenesis" rev="3.1"/>
+			<dependency org="org.ow2.asm" name="asm-util" rev="9.0" />
+			<dependency org="net.bytebuddy" name="byte-buddy-agent" rev="1.10.18"/>
+			<dependency org="org.slf4j" name="slf4j-api" rev="2.0.0-alpha1"/>
+			<dependency org="com.netflix.archaius" name="archaius-core" rev="0.7.4"/>
+			<dependency org="com.netflix.servo" name="servo-core" rev="0.4.37"/>
+			<dependency org="org.openjdk.jmh" name="jmh-core" rev="1.26"/>
+			<dependency org="io.reactivex" name="rxjava" rev="1.3.8"/>
+
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<!--            <dependency org="commons-io" name="commons-io" rev="2.8.0"/>-->
+
+		</ivy:cachepath>
+	</target>
+
+
 	<!-- Define global properties -->
 	<!-- The src folder is where the ant task should search for .java and .class files for compilation and static analysis respectively -->
 	<!-- The dest folder is where the bin folder should be created in order to store the results -->
 	<!-- If they are not defined by the user, the basedir is the default option -->
 	<property name="src.dir" value="src" />
 	<property name="dest.dir" value="dest" />
-<!--	-->
-	 Set the classpath with all the APIs needed for the compilation
-	<path id="ckjm.classpath">
-		<fileset dir="/Users/guribhangu/ckjm-1.9"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
-			<include name="**/*.jar"/>
-		</fileset>
-	</path>
-	
+	<!--	 Set the classpath with all the APIs needed for the compilation-->
+<!--	<path id="ckjm.classpath">-->
+<!--		<fileset dir="/Users/guribhangu/java_dependencies/"> &lt;!&ndash; Another path is C:\Users\Miltos\Desktop\jarito &ndash;&gt;-->
+<!--			<include name="**/*.jar"/>-->
+<!--		</fileset>-->
+<!--	</path>-->
+
+	<target name="compile" depends="resolve">
+		<delete dir="${src.dir}/bin"/>
+		<mkdir dir="${src.dir}/bin"/>
+		<echo message="GSB compiling.... ${src.dir}"/>
+		<javac failonerror="false" includeantruntime="false" srcdir="${src.dir}/hystrix-core/src" destdir="${src.dir}/bin" classpathref="compile.path"/>
+	</target>
+
 	<!-- Create the desired directories -->
+<!--	<target name="init" depends="compile">-->
 	<target name="init">
 		<tstamp />
-		<!--mkdir dir="${src}\bin"/-->
+		<echo message="GSB initializing...."/>
 		<mkdir dir="${dest.dir}"/> <!-- dest = The path were to create dest folder. default=basedir (where the command is executed) -->
 	</target>
-	
+
 	<!-- The target responsible for the static alalysis of a desired project -->
 	<target name="ckjm" depends="init">
-	
 	  <!-- Configure the ckjm task by setting its classpath -->
 	  <taskdef name="ckjm" classname="gr.spinellis.ckjm.ant.CkjmTask">
 		<classpath>
-		  <pathelement location="ckjm_ext.jar"/>
+		  <pathelement location="ckjm_ext-2.2.jar"/>
 		</classpath>
 	  </taskdef>
-	  
+	  <echo message="${src.dir}"/>
+	  <echo message="${dest.dir}"/>
 	  <!-- Apply ckjm to the compiled files of the desired project -->
-	  <ckjm outputfile="${dest.dir}\ckjmResults.xml" format="xml" classdir="${src.dir}">
-		<include name="**/*.class"/>
-		<!--include name="**/*.jar"/-->
-		<!--exclude name="**/*Test*.class"/-->
+	  <ckjm outputfile="${dest.dir}/ckjmResults.xml" format="xml" classdir="com/google/common/base/internal">
+		  <include name="**/*.class"/>
+<!--		<include name="**/*.jar"/>-->
+<!--		<exclude name="**/*Test*.class"/>-->
 	  </ckjm>
 	</target>
-	
 	<!-- Delete the bin and dest folders that contain the compiled files and the results respectively -->
 	<target name="cleanup">
 		<!--delete dir="${src}\bin"/-->

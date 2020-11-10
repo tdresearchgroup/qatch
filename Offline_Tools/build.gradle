@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs '/Users/guribhangu/javafx-sdk-15'
+    }
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+dependencies {
+    compile 'junit:junit:4.12'
+    compile group: 'com.google.guava', name: 'guava', version: '30.0-jre'
+    compile group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+    compile group: 'org.jdom', name: 'jdom2', version: '2.0.6'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+
+    compile group: 'org.openjfx', name: 'javafx-controls', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-graphics', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-base', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-web', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-swing', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-fxml', version: '16-ea+4'
+    compile group: 'org.openjfx', name: 'javafx-media', version: '16-ea+4'
+    compile group: 'org.json', name: 'json', version: '20200518'
+
+
+    compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
+    compile group: 'org.apache.ant', name: 'ant', version: '1.10.9'
+
+    implementation name: 'javafx'
+}

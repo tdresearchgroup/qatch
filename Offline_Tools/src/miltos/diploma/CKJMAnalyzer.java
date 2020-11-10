@@ -19,7 +19,7 @@ import java.util.Iterator;
 public class CKJMAnalyzer extends AbstractAnalyzer{
 	
 	public static final String TOOL_NAME = "CKJM";
-	
+
 	/**
 	 * This method is used to analyze a single project with the CKJM static analysis 
 	 * tool.
@@ -43,6 +43,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		//Configure the command that should be executed
 		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
+		System.out.println("GSB 1");
 		builder.redirectErrorStream(true);
 		//Execute the command
 		try{

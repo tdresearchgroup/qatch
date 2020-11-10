@@ -1,33 +1,103 @@
 <?xml version="1.0"?>
 <ckjm>
 	<class>
-		<name>com.google.common.base.internal.Finalizer</name>
-		<wmc>7</wmc>
+		<name>MyClass</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>1</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>7</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.6666666666666666</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>2.5</amc>
+		<cc>
+			<method name="public static void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>testing.TestFile</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>9</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.5</amc>
+		<cc>
+			<method name="public static void printStuff()">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>MainStuff.HelloWorld</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>1</noc>
+		<cbo>2</cbo>
+		<rfc>6</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>13</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.3333333333333335</amc>
+		<cc>
+			<method name="public static void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+			<method name="public static void printHelloWorld()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>MainStuff.RankingQualityExporter</name>
+		<wmc>1</wmc>
 		<dit>1</dit>
 		<noc>0</noc>
 		<cbo>0</cbo>
-		<rfc>29</rfc>
-		<lcom>1</lcom>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
 		<ca>0</ca>
 		<ce>0</ce>
-		<npm>3</npm>
-		<lcom3>0.638888888888889</lcom3>
-		<loc>164</loc>
-		<dam>1.0</dam>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>4</loc>
+		<dam>0.0</dam>
 		<moa>0</moa>
 		<mfa>0.0</mfa>
-		<cam>0.36666666666666664</cam>
+		<cam>1.0</cam>
 		<ic>0</ic>
 		<cbm>0</cbm>
-		<amc>21.571428571428573</amc>
+		<amc>3.0</amc>
 		<cc>
-			<method name="private void _init_(Class finalizableReferenceClass, java.lang.ref.ReferenceQueue queue, java.lang.ref.PhantomReference frqReference) [Signature: (Ljava/lang/Class_*_;Ljava/lang/ref/ReferenceQueue_Ljava/lang/Object;_;Ljava/lang/ref/PhantomReference_Ljava/lang/Object;_;)V]">1</method>
-			<method name="private java.lang.reflect.Method getFinalizeReferentMethod()">2</method>
-			<method name="private boolean cleanUp(java.lang.ref.Reference reference) [Signature: (Ljava/lang/ref/Reference_*_;)Z]">4</method>
-			<method name="static void _clinit_()">1</method>
-			<method name="public static java.lang.reflect.Field getInheritableThreadLocalsField()">1</method>
-			<method name="public static void startFinalizer(Class finalizableReferenceClass, java.lang.ref.ReferenceQueue queue, java.lang.ref.PhantomReference frqReference) [Signature: (Ljava/lang/Class_*_;Ljava/lang/ref/ReferenceQueue_Ljava/lang/Object;_;Ljava/lang/ref/PhantomReference_Ljava/lang/Object;_;)V]">3</method>
-			<method name="public void run()">2</method>
+			<method name="public void _init_()">1</method>
 		</cc>
 	</class>
 </ckjm>

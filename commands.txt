@@ -1,0 +1,1 @@
+java -cp ".:/Users/guribhangu/java_dependencies/*:Offline_Tools/build/classes/java/main" miltos.diploma.SingleProjectEvaluator

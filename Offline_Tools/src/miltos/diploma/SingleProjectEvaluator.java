@@ -16,10 +16,10 @@ import java.util.Vector;
 public class SingleProjectEvaluator {
 
     private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
-    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/test";
-    private static String PROJECT_PATH = "/Users/guribhangu/research/source_code/test/Hystrix-1.0.1";
-//    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/test_dir";
-//    private static String PROJECT_PATH = "/Users/guribhangu/test_dir/experiment";
+//    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/test";
+//    private static String PROJECT_PATH = "/Users/guribhangu/research/source_code/test/Hystrix-1.0.1";
+    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/test_dir";
+    private static String PROJECT_PATH = "/Users/guribhangu/test_dir/experiment";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
     private static String CREATED_QUALITY_MODEL_PATH = PROJECT_RESULT_PATH + "/qualityModel.xml";
 

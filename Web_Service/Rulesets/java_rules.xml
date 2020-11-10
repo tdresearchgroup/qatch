@@ -102,7 +102,7 @@
 	<rule>CouplingBetweenObjects</rule>
 	<rule>ExcessiveImports</rule>
 	<rule>LooseCoupling</rule>
-	<rule>LoosePackageCoupling</rule>
+	<rule ref="category/java/design.xml/LoosePackageCoupling" />
 	<rule>LawOfDemeter</rule>
 </ruleset>
 

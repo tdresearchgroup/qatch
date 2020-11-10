@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * This class is responsible for analyzing a single project 
@@ -59,7 +60,6 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 			System.out.println(e.getMessage());
 		}
 	}
-	
 	/**
 	 * This method is responsible for analyzing a single project against a set of 
 	 * properties (i.e. PMD rulesets) by using the PMD Tool.

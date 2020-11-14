@@ -101,7 +101,6 @@ public class BenchmarkAggregator {
 			
 			//For each property do...
 			for(int i = 0; i < project.getProperties().size(); i++){
-				System.out.println("Normalizing... " + project.getProperties().get(i).getName());
 				Property property =  project.getProperties().get(i);
 				property.getMeasure().calculateNormValue();
 				

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="358.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miltos.diploma.gui.CharacteristicEditDialogController">
+   <children>
+      <GridPane layoutX="22.0" layoutY="19.0" prefHeight="270.0" prefWidth="421.0" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="19.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="126.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="296.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Characteristic Name : " />
+            <TextField fx:id="nameField" prefHeight="25.0" prefWidth="308.0" GridPane.columnIndex="1" />
+            <TextField fx:id="standardField"  prefHeight="25.0" prefWidth="178.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="descriptionArea" prefHeight="88.0" prefWidth="296.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Standard : " GridPane.rowIndex="1" />
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Description :" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <Button layoutX="361.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="83.0" text="Cancel" />
+      <Button layoutX="271.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="83.0" text="OK" />
+   </children>
+</AnchorPane>

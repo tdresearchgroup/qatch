@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miltos.diploma.gui.WeightElicitationScreenController">
+   <children>
+      <Text layoutX="90.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight Elicitation">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 4:" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to perform simple AHP or fuzzy AHP for the elicitation of the quality model's weights? Please select one of the possible answers and click &quot;Generate&quot; in order to create the appropriate comparison matricies." wrappingWidth="550.0" />
+      <Button layoutX="390.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleGenerateClicked" prefHeight="25.0" prefWidth="75.0" text="Generate" />
+      <Button fx:id="nextButton" disable="true" layoutX="514.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleNextButtonClicked" prefHeight="25.0" prefWidth="72.0" text="Next" />
+      <HBox layoutX="3.0" layoutY="274.0" prefHeight="25.0" prefWidth="501.0">
+         <children>
+            <Label fx:id="label1" />
+            <Region prefHeight="25.0" prefWidth="17.0" />
+            <Label fx:id="label2" />
+         </children>
+      </HBox>
+      <RadioButton fx:id="radioAHP" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" text="AHP">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioMenu" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioFAHP" layoutX="185.0" layoutY="113.0" mnemonicParsing="false" text="Fuzzy AHP" toggleGroup="$radioMenu" />
+      <TextArea fx:id="textArea" editable="false" layoutX="27.0" layoutY="151.0" prefHeight="104.0" prefWidth="527.0" />
+      <Separator layoutX="-1.0" layoutY="135.0" prefHeight="17.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>

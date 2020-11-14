@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miltos.diploma.gui.LastConfigScreenController">
+   <children>
+      <Text layoutX="90.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analysis Type">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 5:" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to perform a serial or parallel analysis? " wrappingWidth="550.0" />
+      <Button fx:id="nextButton" disable="true" layoutX="514.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleNextButtonClicked" prefHeight="25.0" prefWidth="72.0" text="Next" />
+      <HBox layoutX="3.0" layoutY="274.0" prefHeight="25.0" prefWidth="501.0">
+         <children>
+            <Label fx:id="label1" />
+            <Region prefHeight="25.0" prefWidth="17.0" />
+            <Label fx:id="label2" />
+         </children>
+      </HBox>
+      <RadioButton fx:id="radioSerial" layoutX="74.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#handleChoice" text="Serial">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioMenu" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioParallel" layoutX="74.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#handleChoice" text="Parallel" toggleGroup="$radioMenu" />
+      <Separator layoutY="133.0" prefHeight="17.0" prefWidth="600.0" />
+      <Text fx:id="text" disable="true" layoutX="22.0" layoutY="163.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select the depth of the multithreading process :" wrappingWidth="550.0" />
+      <RadioButton fx:id="radioLow" disable="true" layoutX="74.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#handleDepthChoice" selected="true" text="Low">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioMenu2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioMedium" disable="true" layoutX="74.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#handleDepthChoice" text="Medium" toggleGroup="$radioMenu2" />
+      <RadioButton fx:id="radioHigh" disable="true" layoutX="74.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#handleDepthChoice" text="High" toggleGroup="$radioMenu2" />
+   </children>
+</AnchorPane>

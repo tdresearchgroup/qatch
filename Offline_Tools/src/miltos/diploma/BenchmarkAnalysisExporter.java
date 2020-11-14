@@ -66,8 +66,6 @@ public class BenchmarkAnalysisExporter {
 		//Set the path where the csv file will be stored and the name of the csv file
 		String filename = RInvoker.R_WORK_DIR +  "/properties.xls";
 
-		System.out.println(filename);
-
 		//Create the folder
 		File dir = new File(RInvoker.R_WORK_DIR);
 		dir.mkdir();

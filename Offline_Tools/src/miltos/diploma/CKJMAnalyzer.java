@@ -3,6 +3,7 @@ package miltos.diploma;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -43,7 +44,132 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		//Configure the command that should be executed
 		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
-		System.out.println("GSB 1");
+
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + src.substring(1, src.length()-1) + "/bin");
+
+		// dubbo module paths
+		String[] dubbo_paths = {"/hystrix-contrib/hystrix-junit/src/main/java",
+				"/dubbo-registry/dubbo-registry-multicast/target/classes",
+				"/dubbo-registry/dubbo-registry-redis/target/classes",
+				"/dubbo-registry/dubbo-registry-zookeeper/target/classes",
+				"/dubbo-registry/dubbo-registry-default/target/classes",
+				"/hessian-lite/target/classes",
+				"/dubbo-filter/dubbo-filter-validation/target/classes",
+				"/dubbo-filter/dubbo-filter-cache/target/classes",
+				"/dubbo-demo/dubbo-demo-provider/target/classes",
+				"/dubbo-demo/dubbo-demo-api/target/classes",
+				"/dubbo-demo/dubbo-demo-consumer/target/classes",
+				"/dubbo-rpc/dubbo-rpc-http/target/classes",
+				"/dubbo-rpc/dubbo-rpc-rmi/target/classes",
+				"/dubbo-rpc/dubbo-rpc-hessian/target/classes",
+				"/dubbo-rpc/dubbo-rpc-api/target/classes",
+				"/dubbo-rpc/dubbo-rpc-redis/target/classes",
+				"/dubbo-rpc/dubbo-rpc-default/target/classes",
+				"/dubbo-rpc/dubbo-rpc-webservice/target/classes",
+				"/dubbo-rpc/dubbo-rpc-memcached/target/classes",
+				"/dubbo-rpc/dubbo-rpc-thrift/target/classes",
+				"/dubbo-rpc/dubbo-rpc-injvm/target/classes",
+				"/dubbo-common/target/classes",
+				"/dubbo-admin/target/classes",
+				"/dubbo-test/dubbo-test-examples/target/classes",
+				"/dubbo-test/dubbo-test-benchmark/target/classes",
+				"/dubbo-remoting/dubbo-remoting-grizzly/target/classes",
+				"/dubbo-remoting/dubbo-remoting-netty/target/classes",
+				"/dubbo-remoting/dubbo-remoting-api/target/classes",
+				"/dubbo-remoting/dubbo-remoting-netty4/target/classes",
+				"/dubbo-remoting/dubbo-remoting-mina/target/classes",
+				"/dubbo-remoting/dubbo-remoting-p2p/target/classes",
+				"/dubbo-remoting/dubbo-remoting-zookeeper/target/classes",
+				"/dubbo-remoting/dubbo-remoting-http/target/classes",
+				"/dubbo-cluster/target/classes",
+				"/dubbo-simple/dubbo-registry-simple/target/classes",
+				"/dubbo-simple/dubbo-monitor-simple/target/classes",
+				"/dubbo-monitor/dubbo-monitor-api/target/classes",
+				"/dubbo-monitor/dubbo-monitor-default/target/classes",
+				"/dubbo-config/dubbo-config-api/target/classes",
+				"/dubbo-config/dubbo-config-spring/target/classes",
+				"/dubbo-container/dubbo-container-jetty/target/classes",
+				"/dubbo-container/dubbo-container-logback/target/classes",
+				"/dubbo-container/dubbo-container-api/target/classes",
+				"/dubbo-container/dubbo-container-spring/target/classes",
+				"/dubbo-container/dubbo-container-log4j/target/classes",
+				"/dubbo-plugin/dubbo-qos/target/classes",
+				"/dubbo-registry/dubbo-registry-api/target/classes",
+				"/dubbo-compatible/target/classes",
+				"/dubbo-rpc/dubbo-rpc-rest/target/classes/",
+				"/dubbo-remoting/dubbo-remoting-etcd3/target/classes",
+				"/dubbo-serialization/dubbo-serialization-jdk/target/classes",
+				"/dubbo-serialization/dubbo-serialization-kryo/target/classes/",
+				"/dubbo-configcenter/dubbo-configcenter-api/target/classes",
+				"/dubbo-metadata-report/dubbo-metadata-report-api/target/classes",
+				"/dubbo-rpc/dubbo-rpc-http-invoker/target/classes",
+				"/dubbo-metrics/dubbo-metrics-api/target/classes"};
+
+		for (int i = 0; i < dubbo_paths.length; i++) {
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + dubbo_paths[i]);
+		}
+		
+		// third party dependencies
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/log4j-1.2.17.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/spring-context-support-1.0.11.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/org.springframework.beans-3.1.2.release.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/org.springframework.context.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/nacos-api-1.4.0.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/dubbo-metadata-api-2.7.6.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/gson-2.8.2.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/jedis-3.0.0-m1.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/jedis-3.0.0-m1.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/commons-pool2-2.4.2.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/grizzly-framework-3.0.0-M1.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/javax.servlet.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/mina-core-1.1.0.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/netty-3.2.6.Final.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/netty-3.4.6.final.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/netty-all-4.0.0.final.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/netty-all-4.1.54.Final.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/grpc-all-0.13.2.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/hessian-4.0.6.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/swagger-jaxrs-1.6.2.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/citrus-webx-all-3.1.0.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/kryo-2.21.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/spring-remoting-2.0.8.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/org.springframework.core-3.1.0.release.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/experiement/dubbo-dubbo-2.6.2/hessian-lite/target/classes");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/protobuf-java-2.5.0.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/com.google.protobuf-2.4.0.jar");
+		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+				+ ":" + "/Users/guribhangu/java_dependencies/protobuf-java-3.14.0-rc-3.jar");
+
+
 		builder.redirectErrorStream(true);
 		//Execute the command
 		try{
@@ -84,7 +210,6 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 	 * It has this form in order to look the same with the PMDAnalyzer.
 	 */
 		public void analyze(String src, String dest, PropertySet properties){
-
 		//Iterate through the properties of the desired PropertySet object
 		Iterator<Property> iterator = properties.iterator();
 		Property p = null;

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miltos.diploma.gui.WelcomeScreenController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="135.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="62.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="13.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/images/quality-education%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="441.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="19.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: bold;" text="Model Designer" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="6.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Model Designer. This application is a quick and easy to use wizard that helps you in order to create a Quality Model based on benchmarking technique for the thresholds derivation and multicriteria decision making techniques for the weights elicitation." wrappingWidth="380.0" />
+                  <Text layoutX="14.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to perform?" />
+                  <RadioButton fx:id="benchmarkCal" layoutX="28.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleChoice" text="Benchmark Calibration">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="basicMenu" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="weightElicit" layoutX="28.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleChoice" text="Weight Elicitation" toggleGroup="$basicMenu" />
+                  <RadioButton fx:id="modelDeriv" layoutX="28.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleChoice" text="General Quality Model Derivation" toggleGroup="$basicMenu" />
+                  <Button fx:id="nextButton" disable="true" layoutX="331.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="25.0" prefWidth="72.0" text="Next" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -131,7 +131,7 @@ public class BenchmarkAnalyzer {
 
 			//Call the single project analyzers sequentially
 			if(project.isDirectory()){
-//				pmd.analyze(project.getAbsolutePath(), resultsPath + "/" +project.getName(), properties);
+				pmd.analyze(project.getAbsolutePath(), resultsPath + "/" +project.getName(), properties);
 				ckjm.analyze(project.getAbsolutePath(), resultsPath + "/" +project.getName(), properties);
 			}
 			progress++;	

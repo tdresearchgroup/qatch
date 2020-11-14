@@ -56,8 +56,6 @@ public class CKJMResultsImporter {
 					//Get the list of metrics of the class node
 					List<Element> list = el.getChildren();
 
-					System.out.println(list.size());
-
 					//Store the metrics
 					metrics.setName(list.get(0).getText());
 					metrics.setWmc(Integer.parseInt(list.get(1).getText()));

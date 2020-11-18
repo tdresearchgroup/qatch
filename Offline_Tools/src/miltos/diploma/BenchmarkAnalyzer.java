@@ -134,7 +134,7 @@ public class BenchmarkAnalyzer {
 				pmd.analyze(project.getAbsolutePath(), resultsPath + "/" +project.getName(), properties);
 				ckjm.analyze(project.getAbsolutePath(), resultsPath + "/" +project.getName(), properties);
 			}
-			progress++;	
+			progress++;
 		}
 	}
 	

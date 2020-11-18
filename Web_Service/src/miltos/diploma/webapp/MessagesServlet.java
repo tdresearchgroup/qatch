@@ -70,7 +70,6 @@ public class MessagesServlet extends HttpServlet {
 					while (true) {
 						line = r.readLine();
 						if (line == null) { break; }
-						System.out.println(line);
 						if(line.contains("Exception")){
 						    success = false;
 						}
@@ -142,7 +141,6 @@ public class MessagesServlet extends HttpServlet {
 					while (true) {
 						line = r.readLine();
 						if (line == null) { break; }
-						System.out.println(line);
 						if(line.contains("Exception")){
 						    success = false;
 						}

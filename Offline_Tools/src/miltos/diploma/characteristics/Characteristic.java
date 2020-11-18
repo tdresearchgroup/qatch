@@ -164,6 +164,8 @@ public class Characteristic {
 	public void evaluate(PropertySet properties){
 		double sum = 0;
 		for(int i = 0; i < weights.size(); i++){
+			System.out.println(properties.get(i).getName());
+			System.out.println(weights.get(i));
 			sum += properties.get(i).getEval() * weights.get(i).doubleValue();
 		}
 		this.eval = sum;

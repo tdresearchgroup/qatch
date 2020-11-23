@@ -123,6 +123,30 @@ public class BenchmarkAnalyzer {
 		// Analyze all the projects of the benchmark repository
 		double progress = 0;
 
+//		// Process maximum 50 projects
+//		int project_number = 0;
+//		for (int i = 0; i < projects.length; i++) {
+//			if (i >= 50) {
+//				break;
+//			}
+//			if (projects.length > 50) {
+//				ProgressDemo.updateProgress((progress/50));
+//			}
+//			else {
+//				ProgressDemo.updateProgress(progress/projects.length);
+//			}
+//			if (project_number >= projects.length) {
+//				project_number = 1;
+//			}
+//			File project = projects[project_number];
+//			if (project.isDirectory()){
+//				pmd.analyze(project.getAbsolutePath(), resultsPath + "/" + project.getName(), properties);
+//				ckjm.analyze(project.getAbsolutePath(), resultsPath + "/" + project.getName(), properties);
+//			}
+//			project_number += 2;
+//			progress++;
+//		}
+
 		//For each project in the benchmark repo do...
 		for(File project : projects){
 			//Print the progress to the console

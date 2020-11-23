@@ -1,6 +1,7 @@
 package miltos.diploma;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
@@ -51,13 +52,43 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
 
-		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-				+ ":" + src.substring(1, src.length()-1) + "/bin");
-		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-				+ ":" + src.substring(1, src.length()-1) + "/classes");
-		builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-				+ ":" + "/Users/guribhangu/research/source_code/elasticsearch/nonZero/open_versions" +
-				"/elasticsearch-6.0.0/classes");
+		if (src.toLowerCase().contains("guava")){
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/guava/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":" + src.substring(1, src.length()-1) + "/guava-gwt/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":" + src.substring(1, src.length()-1) + "/guava-testlib/target/classes");
+		}
+
+		if (src.toLowerCase().contains("elasticsearch")){
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/elasticsearch/nonZero/open_versions" +
+					"/elasticsearch-6.0.0/classes");
+		}
+		if (src.toLowerCase().contains("commons-lang")){
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/target/classes");
+		}
+
+		if (src.toLowerCase().contains("hystrix")){
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/classes");
+			File folder = new File(src.substring(1, src.length()-1)+"/classes");
+			File[] listOfFiles = folder.listFiles();
+			for (File file: listOfFiles) {
+				builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+						+ ":" + src.substring(1, src.length()-1) + "/classes/" + file.getName());
+			}
+		}
+
+		if (src.toLowerCase().contains("glide")){
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/classes");
+		}
+
 
 		// dubbo module paths
 		String[] dubbo_paths = {"/hystrix-contrib/hystrix-junit/src/main/java",
@@ -123,19 +154,81 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 //					+ ":" + src.substring(1, src.length()-1) + dubbo_paths[i]);
 //		}
 
-		try (Stream<Path> paths = Files.walk(Paths.get("/Users/guribhangu/java_dependencies"))) {
-			paths.filter(Files::isRegularFile).forEach(this::addToClasspath);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-//		// third party dependencies
+		//		// third party dependencies
 //		if (src.contains("dubbo-dubbo-2.7") || (src.contains("dubbo-dubbo-2.6") && !src.contains("dubbo-dubbo-2.6.0") && !src.contains("dubbo-dubbo-2.6.1")
 //				&& !src.contains("dubbo-dubbo-2.6.2"))) {
 //			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 //					+ ":" + "/Users/guribhangu/research/source_code/dubbo/nonZero/open_versions" +
 //					"/dubbo-dubbo-2.6.2/hessian-lite/target/classes");
 //		}
+
+		String[] retrofit_paths = {
+				"/retrofit/target/classes",
+				"/retrofit-samples/github-client/target/classes",
+				"/retrofit-mock/target/classes",
+				"/retrofit/target/classes",
+				"/samples/target/classes",
+				"/retrofit-adapters/java8/target/classes",
+				"/retrofit-adapters/rxjava2/target/classes",
+				"/retrofit-adapters/guava/target/classes",
+				"/retrofit-adapters/scala/target/classes",
+				"/retrofit-adapters/rxjava/target/classes",
+				"/retrofit-converters/java8/target/classes",
+				"/retrofit-converters/gson/target/classes",
+				"/retrofit-converters/wire/target/classes",
+				"/retrofit-converters/guava/target/classes",
+				"/retrofit-converters/scalars/target/classes",
+				"/retrofit-converters/jaxb/target/classes",
+				"/retrofit-converters/moshi/target/classes",
+				"/retrofit-converters/simplexml/target/classes",
+				"/retrofit-converters/protobuf/target/classes",
+				"/retrofit-converters/jackson/target/classes",
+				"/retrofit/build/classes",
+				"/retrofit/build/classes/java/main"
+		};
+
+		for (int i = 0; i < retrofit_paths.length; i++) {
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + retrofit_paths[i]);
+		}
+
+		String[] rxjava_paths = {"rxjava-android",
+				"rxjava-android-samples-build-wrapper",
+				"rxjava-apache-http",
+				"rxjava-async-util",
+				"rxjava-clojure",
+				"rxjava-computation-expressions",
+				"rxjava-contrib",
+				"rxjava-core",
+				"rxjava-debug",
+				"rxjava-examples",
+				"rxjava-groovy",
+				"rxjava-ios",
+				"rxjava-joins",
+				"rxjava-jruby",
+				"rxjava-kotlin",
+				"rxjava-math",
+				"rxjava-quasar",
+				"rxjava-scala",
+				"rxjava-scalaz",
+				"rxjava-string",
+				"rxjava-swing"};
+
+		if (src.toLowerCase().contains("rjava")) {
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/classes");
+			for (int i = 0; i < rxjava_paths.length; i++) {
+				builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+						+ ":" + src.substring(1, src.length()-1) + "/classes/" + rxjava_paths[i]);
+			}
+		}
+
+
+		try (Stream<Path> paths = Files.walk(Paths.get("/Users/guribhangu/java_dependencies"))) {
+			paths.filter(Files::isRegularFile).forEach(this::addToClasspath);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		builder.redirectErrorStream(true);
 		//Execute the command
@@ -147,6 +240,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				while (true) {
 					line = r.readLine();
 					if (line == null) { break; }
+					System.out.println(line);
 				}
 
 		}catch(IOException e){

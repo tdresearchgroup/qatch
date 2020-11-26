@@ -13,15 +13,15 @@ public class SingleProjectEvaluator {
 
     private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
 //    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/some_stuff";
-    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/rjava";
+    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/netty";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
     private static String BENCHMARKING_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Bookmarking_Quality_Model_Results";
     private static String CREATED_QUALITY_MODEL_PATH = BENCHMARKING_QUALITY_MODEL_PATH + "/qualityModel.xml";
 
     private static void buildQuaityModel(QualityModel baseQualityModel, String benchmarkDirectoryPath) throws CloneNotSupportedException, InterruptedException, IOException {
         // clear existing contents
-        FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
-        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
+//        FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
+//        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
         // get base model information
         PropertySet properties = baseQualityModel.getProperties();
 
@@ -29,10 +29,10 @@ public class SingleProjectEvaluator {
         Tqi tqi = baseQualityModel.getTqi();
 
         // Benchmark analysis
-        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
-        benchmarkAnal.setBenchRepoPath(benchmarkDirectoryPath);
-        benchmarkAnal.setProperties(properties);
-        benchmarkAnal.analyzeBenchmarkRepo();
+//        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
+//        benchmarkAnal.setBenchRepoPath(benchmarkDirectoryPath);
+//        benchmarkAnal.setProperties(properties);
+//        benchmarkAnal.analyzeBenchmarkRepo();
 
         // import benchmark analysis results
         BenchmarkResultImporter benchmarkImporter = new BenchmarkResultImporter();
@@ -95,11 +95,11 @@ public class SingleProjectEvaluator {
         String zero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/close_versions";
 
         // clear contents of directory containing analysis results
-        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
+//        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
         // load base quality model to get property and characteristic names
-        QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
-        // build quality model
-        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
+//        QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
+//        // build quality model
+//        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
 
         String[] project_directories = {nonZero_open, nonZero_close, zero_open, zero_close};
         for (String projectPath : project_directories) {
@@ -112,7 +112,7 @@ public class SingleProjectEvaluator {
             File outputFile = new File(projectPath.replace("source_code", "qatch_data") + "/qatch_data.csv");
             FileWriter fw;
             if (outputFile.exists()) {
-                fw = new FileWriter(outputFile, true);
+                fw = new FileWriter(outputFile, false);
             }
             else {
                 outputFile.createNewFile();

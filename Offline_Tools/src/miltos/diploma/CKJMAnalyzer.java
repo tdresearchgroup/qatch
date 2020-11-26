@@ -221,6 +221,138 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 						+ ":" + src.substring(1, src.length()-1) + "/classes/" + rxjava_paths[i]);
 			}
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/some_stuff/RxJava-rxjava-0.11.0/classes/rxjava-core");
+		}
+
+		if (src.toLowerCase().contains("netty")) {
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/handler/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-http/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/transport/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/example/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/common/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/buffer/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-socks/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/transport-rxtx/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/transport-udt/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/transport-sctp/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/microbench/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-memcache/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/handler-proxy/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/resolver/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-xml/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-stomp/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-haproxy/tarcodec-mqttget/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-http2/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-mqtt/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/resolver-dns/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/testsuite/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-dns/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/codec-mqtt/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length() - 1) + "/transport-native-unix-common-tests");
+
+
+
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.23.Final/common/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/example/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/buffer/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/transport/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-3.5.11.Final/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-3.5.11.Final/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/codec-http/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/resolver-dns/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/codec/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/handler/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.47.Final/microbench/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.1.Final/codec-http2/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/transport/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/codec-http2/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/common/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/common/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.0.CR4/common/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/handler/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/microbench/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.0.18.Final/transport/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/microbench/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.0.CR5/codec-http2/target/classes");
+//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+//					+ ":/Users/guribhangu/research/source_code" +
+//					"/netty/zero/close_versions/netty-netty-4.1.1.Final/microbench/target/classes");
+
 		}
 
 

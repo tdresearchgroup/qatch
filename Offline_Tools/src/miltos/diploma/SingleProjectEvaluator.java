@@ -7,21 +7,28 @@ import miltos.diploma.characteristics.*;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.nio.file.CopyOption;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Vector;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class SingleProjectEvaluator {
 
     private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
 //    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/some_stuff";
-    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/netty";
+    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/elasticsearch";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
     private static String BENCHMARKING_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Bookmarking_Quality_Model_Results";
     private static String CREATED_QUALITY_MODEL_PATH = BENCHMARKING_QUALITY_MODEL_PATH + "/qualityModel.xml";
 
     private static void buildQuaityModel(QualityModel baseQualityModel, String benchmarkDirectoryPath) throws CloneNotSupportedException, InterruptedException, IOException {
         // clear existing contents
-//        FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
-//        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
+        FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
+        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
         // get base model information
         PropertySet properties = baseQualityModel.getProperties();
 
@@ -29,10 +36,10 @@ public class SingleProjectEvaluator {
         Tqi tqi = baseQualityModel.getTqi();
 
         // Benchmark analysis
-//        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
-//        benchmarkAnal.setBenchRepoPath(benchmarkDirectoryPath);
-//        benchmarkAnal.setProperties(properties);
-//        benchmarkAnal.analyzeBenchmarkRepo();
+        BenchmarkAnalyzer benchmarkAnal = new BenchmarkAnalyzer();
+        benchmarkAnal.setBenchRepoPath(benchmarkDirectoryPath);
+        benchmarkAnal.setProperties(properties);
+        benchmarkAnal.analyzeBenchmarkRepo();
 
         // import benchmark analysis results
         BenchmarkResultImporter benchmarkImporter = new BenchmarkResultImporter();
@@ -83,8 +90,14 @@ public class SingleProjectEvaluator {
         new File(BENCHMARKING_QUALITY_MODEL_PATH).mkdir();
         QualityModelExporter qmExp = new QualityModelExporter();
         qmExp.exportQualityModelToXML(baseQualityModel, new File(CREATED_QUALITY_MODEL_PATH).getAbsolutePath());
-//        // import and build quality model object
-//        return new QualityModelLoader(CREATED_QUALITY_MODEL_PATH).importQualityModel();
+
+        // move file resulted from benchmarking process to results directory for re-use during project evaluation process
+        File benchmarkingRepo = new File("/Users/guribhangu/development/research/qatch/Results/Analysis/BenchmarkResults");
+        File[] resultFiles = benchmarkingRepo.listFiles();
+        for (File resultFile: resultFiles) {
+            resultFile.renameTo(new File("/Users/guribhangu/development/research/qatch/Results/"+resultFile.getName()));
+        }
+        new File("/Users/guribhangu/development/research/qatch/Results/Analysis/BenchmarkResults").deleteOnExit();
     }
 
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
@@ -94,18 +107,17 @@ public class SingleProjectEvaluator {
         String zero_open = BENCHMARK_PROJECT_ROOT_PATH + "/zero/open_versions";
         String zero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/close_versions";
 
-        // clear contents of directory containing analysis results
+//        // clear contents of directory containing analysis results
 //        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
-        // load base quality model to get property and characteristic names
+//        // load base quality model to get property and characteristic names
 //        QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
 //        // build quality model
 //        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
 
-        String[] project_directories = {nonZero_open, nonZero_close, zero_open, zero_close};
+//        String[] project_directories = {nonZero_open, nonZero_close, zero_open, zero_close};
+        String[] project_directories = {nonZero_close};
+//        String[] project_directories = {BENCHMARK_PROJECT_ROOT_PATH};
         for (String projectPath : project_directories) {
-
-            // clear contents of directory containing results for individual projects
-            FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
             // load quality model
             QualityModel qualityModel = new QualityModelLoader(CREATED_QUALITY_MODEL_PATH).importQualityModel();
             // setup final output file path
@@ -135,77 +147,84 @@ public class SingleProjectEvaluator {
                 project.setPath(versionPath);
                 project.setName(versionDir.getName());
 
-                PMDAnalyzer pmdAnalyzer = new PMDAnalyzer();
-                CKJMAnalyzer ckjmAnalyzer = new CKJMAnalyzer();
+                // check if the project has already been analyzed
+               boolean projectAlreadyAnalyzed = Arrays.stream(new File(PROJECT_RESULT_PATH).listFiles()).map(File::getName)
+                       .filter(dirName -> dirName.equals(project.getName())).collect(Collectors.toList()).isEmpty();
+               if (!projectAlreadyAnalyzed){
+                   PMDAnalyzer pmdAnalyzer = new PMDAnalyzer();
+                   CKJMAnalyzer ckjmAnalyzer = new CKJMAnalyzer();
+                   // Analyze projects
+                   pmdAnalyzer.analyze(versionPath, PROJECT_RESULT_PATH + "/" + project.getName(),
+                           qualityModel.getProperties());
+                   ckjmAnalyzer.analyze(versionPath, PROJECT_RESULT_PATH + "/" + project.getName(),
+                           qualityModel.getProperties());
+               }
 
-                // Analyze projects
-                pmdAnalyzer.analyze(versionPath, PROJECT_RESULT_PATH + "/" + project.getName(),
-                        qualityModel.getProperties());
-                ckjmAnalyzer.analyze(versionPath, PROJECT_RESULT_PATH + "/" + project.getName(),
-                        qualityModel.getProperties());
+               // check if result files for the project has already been evaluated
+                boolean evalFileExists = !Arrays.stream(new File(PROJECT_RESULT_PATH).listFiles()).map(File::getName)
+                        .filter(fileName -> fileName.equals(project.getName()+"_evalResults.json")).collect(Collectors.toList()).isEmpty();
+               if (!evalFileExists) {
+                   File resultsDir = new File(PROJECT_RESULT_PATH + "/" + project.getName());
+                   File[] results = resultsDir.listFiles();
+                   // import pmd and ckjm analysis results
+                   PMDResultsImporter pmdImporter = new PMDResultsImporter();
+                   CKJMResultsImporter ckjmImporter = new CKJMResultsImporter();
 
-                // import pmd and ckjm analysis results
-                PMDResultsImporter pmdImporter = new PMDResultsImporter();
-                CKJMResultsImporter ckjmImporter = new CKJMResultsImporter();
+                   for (File resultFile : results) {
 
-                File resultsDir = new File(PROJECT_RESULT_PATH + "/" + project.getName());
-                File[] results = resultsDir.listFiles();
+                       //Check if it is a ckjm result file
+                       if (!resultFile.getName().contains("ckjm")) {
 
-                for (File resultFile : results) {
+                           //Parse the issues and add them to the IssueSet Vector of the Project object
+                           project.addIssueSet(pmdImporter.parseIssues(resultFile.getAbsolutePath()));
 
-                    //Check if it is a ckjm result file
-                    if (!resultFile.getName().contains("ckjm")) {
+                       } else {
 
-                        //Parse the issues and add them to the IssueSet Vector of the Project object
-                        project.addIssueSet(pmdImporter.parseIssues(resultFile.getAbsolutePath()));
+                           //Parse the metrics of the project and add them to the MetricSet field of the Project object
+                           project.setMetrics(ckjmImporter.parseMetrics(resultFile.getAbsolutePath()));
+                       }
+                   }
 
-                    } else {
+                   // Aggregate results
+                   for (int i = 0; i < qualityModel.getProperties().size(); i++) {
+                       //Clone the property and add it to the PropertySet of the current project
+                       Property p = (Property) qualityModel.getProperties().get(i).clone();
+                       project.addProperty(p);
+                   }
 
-                        //Parse the metrics of the project and add them to the MetricSet field of the Project object
-                        project.setMetrics(ckjmImporter.parseMetrics(resultFile.getAbsolutePath()));
-                    }
-                }
+                   PMDAggregator pmd = new PMDAggregator();
+                   CKJMAggregator ckjm = new CKJMAggregator();
 
-                // Aggregate results
-                for (int i = 0; i < qualityModel.getProperties().size(); i++) {
-                    //Clone the property and add it to the PropertySet of the current project
-                    Property p = (Property) qualityModel.getProperties().get(i).clone();
-                    project.addProperty(p);
-                }
+                   pmd.aggregate(project);
+                   ckjm.aggregate(project);
 
-                PMDAggregator pmd = new PMDAggregator();
-                CKJMAggregator ckjm = new CKJMAggregator();
+                   for (int i = 0; i < project.getProperties().size(); i++) {
+                       Property property = project.getProperties().get(i);
+                       property.getMeasure().calculateNormValue();
+                   }
 
-                pmd.aggregate(project);
-                ckjm.aggregate(project);
+                   // Evaluate benchmark projects against their thresholds
+                   ProjectEvaluator evaluator = new ProjectEvaluator();
+                   evaluator.evaluateProjectProperties(project);
 
-                for (int i = 0; i < project.getProperties().size(); i++) {
-                    Property property = project.getProperties().get(i);
-                    property.getMeasure().calculateNormValue();
-                }
+                   // Characteristic evaluation
+                   for (int i = 0; i < qualityModel.getCharacteristics().size(); i++) {
+                       //Clone the characteristic and add it to the CharacteristicSet of the current project
+                       Characteristic c = (Characteristic) qualityModel.getCharacteristics().get(i).clone();
+                       project.getCharacteristics().addCharacteristic(c);
+                   }
 
-                // Evaluate benchmark projects against their thresholds
-                ProjectEvaluator evaluator = new ProjectEvaluator();
-                evaluator.evaluateProjectProperties(project);
-
-                // Characteristic evaluation
-                for (int i = 0; i < qualityModel.getCharacteristics().size(); i++) {
-                    //Clone the characteristic and add it to the CharacteristicSet of the current project
-                    Characteristic c = (Characteristic) qualityModel.getCharacteristics().get(i).clone();
-                    project.getCharacteristics().addCharacteristic(c);
-                }
-
-                ProjectCharacteristicsEvaluator charEvaluator = new ProjectCharacteristicsEvaluator();
-                charEvaluator.evaluateProjectCharacteristics(project);
+                   ProjectCharacteristicsEvaluator charEvaluator = new ProjectCharacteristicsEvaluator();
+                   charEvaluator.evaluateProjectCharacteristics(project);
 
 
-                // TQI calculation
-                project.setTqi((Tqi) qualityModel.getTqi().clone());
-                project.calculateTQI();
+                   // TQI calculation
+                   project.setTqi((Tqi) qualityModel.getTqi().clone());
+                   project.calculateTQI();
 
-                //export result
-                EvaluationResultsExporter.exportProjectToJson(project, new File(PROJECT_RESULT_PATH + "/" + project.getName() + "_evalResults.json").getAbsolutePath());
-
+                   //export result
+                   EvaluationResultsExporter.exportProjectToJson(project, new File(PROJECT_RESULT_PATH + "/" + project.getName() + "_evalResults.json").getAbsolutePath());
+               }
 
                 JsonParser parser = new JsonParser();
                 JsonObject jsonObject = (JsonObject) parser.parse(new FileReader(PROJECT_RESULT_PATH + "/" + project.getName() + "_evalResults.json"));

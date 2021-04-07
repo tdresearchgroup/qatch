@@ -98,7 +98,6 @@
 	<target name="compile" depends="resolve">
 		<delete dir="${src.dir}/bin"/>
 		<mkdir dir="${src.dir}/bin"/>
-		<echo message="GSB compiling.... ${src.dir}"/>
 		<javac failonerror="false" debug="on" includeantruntime="false" srcdir="${src.dir}" destdir="${src.dir}/bin" classpathref="compile.path"/>
 	</target>
 
@@ -109,8 +108,6 @@
 		<mkdir dir="${dest.dir}"/> <!-- dest = The path were to create dest folder. default=basedir (where the command is executed) -->
 	</target>
 
-
-
 	<!-- The target responsible for the static alalysis of a desired project -->
 	<target name="ckjm" depends="init">
 	  <!-- Configure the ckjm task by setting its classpath -->
@@ -119,17 +116,11 @@
 		  <pathelement location="ckjm_ext.jar"/>
 		</classpath>
 	  </taskdef>
-	  <taskdef resource="net/sf/antcontrib/cpptasks/antlib.xml">
-	    <classpath>
-		  <pathelement location="/Users/guribhangu/development/research/qatch/Offline_Tools/cpptasks.jar"/>
-	    </classpath>
-	  </taskdef>
 	  <echo message="${src.dir}"/>
-	  <echo message="${dest.dir}"/>
 	  <!-- Apply ckjm to the compiled files of the desired project -->
 	  <ckjm outputfile="${dest.dir}/ckjmResults.xml" format="xml" classdir="${src.dir}">
 		  <include name="**/*.class"/>
-		  <exclude name="**Test**"/>
+		  <exclude name="**/*Test*.class"/>
 <!--		<include name="**/*.jar"/>-->
 	  </ckjm>
 	</target>

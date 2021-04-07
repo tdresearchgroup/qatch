@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 public class SingleProjectEvaluator {
 
     private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
-//    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/some_stuff";
-    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/elasticsearch";
+//    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/experiement";
+    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/retrofit";
     private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
     private static String BENCHMARKING_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Bookmarking_Quality_Model_Results";
     private static String CREATED_QUALITY_MODEL_PATH = BENCHMARKING_QUALITY_MODEL_PATH + "/qualityModel.xml";
@@ -29,6 +29,8 @@ public class SingleProjectEvaluator {
         // clear existing contents
         FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
         FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
+        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/Results"));
+
         // get base model information
         PropertySet properties = baseQualityModel.getProperties();
 
@@ -97,25 +99,22 @@ public class SingleProjectEvaluator {
         for (File resultFile: resultFiles) {
             resultFile.renameTo(new File("/Users/guribhangu/development/research/qatch/Results/"+resultFile.getName()));
         }
-        new File("/Users/guribhangu/development/research/qatch/Results/Analysis/BenchmarkResults").deleteOnExit();
+        new File("/Users/guribhangu/development/research/qatch/Results/Analysis").deleteOnExit();
     }
 
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
 
-        String nonZero_open = BENCHMARK_PROJECT_ROOT_PATH + "/nonZero/open_versions";
-        String nonZero_close = BENCHMARK_PROJECT_ROOT_PATH + "/nonZero/close_versions";
-        String zero_open = BENCHMARK_PROJECT_ROOT_PATH + "/zero/open_versions";
-        String zero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/close_versions";
+        String nonZero_open = BENCHMARK_PROJECT_ROOT_PATH + "/nonZero/in_between_versions";
+        String nonZero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/in_between_versions";
+//        String zero_open = BENCHMARK_PROJECT_ROOT_PATH + "/zero/open_versions";
+//        String zero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/close_versions";
 
-//        // clear contents of directory containing analysis results
-//        FileUtils.deleteDirectory(new File(PROJECT_RESULT_PATH));
-//        // load base quality model to get property and characteristic names
-//        QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
-//        // build quality model
-//        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
+        // load base quality model to get property and characteristic names
+        QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
+        // build quality model
+        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
 
-//        String[] project_directories = {nonZero_open, nonZero_close, zero_open, zero_close};
-        String[] project_directories = {nonZero_close};
+        String[] project_directories = {nonZero_open, nonZero_close};
 //        String[] project_directories = {BENCHMARK_PROJECT_ROOT_PATH};
         for (String projectPath : project_directories) {
             // load quality model
@@ -127,6 +126,7 @@ public class SingleProjectEvaluator {
                 fw = new FileWriter(outputFile, false);
             }
             else {
+                System.out.println(projectPath.replace("source_code", "qatch_data") + "/qatch_data.csv");
                 outputFile.createNewFile();
                 fw = new FileWriter(outputFile);
             }
@@ -148,7 +148,7 @@ public class SingleProjectEvaluator {
                 project.setName(versionDir.getName());
 
                 // check if the project has already been analyzed
-               boolean projectAlreadyAnalyzed = Arrays.stream(new File(PROJECT_RESULT_PATH).listFiles()).map(File::getName)
+               boolean projectAlreadyAnalyzed = !Arrays.stream(new File(PROJECT_RESULT_PATH).listFiles()).map(File::getName)
                        .filter(dirName -> dirName.equals(project.getName())).collect(Collectors.toList()).isEmpty();
                if (!projectAlreadyAnalyzed){
                    PMDAnalyzer pmdAnalyzer = new PMDAnalyzer();
@@ -160,7 +160,7 @@ public class SingleProjectEvaluator {
                            qualityModel.getProperties());
                }
 
-               // check if result files for the project has already been evaluated
+               // check if result files for the project have already been evaluated
                 boolean evalFileExists = !Arrays.stream(new File(PROJECT_RESULT_PATH).listFiles()).map(File::getName)
                         .filter(fileName -> fileName.equals(project.getName()+"_evalResults.json")).collect(Collectors.toList()).isEmpty();
                if (!evalFileExists) {

@@ -46,11 +46,6 @@ public class BenchmarkResultImporter {
 		double progress = 0;
 		int i = 0;
 		for(File projectDir : projectDirs){
-			System.out.println("GSB yoman");
-//			if ( i++ % 2 != 0 ) {
-//				continue;
-//			}
-			System.out.println("GSB " + ++i);
 			//Print the progress to the console
 			//TODO: Remove this print
 			System.out.print("* Progress : " + (int) (progress/projectDirs.length * 100) + " %\r");

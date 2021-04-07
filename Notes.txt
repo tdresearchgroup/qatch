@@ -5,3 +5,12 @@
     - retrofit: 0.1, 0.5
     - rxjava: 0.1.2, 0.13.5, 1.2.8, 2.0.0-dp0, 2.1.5-RC1, 2.1.5-RC2
     - selenium: 2.29.0a, atoms-base-20170918, atoms-20181002, atoms-base-20181002, 3.5.0
+    - Mockito 1.10.28-dev, 2.24.7, 1.10.43-dev, 2.8.4, 1.10.1-dev, 1.10.42-dev, 2.24.8, 2.8.3
+    - springframework 3.0.0.M1, 3.0.0.M2, 3.0.1.RELEASE-A, 3.2.0.RC2-A, 5.1.14.RELEASE, 5.2.7.RELEASE
+    - jenkins 1.385, 1.565.1-rc1, hudson-1_388, hudson-1_389, hudson-1_394, 1.409.1-rc1, 1.409.2-rc, 1.424.1-rc2,
+                1.424.3-rc2, 1.447.1-rc1, 1.580.3-rc1, 1.625.1-rc1, 1.625.1-rc2, 1.642.2-rc1, 1.480.3-rc2, 1.565.3-rc1,
+                1.580.1-rc1, hudson-1_387, hudson-1_395, 1.424.2-rc1, 1.424.2-rc2, 1.466.1-rc1, 1.480.1-RC1,
+                1.554.3-rc1, 1.565.2-rc1, 1.596.2-rc1, 1.625.3-rc1, 1.642.1-rc1, unified-annotation-indexer,
+                untagged-e3a154d27f5bd99802eb, untagged-refs/heads/master, 1.480.3-rc4, hudson-1_392, hudson-1_393,
+                1.424.1-rc3, 1.424.2-rc3, 1.509.1-rc2, 1.509.2-rc1, 1.509.3-rc1, 1.532.3-RC1, 1.609.2-rc1,
+                hudson-1_390, 1_402, untagged-010cd0d0ed069df04d00

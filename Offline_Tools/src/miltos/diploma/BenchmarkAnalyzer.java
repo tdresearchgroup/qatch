@@ -6,6 +6,9 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.text.Text;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * This class is responsible for analyzing all the projects that are stored in the
  * desired folder (e.g. Benchmark Repository) against:
@@ -128,6 +131,10 @@ public class BenchmarkAnalyzer {
 			//Print the progress to the console
 			//TODO: Remove this print
 			ProgressDemo.updateProgress((progress/projects.length));
+
+//			boolean projectAlreadyAnalyzed = !Arrays.stream(new File("/Users/guribhangu/development/research" +
+//					"/qatch/Results/Analysis/BenchmarkResults").listFiles()).map(File::getName)
+//					.filter(dirName -> dirName.equals(project.getName())).collect(Collectors.toList()).isEmpty();
 
 			//Call the single project analyzers sequentially
 			if(project.isDirectory()){

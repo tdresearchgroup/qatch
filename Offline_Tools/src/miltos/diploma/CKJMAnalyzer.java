@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -55,10 +56,10 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		if (src.toLowerCase().contains("guava")){
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length()-1) + "/guava/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":" + src.substring(1, src.length()-1) + "/guava-gwt/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":" + src.substring(1, src.length()-1) + "/guava-testlib/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/guava-gwt/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + src.substring(1, src.length()-1) + "/guava-testlib/target/classes");
 		}
 
 		if (src.toLowerCase().contains("elasticsearch")){
@@ -78,9 +79,11 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 					+ ":" + src.substring(1, src.length()-1) + "/classes");
 			File folder = new File(src.substring(1, src.length()-1)+"/classes");
 			File[] listOfFiles = folder.listFiles();
-			for (File file: listOfFiles) {
-				builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-						+ ":" + src.substring(1, src.length()-1) + "/classes/" + file.getName());
+			if (listOfFiles != null) {
+				for (File file: listOfFiles) {
+					builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+							+ ":" + src.substring(1, src.length()-1) + "/classes/" + file.getName());
+				}
 			}
 		}
 
@@ -187,9 +190,11 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				"/retrofit/build/classes/java/main"
 		};
 
-		for (int i = 0; i < retrofit_paths.length; i++) {
-			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + src.substring(1, src.length()-1) + retrofit_paths[i]);
+		if (src.toLowerCase().contains("retrofit")) {
+			for (int i = 0; i < retrofit_paths.length; i++) {
+				builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+						+ ":" + src.substring(1, src.length()-1) + retrofit_paths[i]);
+			}
 		}
 
 		String[] rxjava_paths = {"rxjava-android",
@@ -228,6 +233,31 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		if (src.toLowerCase().contains("netty")) {
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/nonZero/" +
+					"in_between_versions/netty-netty-4.1.18.Final/codec-haproxy/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-redis/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-smtp/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-unix-common/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-epoll/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
@@ -280,79 +310,43 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 					+ ":" + src.substring(1, src.length() - 1) + "/codec-mqtt/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/transport-native-unix-common-tests");
+		}
 
+		if (src.toLowerCase().contains("selenium") || src.toLowerCase().contains("springboot")
+				|| src.toLowerCase().contains("mockito")) {
+			try (Stream<Path> paths = Files.walk(Paths.get(src.substring(1, src.length() - 1) + "/classes"))) {
+				paths.filter(Files::isDirectory).forEach(this::addToClasspath);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
+		if (src.toLowerCase().contains("spring-framework")) {
+			try (Stream<Path> paths = Files.walk(Paths.get(src.substring(1, src.length() - 1) + "/classes"))) {
+				paths.filter(Files::isDirectory).forEach(this::addToClasspath);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/springframework/zero/close_versions/" +
+					"spring-framework-4.0.0.RC1/classes/spring-websocket");
+		}
 
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.23.Final/common/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/example/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/buffer/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/transport/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-3.5.11.Final/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-3.5.11.Final/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/codec-http/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/resolver-dns/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.0.CR3/codec/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/handler/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.47.Final/microbench/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.1.Final/codec-http2/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.21.Final/transport/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/codec-http2/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/common/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/common/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.0.CR4/common/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.38.Final/handler/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/microbench/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.0.18.Final/transport/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.7.Final/microbench/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.0.CR5/codec-http2/target/classes");
-//			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":/Users/guribhangu/research/source_code" +
-//					"/netty/zero/close_versions/netty-netty-4.1.1.Final/microbench/target/classes");
-
+		if (src.toLowerCase().contains("jenkins")) {
+			List<File> class_dirs = getDirs(new File(src.substring(1, src.length() - 1) + "/classes"), 0);
+			for (File file: class_dirs) {
+				addToClasspath(Paths.get(file.getAbsolutePath()));
+//			}
+//			try (Stream<Path> paths = Files.walk(Paths.get(src.substring(1, src.length() - 1) + "/classes"))) {
+//				paths.filter(Files::isDirectory).forEach(this::addToClasspath);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+			}
+			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
+					+ ":" + "/Users/guribhangu/research/source_code/jenkins/nonZero/" +
+					"close_versions/jenkins-jenkins-2.50/classes/remoting"
+					+ ":" + "/Users/guribhangu/research/source_code/jenkins/nonZero/" +
+					"close_versions/jenkins-jenkins-2.61/classes/remoting");
 		}
 
 
@@ -361,13 +355,23 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+//		try (Stream<Path> paths = Files.walk(Paths.get("/Users/guribhangu/java_dependencies_2"))) {
+//			paths.filter(Files::isRegularFile).forEach(this::addToClasspath);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		try (Stream<Path> paths = Files.walk(Paths.get("/Users/guribhangu/java_dependencies_springboot"))) {
+//			paths.filter(Files::isRegularFile).forEach(this::addToClasspath);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 
 		builder.redirectErrorStream(true);
 		//Execute the command
 		try{
 				Process p = builder.start();
 				BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-				//Print the console output for debugging purposes
+				// Print the console output for debugging purposes
 				String line;
 				while (true) {
 					line = r.readLine();
@@ -378,6 +382,19 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		}catch(IOException e){
 			System.out.println(e.getMessage());
 		}
+	}
+
+	static public List<File> getDirs(File parent, int level){
+		List<File> dirs = new ArrayList<File>();
+		File[] files = parent.listFiles();
+		if (files == null) return dirs; // empty dir
+		for (File f : files){
+			if (f.isDirectory()) {
+				if (level == 0) dirs.add(f);
+				else if (level > 0) dirs.addAll(getDirs(f,level-1));
+			}
+		}
+		return dirs;
 	}
 
 	private void addToClasspath(Path filePath) {

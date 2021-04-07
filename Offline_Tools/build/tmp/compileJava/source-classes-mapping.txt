@@ -128,14 +128,14 @@ miltos/diploma/characteristics/BenchmarkTqiEvaluator.java
  miltos.diploma.characteristics.BenchmarkTqiEvaluator
 miltos/diploma/Filename.java
  miltos.diploma.Filename
-miltos/diploma/Project.java
- miltos.diploma.Project
- miltos.diploma.Project$1
+miltos/diploma/SingleProjectEvaluator.java
+ miltos.diploma.SingleProjectEvaluator
 miltos/diploma/characteristics/TestSingleProjectEvaluator.java
  miltos.diploma.characteristics.TestSingleProjectEvaluator
 miltos/diploma/Measure.java
  miltos.diploma.Measure
 miltos/diploma/PMDAggregator.java
  miltos.diploma.PMDAggregator
-miltos/diploma/SingleProjectEvaluator.java
- miltos.diploma.SingleProjectEvaluator
+miltos/diploma/Project.java
+ miltos.diploma.Project
+ miltos.diploma.Project$1

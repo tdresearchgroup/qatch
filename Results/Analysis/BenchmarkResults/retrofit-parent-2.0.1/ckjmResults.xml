@@ -1,0 +1,5408 @@
+<?xml version="1.0"?>
+<ckjm>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory$1</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>5</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>0.5</lcom3>
+		<loc>30</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.0</amc>
+		<cc>
+			<method name="public retrofit2.Call adapt(retrofit2.Call call)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+			<method name="void _init_(retrofit2.ExecutorCallAdapterFactory this$0, java.lang.reflect.Type)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.OkHttpCall$1</name>
+		<wmc>5</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>10</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>7</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>64</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.325</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.4</amc>
+		<cc>
+			<method name="public void onResponse(okhttp3.Call call, okhttp3.Response rawResponse)">1</method>
+			<method name="private void callSuccess(retrofit2.Response response)">1</method>
+			<method name="public void onFailure(okhttp3.Call call, java.io.IOException e)">1</method>
+			<method name="void _init_(retrofit2.OkHttpCall this$0, retrofit2.Callback)">1</method>
+			<method name="private void callFailure(Throwable e)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DynamicBaseUrl$Pop</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call robots()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.PartMap</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String encoding()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.CompletableHelper</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>10</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="static retrofit2.CallAdapter createCallAdapter(rx.Scheduler scheduler)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.DefaultCallAdapterFactory$1</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>4</rfc>
+		<lcom>4</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>3</npm>
+		<lcom3>0.8333333333333334</lcom3>
+		<loc>24</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.5</amc>
+		<cc>
+			<method name="void _init_(retrofit2.DefaultCallAdapterFactory this$0, java.lang.reflect.Type)">1</method>
+			<method name="public retrofit2.Call adapt(retrofit2.Call call)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.Calls$2</name>
+		<wmc>9</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>13</rfc>
+		<lcom>30</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>8</npm>
+		<lcom3>0.75</lcom3>
+		<loc>42</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4074074074074074</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.5555555555555554</amc>
+		<cc>
+			<method name="public retrofit2.Response execute()">1</method>
+			<method name="public boolean isExecuted()">1</method>
+			<method name="public retrofit2.Call clone()">1</method>
+			<method name="public void cancel()">1</method>
+			<method name="public void enqueue(retrofit2.Callback callback)">1</method>
+			<method name="void _init_(java.io.IOException)">1</method>
+			<method name="public okhttp3.Request request()">1</method>
+			<method name="public boolean isCanceled()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>26</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>13</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>82</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>40.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.Calls$1</name>
+		<wmc>9</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>12</rfc>
+		<lcom>24</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>8</npm>
+		<lcom3>0.625</lcom3>
+		<loc>40</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4074074074074074</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.3333333333333335</amc>
+		<cc>
+			<method name="public retrofit2.Response execute()">1</method>
+			<method name="public boolean isExecuted()">1</method>
+			<method name="void _init_(retrofit2.Response)">1</method>
+			<method name="public retrofit2.Call clone()">1</method>
+			<method name="public void cancel()">1</method>
+			<method name="public void enqueue(retrofit2.Callback callback)">1</method>
+			<method name="public okhttp3.Request request()">1</method>
+			<method name="public boolean isCanceled()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters$Service</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call example(com.example.retrofit.JsonQueryParameters$Filter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.SimpleMockService</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>11</cbo>
+		<rfc>28</rfc>
+		<lcom>3</lcom>
+		<ca>0</ca>
+		<ce>11</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>120</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>39.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+			<method name="private static void printContributors(com.example.retrofit.SimpleService$GitHub gitHub, String owner, String repo)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$ChunkingConverterFactory$1$1</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>23</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.9</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.0</amc>
+		<cc>
+			<method name="void _init_(com.example.retrofit.ChunkingConverter$ChunkingConverterFactory$1 this$1, okhttp3.RequestBody)">1</method>
+			<method name="public okhttp3.MediaType contentType()">1</method>
+			<method name="public void writeTo(okio.BufferedSink sink)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$ByteResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="public Byte convert(okhttp3.ResponseBody value)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform$IOS</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>15</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="retrofit2.CallAdapter$Factory defaultCallAdapterFactory(java.util.concurrent.Executor callbackExecutor)">1</method>
+			<method name="public java.util.concurrent.Executor defaultCallbackExecutor()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$RelativeUrl</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>9</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.5</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter$1</name>
+		<wmc>4</wmc>
+		<dit>3</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>10</rfc>
+		<lcom>4</lcom>
+		<ca>2</ca>
+		<ce>5</ce>
+		<npm>0</npm>
+		<lcom3>0.8333333333333334</lcom3>
+		<loc>34</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.9302325581395349</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="protected void interruptTask()">1</method>
+			<method name="void _init_(retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter this$0, retrofit2.Call)">1</method>
+			<method name="static synthetic boolean access$300(retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter$1 x0, Object x1)">1</method>
+			<method name="static synthetic boolean access$400(retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter$1 x0, Throwable x1)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.gson.GsonResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>8</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>39</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4666666666666667</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.333333333333334</amc>
+		<cc>
+			<method name="public Object convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(com.google.gson.Gson gson, com.google.gson.TypeAdapter adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.SimpleService</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>20</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>8</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>58</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>27.5</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">2</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.RequestBuilder</name>
+		<wmc>13</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>29</cbo>
+		<rfc>59</rfc>
+		<lcom>36</lcom>
+		<ca>15</ca>
+		<ce>14</ce>
+		<npm>0</npm>
+		<lcom3>0.8611111111111112</lcom3>
+		<loc>530</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.25</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>38.84615384615385</amc>
+		<cc>
+			<method name="private static String canonicalizeForPath(String input, boolean alreadyEncoded)">8</method>
+			<method name="void addPathParam(String name, String value, boolean encoded)">2</method>
+			<method name="void setBody(okhttp3.RequestBody body)">1</method>
+			<method name="void setRelativeUrl(Object relativeUrl)">2</method>
+			<method name="void addPart(okhttp3.Headers headers, okhttp3.RequestBody body)">1</method>
+			<method name="void _init_(String method, okhttp3.HttpUrl baseUrl, String relativeUrl, okhttp3.Headers headers, okhttp3.MediaType contentType, boolean hasBody, boolean isFormEncoded, boolean isMultipart)">4</method>
+			<method name="void addHeader(String name, String value)">2</method>
+			<method name="private static void canonicalizeForPath(okio.Buffer out, String input, int pos, int limit, boolean alreadyEncoded)">15</method>
+			<method name="okhttp3.Request build()">9</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="void addFormField(String name, String value, boolean encoded)">2</method>
+			<method name="void addQueryParam(String name, String value, boolean encoded)">4</method>
+			<method name="void addPart(okhttp3.MultipartBody$Part part)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$RawPart</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>0</npm>
+		<lcom3>1.0</lcom3>
+		<loc>25</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.6</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.0</amc>
+		<cc>
+			<method name="volatile synthetic void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="private void _init_()">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, okhttp3.MultipartBody$Part value)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.OPTIONS</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.moshi.MoshiConverterFactory</name>
+		<wmc>6</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>14</rfc>
+		<lcom>3</lcom>
+		<ca>0</ca>
+		<ce>8</ce>
+		<npm>5</npm>
+		<lcom3>0.2</lcom3>
+		<loc>75</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.375</mfa>
+		<cam>0.3611111111111111</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.166666666666666</amc>
+		<cc>
+			<method name="public static retrofit2.converter.moshi.MoshiConverterFactory create()">1</method>
+			<method name="public static retrofit2.converter.moshi.MoshiConverterFactory create(com.squareup.moshi.Moshi moshi)">1</method>
+			<method name="private void _init_(com.squareup.moshi.Moshi moshi, boolean lenient)">2</method>
+			<method name="public retrofit2.converter.moshi.MoshiConverterFactory asLenient()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$BufferingResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>30</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="public okhttp3.ResponseBody convert(okhttp3.ResponseBody value)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$ErrorHandlingCallAdapterFactory$1</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>5</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>33</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.45</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.5</amc>
+		<cc>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public com.example.retrofit.ErrorHandlingCallAdapter$MyCall adapt(retrofit2.Call call)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+			<method name="void _init_(com.example.retrofit.ErrorHandlingCallAdapter$ErrorHandlingCallAdapterFactory this$0, java.lang.reflect.Type, java.util.concurrent.Executor)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.gson.GsonRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>9</cbo>
+		<rfc>14</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>8</ce>
+		<npm>2</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>56</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>12.0</amc>
+		<cc>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="void _init_(com.google.gson.Gson gson, com.google.gson.TypeAdapter adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform$IOS$MainThreadExecutor</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>10</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>0.5</lcom3>
+		<loc>78</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.75</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>24.333333333333332</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public void execute(Runnable r)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$FieldMap</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>16</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>80</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.6</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>25.0</amc>
+		<cc>
+			<method name="volatile synthetic void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="void _init_(retrofit2.Converter valueConverter, boolean encoded)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, java.util.Map value)">5</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$PartMap</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>17</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>108</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.6</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>34.333333333333336</amc>
+		<cc>
+			<method name="volatile synthetic void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, java.util.Map value)">5</method>
+			<method name="void _init_(retrofit2.Converter valueConverter, String transferEncoding)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResultCallAdapter$2</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>5</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>18</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.666666666666667</amc>
+		<cc>
+			<method name="void _init_(retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResultCallAdapter this$0)">1</method>
+			<method name="public volatile synthetic Object call(Object)">1</method>
+			<method name="public retrofit2.adapter.rxjava.Result call(retrofit2.Response response)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.NetworkBehavior</name>
+		<wmc>13</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>22</rfc>
+		<lcom>36</lcom>
+		<ca>7</ca>
+		<ce>0</ce>
+		<npm>12</npm>
+		<lcom3>0.7916666666666666</lcom3>
+		<loc>181</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.2564102564102564</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>12.307692307692308</amc>
+		<cc>
+			<method name="public void setFailureException(Throwable t)">2</method>
+			<method name="public static retrofit2.mock.NetworkBehavior create()">1</method>
+			<method name="private void _init_(java.util.Random random)">1</method>
+			<method name="public void setDelay(long amount, java.util.concurrent.TimeUnit unit)">2</method>
+			<method name="public Throwable failureException()">1</method>
+			<method name="public int variancePercent()">1</method>
+			<method name="public boolean calculateIsFailure()">2</method>
+			<method name="public void setVariancePercent(int variancePercent)">3</method>
+			<method name="public int failurePercent()">1</method>
+			<method name="public long calculateDelay(java.util.concurrent.TimeUnit unit)">1</method>
+			<method name="public static retrofit2.mock.NetworkBehavior create(java.util.Random random)">2</method>
+			<method name="public void setFailurePercent(int failurePercent)">3</method>
+			<method name="public long delay(java.util.concurrent.TimeUnit unit)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResultCallAdapter$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>5</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>18</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.666666666666667</amc>
+		<cc>
+			<method name="void _init_(retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResultCallAdapter this$0)">1</method>
+			<method name="public volatile synthetic Object call(Object)">1</method>
+			<method name="public retrofit2.adapter.rxjava.Result call(Throwable throwable)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$ResponseCallAdapter$1</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>5</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>1</npm>
+		<lcom3>0.5</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.9942196531791907</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="void _init_(retrofit2.adapter.java8.Java8CallAdapterFactory$ResponseCallAdapter this$0, retrofit2.Call)">1</method>
+			<method name="public boolean cancel(boolean mayInterruptIfRunning)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$ResponseCallAdapter$2</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>26</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">1</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+			<method name="void _init_(retrofit2.adapter.java8.Java8CallAdapterFactory$ResponseCallAdapter this$0, java.util.concurrent.CompletableFuture)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$1</name>
+		<wmc>7</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>18</rfc>
+		<lcom>21</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>6</npm>
+		<lcom3>2.0</lcom3>
+		<loc>86</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4642857142857143</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.285714285714286</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public void success(retrofit2.Response response)">1</method>
+			<method name="public void clientError(retrofit2.Response response)">1</method>
+			<method name="public void serverError(retrofit2.Response response)">1</method>
+			<method name="public void unauthenticated(retrofit2.Response response)">1</method>
+			<method name="public void networkError(java.io.IOException e)">1</method>
+			<method name="public void unexpectedError(Throwable t)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters$JsonStringConverterFactory</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>5</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>44</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>20.5</amc>
+		<cc>
+			<method name="void _init_(retrofit2.Converter$Factory delegateFactory)">1</method>
+			<method name="public retrofit2.Converter stringConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>9</rfc>
+		<lcom>3</lcom>
+		<ca>0</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>56</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.6</mfa>
+		<cam>0.4166666666666667</cam>
+		<ic>1</ic>
+		<cbm>2</cbm>
+		<amc>17.666666666666668</amc>
+		<cc>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">5</method>
+			<method name="public static retrofit2.adapter.java8.Java8CallAdapterFactory create()">1</method>
+			<method name="private void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Utils</name>
+		<wmc>21</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>22</cbo>
+		<rfc>69</rfc>
+		<lcom>208</lcom>
+		<ca>16</ca>
+		<ce>9</ce>
+		<npm>5</npm>
+		<lcom3>0.9</lcom3>
+		<loc>840</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.1318181818181818</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>38.95238095238095</amc>
+		<cc>
+			<method name="public static String typeToString(java.lang.reflect.Type type)">2</method>
+			<method name="static boolean isAnnotationPresent(java.lang.annotation.Annotation[] annotations, Class cls)">3</method>
+			<method name="private static boolean equal(Object a, Object b)">4</method>
+			<method name="static int hashCodeOrZero(Object o)">2</method>
+			<method name="static void validateServiceInterface(Class service)">3</method>
+			<method name="private static Class declaringClassOf(java.lang.reflect.TypeVariable typeVariable)">2</method>
+			<method name="static void checkNotPrimitive(java.lang.reflect.Type type)">3</method>
+			<method name="private static int indexOf(Object[] array, Object toFind)">3</method>
+			<method name="public static java.lang.reflect.Type getSupertype(java.lang.reflect.Type context, Class contextRawType, Class supertype)">2</method>
+			<method name="static java.lang.reflect.Type getGenericSupertype(java.lang.reflect.Type context, Class rawType, Class toResolve)">10</method>
+			<method name="private static java.lang.reflect.Type resolveTypeVariable(java.lang.reflect.Type context, Class contextRawType, java.lang.reflect.TypeVariable unknown)">3</method>
+			<method name="public static Class getRawType(java.lang.reflect.Type type)">8</method>
+			<method name="static boolean hasUnresolvableType(java.lang.reflect.Type type)">9</method>
+			<method name="public static java.lang.reflect.Type resolve(java.lang.reflect.Type context, Class contextRawType, java.lang.reflect.Type toResolve)">19</method>
+			<method name="static java.lang.reflect.Type getParameterUpperBound(int index, java.lang.reflect.ParameterizedType type)">3</method>
+			<method name="private void _init_()">1</method>
+			<method name="public static boolean equals(java.lang.reflect.Type a, java.lang.reflect.Type b)">18</method>
+			<method name="static okhttp3.ResponseBody buffer(okhttp3.ResponseBody body)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="static Object checkNotNull(Object object, String message)">2</method>
+			<method name="static java.lang.reflect.Type getCallResponseType(java.lang.reflect.Type returnType)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$VoidResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>6</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public Void convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>26</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>13</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>90</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>44.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Utils$WildcardTypeImpl</name>
+		<wmc>6</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>16</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>6</npm>
+		<lcom3>0.4</lcom3>
+		<loc>162</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4444444444444444</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>25.666666666666668</amc>
+		<cc>
+			<method name="public String toString()">3</method>
+			<method name="public int hashCode()">2</method>
+			<method name="public boolean equals(Object other)">3</method>
+			<method name="public java.lang.reflect.Type[] getUpperBounds()">1</method>
+			<method name="public void _init_(java.lang.reflect.Type[] upperBounds, java.lang.reflect.Type[] lowerBounds)">7</method>
+			<method name="public java.lang.reflect.Type[] getLowerBounds()">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.OkHttpCall$ExceptionCatchingRequestBody$1</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>4</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.8333333333333334</mfa>
+		<cam>0.6</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.5</amc>
+		<cc>
+			<method name="void _init_(retrofit2.OkHttpCall$ExceptionCatchingRequestBody this$0, okio.Source x0)">1</method>
+			<method name="public long read(okio.Buffer sink, long byteCount)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.SimpleMockService$MockGitHub</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>13</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>0.25</lcom3>
+		<loc>117</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>37.333333333333336</amc>
+		<cc>
+			<method name="public void addContributor(String owner, String repo, String name, int contributions)">3</method>
+			<method name="public void _init_(retrofit2.mock.BehaviorDelegate delegate)">1</method>
+			<method name="public retrofit2.Call contributors(String owner, String repo)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform$Android$MainThreadExecutor</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>18</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.75</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.5</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public void execute(Runnable r)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform$Android</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>15</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="retrofit2.CallAdapter$Factory defaultCallAdapterFactory(java.util.concurrent.Executor callbackExecutor)">1</method>
+			<method name="public java.util.concurrent.Executor defaultCallbackExecutor()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.HttpException</name>
+		<wmc>4</wmc>
+		<dit>3</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>11</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>4</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>44</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.875</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.25</amc>
+		<cc>
+			<method name="public retrofit2.Response response()">1</method>
+			<method name="public int code()">1</method>
+			<method name="public String message()">1</method>
+			<method name="public void _init_(retrofit2.Response response)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DeserializeErrorBody$Service</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call getUser()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$MyCallAdapter</name>
+		<wmc>5</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>9</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>5</ce>
+		<npm>4</npm>
+		<lcom3>0.25</lcom3>
+		<loc>41</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.8</amc>
+		<cc>
+			<method name="public void enqueue(com.example.retrofit.ErrorHandlingCallAdapter$MyCallback callback)">1</method>
+			<method name="public void cancel()">1</method>
+			<method name="public com.example.retrofit.ErrorHandlingCallAdapter$MyCall clone()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+			<method name="void _init_(retrofit2.Call call, java.util.concurrent.Executor callbackExecutor)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>5</rfc>
+		<lcom>4</lcom>
+		<ca>2</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>24</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.75</amc>
+		<cc>
+			<method name="public com.google.common.util.concurrent.ListenableFuture adapt(retrofit2.Call call)">1</method>
+			<method name="void _init_(java.lang.reflect.Type responseType)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.wire.WireRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>9</cbo>
+		<rfc>10</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>8</ce>
+		<npm>2</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>35</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.25</amc>
+		<cc>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public okhttp3.RequestBody convert(com.squareup.wire.Message value)">1</method>
+			<method name="void _init_(com.squareup.wire.ProtoAdapter adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters$Filter</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>8</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.0</amc>
+		<cc>
+			<method name="public void _init_(String userId)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>22</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>13</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>55</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>26.5</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler$Page</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>12</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="public void _init_(String title, java.util.List links)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.SimpleService$GitHub</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>3</ca>
+		<ce>1</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call contributors(String, String)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.CompletableHelper$CompletableCallOnSubscribe</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>11</cbo>
+		<rfc>15</rfc>
+		<lcom>1</lcom>
+		<ca>2</ca>
+		<ce>10</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>58</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>18.0</amc>
+		<cc>
+			<method name="void _init_(retrofit2.Call originalCall)">1</method>
+			<method name="public void call(rx.Completable$CompletableSubscriber subscriber)">4</method>
+			<method name="public volatile synthetic void call(Object)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>13</noc>
+		<cbo>16</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>15</ca>
+		<ce>3</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>17</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="final retrofit2.ParameterHandler array()">1</method>
+			<method name="abstract void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="final retrofit2.ParameterHandler iterable()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1</name>
+		<wmc>5</wmc>
+		<dit>3</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>11</rfc>
+		<lcom>8</lcom>
+		<ca>2</ca>
+		<ce>5</ce>
+		<npm>0</npm>
+		<lcom3>0.875</lcom3>
+		<loc>39</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.9090909090909091</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>6.4</amc>
+		<cc>
+			<method name="protected void interruptTask()">1</method>
+			<method name="static synthetic boolean access$000(retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1 x0, Object x1)">1</method>
+			<method name="static synthetic boolean access$100(retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1 x0, Throwable x1)">1</method>
+			<method name="void _init_(retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter this$0, retrofit2.Call)">1</method>
+			<method name="static synthetic boolean access$200(retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1 x0, Throwable x1)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$ShortResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public Short convert(okhttp3.ResponseBody value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Header</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>29</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>12.5</amc>
+		<cc>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+			<method name="void _init_(String name, retrofit2.Converter valueConverter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.Result</name>
+		<wmc>6</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>8</rfc>
+		<lcom>7</lcom>
+		<ca>2</ca>
+		<ce>1</ce>
+		<npm>5</npm>
+		<lcom3>0.3</lcom3>
+		<loc>56</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4444444444444444</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.0</amc>
+		<cc>
+			<method name="public retrofit2.Response response()">1</method>
+			<method name="public static retrofit2.adapter.rxjava.Result error(Throwable error)">2</method>
+			<method name="public static retrofit2.adapter.rxjava.Result response(retrofit2.Response response)">2</method>
+			<method name="private void _init_(retrofit2.Response response, Throwable error)">1</method>
+			<method name="public boolean isError()">2</method>
+			<method name="public Throwable error()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.wire.WireResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>7</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>31</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="public com.squareup.wire.Message convert(okhttp3.ResponseBody value)">1</method>
+			<method name="void _init_(com.squareup.wire.ProtoAdapter adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.wire.WireConverterFactory</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>9</rfc>
+		<lcom>6</lcom>
+		<ca>0</ca>
+		<ce>6</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>55</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.5</mfa>
+		<cam>0.5625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>12.75</amc>
+		<cc>
+			<method name="public static retrofit2.converter.wire.WireConverterFactory create()">1</method>
+			<method name="private void _init_()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">3</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>31</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>13</ce>
+		<npm>3</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>113</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>26.5</amc>
+		<cc>
+			<method name="public void _init_(com.example.retrofit.Crawler$PageService pageService)">1</method>
+			<method name="public void crawlPage(okhttp3.HttpUrl url)">3</method>
+			<method name="static synthetic java.util.Set access$000(com.example.retrofit.Crawler x0)">1</method>
+			<method name="public static transient void main(String[] args)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters$Xml</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>24</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>8</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>95</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>30.333333333333332</amc>
+		<cc>
+			<method name="void _init_(com.example.retrofit.Crawler this$0)">1</method>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">5</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Converter</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>57</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>57</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract Object convert(Object)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$QueryMap</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>16</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>80</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.6</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>25.0</amc>
+		<cc>
+			<method name="volatile synthetic void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="void _init_(retrofit2.Converter valueConverter, boolean encoded)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, java.util.Map value)">5</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$Ip</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>5</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DeserializeErrorBody$Error</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>5</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Query</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+			<method name="public abstract boolean encoded()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.simplexml.SimpleXmlRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>13</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>6</ce>
+		<npm>2</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>51</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.0</amc>
+		<cc>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(org.simpleframework.xml.Serializer serializer)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Retrofit</name>
+		<wmc>16</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>44</cbo>
+		<rfc>46</rfc>
+		<lcom>84</lcom>
+		<ca>37</ca>
+		<ce>12</ce>
+		<npm>13</npm>
+		<lcom3>0.8571428571428572</lcom3>
+		<loc>547</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.21354166666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>32.75</amc>
+		<cc>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations)">1</method>
+			<method name="public okhttp3.HttpUrl baseUrl()">1</method>
+			<method name="void _init_(okhttp3.Call$Factory callFactory, okhttp3.HttpUrl baseUrl, java.util.List converterFactories, java.util.List adapterFactories, java.util.concurrent.Executor callbackExecutor, boolean validateEagerly)">1</method>
+			<method name="public okhttp3.Call$Factory callFactory()">1</method>
+			<method name="public java.util.List callAdapterFactories()">1</method>
+			<method name="public retrofit2.Converter stringConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations)">3</method>
+			<method name="public Object create(Class service)">2</method>
+			<method name="public java.util.List converterFactories()">1</method>
+			<method name="public retrofit2.Converter nextRequestBodyConverter(retrofit2.Converter$Factory skipPast, java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations)">6</method>
+			<method name="private void eagerlyValidateMethods(Class service)">3</method>
+			<method name="public retrofit2.CallAdapter callAdapter(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations)">1</method>
+			<method name="public retrofit2.CallAdapter nextCallAdapter(retrofit2.CallAdapter$Factory skipPast, java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations)">6</method>
+			<method name="public retrofit2.Converter nextResponseBodyConverter(retrofit2.Converter$Factory skipPast, java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations)">6</method>
+			<method name="retrofit2.ServiceMethod loadServiceMethod(java.lang.reflect.Method method)">2</method>
+			<method name="public java.util.concurrent.Executor callbackExecutor()">1</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$CallOnSubscribe</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>11</cbo>
+		<rfc>9</rfc>
+		<lcom>1</lcom>
+		<ca>3</ca>
+		<ce>8</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>33</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.666666666666666</amc>
+		<cc>
+			<method name="public void call(rx.Subscriber subscriber)">1</method>
+			<method name="void _init_(retrofit2.Call originalCall)">1</method>
+			<method name="public volatile synthetic void call(Object)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.simplexml.SimpleXmlResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>13</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>68</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4444444444444444</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>20.666666666666668</amc>
+		<cc>
+			<method name="public Object convert(okhttp3.ResponseBody value)">2</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(Class cls, org.simpleframework.xml.Serializer serializer, boolean strict)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.DefaultCallAdapterFactory</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>7</rfc>
+		<lcom>3</lcom>
+		<ca>2</ca>
+		<ce>5</ce>
+		<npm>1</npm>
+		<lcom3>1.0</lcom3>
+		<loc>27</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>7.666666666666667</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.OkHttpCall$ExceptionCatchingRequestBody</name>
+		<wmc>6</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>13</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>6</ce>
+		<npm>4</npm>
+		<lcom3>0.6</lcom3>
+		<loc>42</loc>
+		<dam>0.5</dam>
+		<moa>0</moa>
+		<mfa>0.7916666666666666</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>1</ic>
+		<cbm>6</cbm>
+		<amc>5.666666666666667</amc>
+		<cc>
+			<method name="void _init_(okhttp3.ResponseBody delegate)">1</method>
+			<method name="public okhttp3.MediaType contentType()">1</method>
+			<method name="public okio.BufferedSource source()">1</method>
+			<method name="public long contentLength()">1</method>
+			<method name="public void close()">1</method>
+			<method name="void throwIfCaught()">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters$JsonStringConverterFactory$DelegateToStringConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>28</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.0</amc>
+		<cc>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(retrofit2.Converter delegate)">1</method>
+			<method name="public String convert(Object value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.DELETE</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>10</cbo>
+		<rfc>8</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>9</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>41</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.5</mfa>
+		<cam>0.8125</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public retrofit2.Converter stringConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">4</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.GET</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$Repo</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>12</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="void _init_(String owner, String name)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$DoubleResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public Double convert(okhttp3.ResponseBody value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Call</name>
+		<wmc>7</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>63</cbo>
+		<rfc>7</rfc>
+		<lcom>21</lcom>
+		<ca>61</ca>
+		<ce>3</ce>
+		<npm>7</npm>
+		<lcom3>2.0</lcom3>
+		<loc>7</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5714285714285714</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract okhttp3.Request request()">1</method>
+			<method name="public abstract void cancel()">1</method>
+			<method name="public abstract retrofit2.Call clone()">1</method>
+			<method name="public abstract boolean isCanceled()">1</method>
+			<method name="public abstract retrofit2.Response execute()">1</method>
+			<method name="public abstract void enqueue(retrofit2.Callback)">1</method>
+			<method name="public abstract boolean isExecuted()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorCall</name>
+		<wmc>9</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>23</rfc>
+		<lcom>20</lcom>
+		<ca>3</ca>
+		<ce>7</ce>
+		<npm>8</npm>
+		<lcom3>0.7083333333333333</lcom3>
+		<loc>165</loc>
+		<dam>0.3333333333333333</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.28888888888888886</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>16.666666666666668</amc>
+		<cc>
+			<method name="void _init_(retrofit2.mock.NetworkBehavior behavior, java.util.concurrent.ExecutorService backgroundExecutor, retrofit2.Call delegate)">1</method>
+			<method name="public retrofit2.Response execute()">4</method>
+			<method name="public retrofit2.Call clone()">1</method>
+			<method name="public void cancel()">2</method>
+			<method name="public void enqueue(retrofit2.Callback callback)">3</method>
+			<method name="public okhttp3.Request request()">1</method>
+			<method name="public synchronized boolean isExecuted()">1</method>
+			<method name="public boolean isCanceled()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.moshi.MoshiRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>9</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>7</ce>
+		<npm>2</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>34</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="void _init_(com.squareup.moshi.JsonAdapter adapter)">1</method>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Streaming</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>0</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>0</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Header</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.MockRetrofit$Builder</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>9</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>4</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>66</loc>
+		<dam>1.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4375</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>14.75</amc>
+		<cc>
+			<method name="public retrofit2.mock.MockRetrofit$Builder networkBehavior(retrofit2.mock.NetworkBehavior behavior)">2</method>
+			<method name="public retrofit2.mock.MockRetrofit$Builder backgroundExecutor(java.util.concurrent.ExecutorService executor)">2</method>
+			<method name="public void _init_(retrofit2.Retrofit retrofit)">2</method>
+			<method name="public retrofit2.mock.MockRetrofit build()">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>0</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>0</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>4</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="private void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters$User</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>5</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.gson.GsonConverterFactory</name>
+		<wmc>5</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>14</cbo>
+		<rfc>12</rfc>
+		<lcom>4</lcom>
+		<ca>6</ca>
+		<ce>8</ce>
+		<npm>4</npm>
+		<lcom3>0.25</lcom3>
+		<loc>55</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.42857142857142855</mfa>
+		<cam>0.44</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.8</amc>
+		<cc>
+			<method name="private void _init_(com.google.gson.Gson gson)">2</method>
+			<method name="public static retrofit2.converter.gson.GsonConverterFactory create()">1</method>
+			<method name="public static retrofit2.converter.gson.GsonConverterFactory create(com.google.gson.Gson gson)">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">1</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.SimpleService$Contributor</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>3</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>12</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="public void _init_(String login, int contributions)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform$Java8</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>12</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>47</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>14.666666666666666</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="boolean isDefaultMethod(java.lang.reflect.Method method)">1</method>
+			<method name="transient Object invokeDefaultMethod(java.lang.reflect.Method method, Class declaringClass, Object object, Object[] args)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$CharacterResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>14</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>43</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.5</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public Character convert(okhttp3.ResponseBody value)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.protobuf.ProtoResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>8</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>37</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.0</amc>
+		<cc>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(com.google.protobuf.Parser parser)">1</method>
+			<method name="public com.google.protobuf.MessageLite convert(okhttp3.ResponseBody value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DeserializeErrorBody</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>26</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>13</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>66</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>32.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Headers</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String[] value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$BodyCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>7</rfc>
+		<lcom>4</lcom>
+		<ca>3</ca>
+		<ce>5</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>33</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="void _init_(java.lang.reflect.Type responseType)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public java.util.concurrent.CompletableFuture adapt(retrofit2.Call call)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.PUT</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$ChunkingConverterFactory$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>5</rfc>
+		<lcom>1</lcom>
+		<ca>2</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>30</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.333333333333334</amc>
+		<cc>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(com.example.retrofit.ChunkingConverter$ChunkingConverterFactory this$0, retrofit2.Converter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory</name>
+		<wmc>5</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>9</cbo>
+		<rfc>20</rfc>
+		<lcom>8</lcom>
+		<ca>0</ca>
+		<ce>9</ce>
+		<npm>3</npm>
+		<lcom3>0.25</lcom3>
+		<loc>160</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.42857142857142855</mfa>
+		<cam>0.4</cam>
+		<ic>2</ic>
+		<cbm>2</cbm>
+		<amc>30.8</amc>
+		<cc>
+			<method name="private retrofit2.CallAdapter getCallAdapter(java.lang.reflect.Type returnType, rx.Scheduler scheduler)">5</method>
+			<method name="public static retrofit2.adapter.rxjava.RxJavaCallAdapterFactory createWithScheduler(rx.Scheduler scheduler)">2</method>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">9</method>
+			<method name="private void _init_(rx.Scheduler scheduler)">1</method>
+			<method name="public static retrofit2.adapter.rxjava.RxJavaCallAdapterFactory create()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall</name>
+		<wmc>9</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>18</rfc>
+		<lcom>0</lcom>
+		<ca>3</ca>
+		<ce>5</ce>
+		<npm>8</npm>
+		<lcom3>0.375</lcom3>
+		<loc>68</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.333333333333333</amc>
+		<cc>
+			<method name="public boolean isExecuted()">1</method>
+			<method name="public retrofit2.Response execute()">1</method>
+			<method name="public retrofit2.Call clone()">1</method>
+			<method name="public void cancel()">1</method>
+			<method name="public void enqueue(retrofit2.Callback callback)">2</method>
+			<method name="void _init_(java.util.concurrent.Executor callbackExecutor, retrofit2.Call delegate)">1</method>
+			<method name="public okhttp3.Request request()">1</method>
+			<method name="public boolean isCanceled()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>5</rfc>
+		<lcom>4</lcom>
+		<ca>2</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>24</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.75</amc>
+		<cc>
+			<method name="public com.google.common.util.concurrent.ListenableFuture adapt(retrofit2.Call call)">1</method>
+			<method name="void _init_(java.lang.reflect.Type responseType)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Query</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>35</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>15.0</amc>
+		<cc>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+			<method name="void _init_(String name, retrofit2.Converter valueConverter, boolean encoded)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.CallAdapter$Factory</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>6</noc>
+		<cbo>14</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>12</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>14</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>2.5</amc>
+		<cc>
+			<method name="public abstract retrofit2.CallAdapter get(java.lang.reflect.Type, java.lang.annotation.Annotation[], retrofit2.Retrofit)">1</method>
+			<method name="protected static Class getRawType(java.lang.reflect.Type type)">1</method>
+			<method name="protected static java.lang.reflect.Type getParameterUpperBound(int index, java.lang.reflect.ParameterizedType type)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.OperatorMapResponseToBodyOrError$1</name>
+		<wmc>5</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>12</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>4</npm>
+		<lcom3>0.5</lcom3>
+		<loc>48</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.6363636363636364</mfa>
+		<cam>0.3333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.2</amc>
+		<cc>
+			<method name="public volatile synthetic void onNext(Object)">1</method>
+			<method name="void _init_(retrofit2.adapter.rxjava.OperatorMapResponseToBodyOrError this$0, rx.Subscriber x0, rx.Subscriber)">1</method>
+			<method name="public void onCompleted()">1</method>
+			<method name="public void onNext(retrofit2.Response response)">2</method>
+			<method name="public void onError(Throwable e)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.FieldMap</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract boolean encoded()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.simplexml.SimpleXmlConverterFactory</name>
+		<wmc>8</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>13</rfc>
+		<lcom>18</lcom>
+		<ca>1</ca>
+		<ce>7</ce>
+		<npm>7</npm>
+		<lcom3>0.42857142857142855</lcom3>
+		<loc>79</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.3</mfa>
+		<cam>0.2916666666666667</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.625</amc>
+		<cc>
+			<method name="public static retrofit2.converter.simplexml.SimpleXmlConverterFactory createNonStrict()">1</method>
+			<method name="public static retrofit2.converter.simplexml.SimpleXmlConverterFactory createNonStrict(org.simpleframework.xml.Serializer serializer)">1</method>
+			<method name="private void _init_(org.simpleframework.xml.Serializer serializer, boolean strict)">2</method>
+			<method name="public static retrofit2.converter.simplexml.SimpleXmlConverterFactory create()">1</method>
+			<method name="public static retrofit2.converter.simplexml.SimpleXmlConverterFactory create(org.simpleframework.xml.Serializer serializer)">1</method>
+			<method name="public boolean isStrict()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>4</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>26</loc>
+		<dam>0.5</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.8333333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.0</amc>
+		<cc>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="private void _init_()">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Multipart</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ServiceMethod</name>
+		<wmc>6</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>14</cbo>
+		<rfc>24</rfc>
+		<lcom>9</lcom>
+		<ca>4</ca>
+		<ce>12</ce>
+		<npm>0</npm>
+		<lcom3>0.8666666666666666</lcom3>
+		<loc>220</loc>
+		<dam>0.6666666666666666</dam>
+		<moa>3</moa>
+		<mfa>0.0</mfa>
+		<cam>0.26666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>33.166666666666664</amc>
+		<cc>
+			<method name="static Class boxIfPrimitive(Class type)">9</method>
+			<method name="transient okhttp3.Request toRequest(Object[] args)">4</method>
+			<method name="void _init_(retrofit2.ServiceMethod$Builder builder)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="Object toResponse(okhttp3.ResponseBody body)">1</method>
+			<method name="static java.util.Set parsePathParameters(String path)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.POST</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$RequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>20</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.75</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public okhttp3.RequestBody convert(okhttp3.RequestBody value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$StreamingResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>20</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.75</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="public okhttp3.ResponseBody convert(okhttp3.ResponseBody value)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Platform</name>
+		<wmc>8</wmc>
+		<dit>1</dit>
+		<noc>3</noc>
+		<cbo>10</cbo>
+		<rfc>15</rfc>
+		<lcom>26</lcom>
+		<ca>6</ca>
+		<ce>7</ce>
+		<npm>0</npm>
+		<lcom3>0.8571428571428571</lcom3>
+		<loc>65</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.2619047619047619</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="static retrofit2.Platform get()">1</method>
+			<method name="retrofit2.CallAdapter$Factory defaultCallAdapterFactory(java.util.concurrent.Executor callbackExecutor)">2</method>
+			<method name="boolean isDefaultMethod(java.lang.reflect.Method method)">1</method>
+			<method name="java.util.concurrent.Executor defaultCallbackExecutor()">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="private static retrofit2.Platform findPlatform()">2</method>
+			<method name="transient Object invokeDefaultMethod(java.lang.reflect.Method method, Class declaringClass, Object object, Object[] args)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>43</loc>
+		<dam>0.0</dam>
+		<moa>3</moa>
+		<mfa>0.0</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>19.0</amc>
+		<cc>
+			<method name="void _init_(retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1 this$1, retrofit2.Call, retrofit2.Response)">1</method>
+			<method name="public void run()">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler$PageAdapter$1</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>14</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$2</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>4</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>26</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.5</amc>
+		<cc>
+			<method name="public void run()">1</method>
+			<method name="void _init_(retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1 this$1, retrofit2.Call, Throwable)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Retrofit$1</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>11</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>6</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>56</loc>
+		<dam>0.3333333333333333</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>25.5</amc>
+		<cc>
+			<method name="public transient Object invoke(Object proxy, java.lang.reflect.Method method, Object[] args)">3</method>
+			<method name="void _init_(retrofit2.Retrofit this$0, Class)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$SimpleCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>9</cbo>
+		<rfc>9</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>8</ce>
+		<npm>3</npm>
+		<lcom3>0.5</lcom3>
+		<loc>40</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.5</amc>
+		<cc>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public rx.Observable adapt(retrofit2.Call call)">2</method>
+			<method name="void _init_(java.lang.reflect.Type responseType, rx.Scheduler scheduler)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.NetworkBehavior$Adapter</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>0</ca>
+		<ce>1</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract Object applyBehavior(retrofit2.mock.NetworkBehavior, Object)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.jackson.JacksonConverterFactory</name>
+		<wmc>5</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>10</cbo>
+		<rfc>14</rfc>
+		<lcom>4</lcom>
+		<ca>0</ca>
+		<ce>10</ce>
+		<npm>4</npm>
+		<lcom3>0.25</lcom3>
+		<loc>61</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.42857142857142855</mfa>
+		<cam>0.44</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.0</amc>
+		<cc>
+			<method name="public static retrofit2.converter.jackson.JacksonConverterFactory create(com.fasterxml.jackson.databind.ObjectMapper mapper)">1</method>
+			<method name="private void _init_(com.fasterxml.jackson.databind.ObjectMapper mapper)">2</method>
+			<method name="public static retrofit2.converter.jackson.JacksonConverterFactory create()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">1</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.HTTP</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>3</rfc>
+		<lcom>3</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>3</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String method()">1</method>
+			<method name="public abstract String path()">1</method>
+			<method name="public abstract boolean hasBody()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler$PageAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>10</cbo>
+		<rfc>18</rfc>
+		<lcom>6</lcom>
+		<ca>2</ca>
+		<ce>9</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>53</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>12.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public com.example.retrofit.Crawler$Page convert(okhttp3.ResponseBody responseBody)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$RequestArbiter</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>17</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>6</ce>
+		<npm>2</npm>
+		<lcom3>0.25</lcom3>
+		<loc>78</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.9090909090909091</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>24.333333333333332</amc>
+		<cc>
+			<method name="public void request(long n)">7</method>
+			<method name="void _init_(retrofit2.Call call, rx.Subscriber subscriber)">1</method>
+			<method name="public void call()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$FloatResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="public Float convert(okhttp3.ResponseBody value)">1</method>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Response</name>
+		<wmc>13</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>43</cbo>
+		<rfc>34</rfc>
+		<lcom>44</lcom>
+		<ca>36</ca>
+		<ce>7</ce>
+		<npm>12</npm>
+		<lcom3>0.638888888888889</lcom3>
+		<loc>186</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.2564102564102564</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>13.076923076923077</amc>
+		<cc>
+			<method name="public static retrofit2.Response error(okhttp3.ResponseBody body, okhttp3.Response rawResponse)">4</method>
+			<method name="public String message()">1</method>
+			<method name="public static retrofit2.Response success(Object body, okhttp3.Headers headers)">2</method>
+			<method name="public static retrofit2.Response error(int code, okhttp3.ResponseBody body)">2</method>
+			<method name="private void _init_(okhttp3.Response rawResponse, Object body, okhttp3.ResponseBody errorBody)">1</method>
+			<method name="public static retrofit2.Response success(Object body, okhttp3.Response rawResponse)">3</method>
+			<method name="public Object body()">1</method>
+			<method name="public okhttp3.ResponseBody errorBody()">1</method>
+			<method name="public okhttp3.Headers headers()">1</method>
+			<method name="public int code()">1</method>
+			<method name="public static retrofit2.Response success(Object body)">1</method>
+			<method name="public boolean isSuccessful()">1</method>
+			<method name="public okhttp3.Response raw()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$LongResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public Long convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResponseCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>7</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>6</ce>
+		<npm>3</npm>
+		<lcom3>0.5</lcom3>
+		<loc>38</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.0</amc>
+		<cc>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public rx.Observable adapt(retrofit2.Call call)">2</method>
+			<method name="void _init_(java.lang.reflect.Type responseType, rx.Scheduler scheduler)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Url</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorCall$2</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>38</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.47619047619047616</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.333333333333334</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">1</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+			<method name="void _init_(retrofit2.mock.BehaviorCall this$0, java.util.concurrent.atomic.AtomicReference, java.util.concurrent.CountDownLatch, java.util.concurrent.atomic.AtomicReference)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorCall$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>12</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>5</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>82</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>25.666666666666668</amc>
+		<cc>
+			<method name="public void run()">4</method>
+			<method name="void _init_(retrofit2.mock.BehaviorCall this$0, retrofit2.Callback)">1</method>
+			<method name="boolean delaySleep()">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Part</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>10</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>45</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>20.5</amc>
+		<cc>
+			<method name="void _init_(okhttp3.Headers headers, retrofit2.Converter converter)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.protobuf.ProtoConverterFactory</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>15</rfc>
+		<lcom>6</lcom>
+		<ca>0</ca>
+		<ce>6</ce>
+		<npm>4</npm>
+		<lcom3>2.0</lcom3>
+		<loc>72</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.5</mfa>
+		<cam>0.5625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>17.0</amc>
+		<cc>
+			<method name="public static retrofit2.converter.protobuf.ProtoConverterFactory create()">1</method>
+			<method name="public void _init_()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">3</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$Service</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call sendChunked(com.example.retrofit.ChunkingConverter$Repo)">1</method>
+			<method name="public abstract retrofit2.Call sendNormal(com.example.retrofit.ChunkingConverter$Repo)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$ResponseCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>7</rfc>
+		<lcom>4</lcom>
+		<ca>3</ca>
+		<ce>5</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>33</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="void _init_(java.lang.reflect.Type responseType)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public java.util.concurrent.CompletableFuture adapt(retrofit2.Call call)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Path</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>10</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>49</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>22.0</amc>
+		<cc>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+			<method name="void _init_(String name, retrofit2.Converter valueConverter, boolean encoded)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DeserializeErrorBody$User</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>0</cbo>
+		<rfc>2</rfc>
+		<lcom>0</lcom>
+		<ca>0</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>4</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.Crawler$PageService</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call get(okhttp3.HttpUrl)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.OperatorMapResponseToBodyOrError</name>
+		<wmc>5</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>8</lcom>
+		<ca>2</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>0.75</lcom3>
+		<loc>28</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4166666666666667</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.4</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="static retrofit2.adapter.rxjava.OperatorMapResponseToBodyOrError instance()">1</method>
+			<method name="public volatile synthetic Object call(Object)">1</method>
+			<method name="public rx.Subscriber call(rx.Subscriber child)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorDelegate$1</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>1</npm>
+		<lcom3>0.0</lcom3>
+		<loc>31</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>13.5</amc>
+		<cc>
+			<method name="void _init_(retrofit2.mock.BehaviorDelegate this$0, retrofit2.Call)">1</method>
+			<method name="public Object invoke(Object proxy, java.lang.reflect.Method method, Object[] args)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter$1$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.0</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">1</method>
+			<method name="void _init_(retrofit2.adapter.guava.GuavaCallAdapterFactory$ResponseCallAdapter$1 this$1)">1</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.OkHttpCall$NoContentResponseBody</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>6</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>3</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>26</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.8636363636363636</mfa>
+		<cam>0.5</cam>
+		<ic>1</ic>
+		<cbm>6</cbm>
+		<amc>5.0</amc>
+		<cc>
+			<method name="public okhttp3.MediaType contentType()">1</method>
+			<method name="void _init_(okhttp3.MediaType contentType, long contentLength)">1</method>
+			<method name="public okio.BufferedSource source()">1</method>
+			<method name="public long contentLength()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.jackson.JacksonRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>2</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>29</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.75</amc>
+		<cc>
+			<method name="public okhttp3.RequestBody convert(Object value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="void _init_(com.fasterxml.jackson.databind.ObjectWriter adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.RequestBuilder$ContentTypeOverridingRequestBody</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>3</npm>
+		<lcom3>0.5</lcom3>
+		<loc>27</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.8571428571428571</mfa>
+		<cam>0.4375</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.25</amc>
+		<cc>
+			<method name="public okhttp3.MediaType contentType()">1</method>
+			<method name="public void writeTo(okio.BufferedSink sink)">1</method>
+			<method name="void _init_(okhttp3.RequestBody delegate, okhttp3.MediaType contentType)">1</method>
+			<method name="public long contentLength()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.CompletableHelper$CompletableCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>7</rfc>
+		<lcom>4</lcom>
+		<ca>1</ca>
+		<ce>6</ce>
+		<npm>3</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>33</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>7.0</amc>
+		<cc>
+			<method name="public rx.Completable adapt(retrofit2.Call call)">2</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+			<method name="void _init_(rx.Scheduler scheduler)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.protobuf.ProtoRequestBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>8</rfc>
+		<lcom>4</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.3333333333333333</lcom3>
+		<loc>24</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.75</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public okhttp3.RequestBody convert(com.google.protobuf.MessageLite value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.OkHttpCall</name>
+		<wmc>12</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>17</cbo>
+		<rfc>37</rfc>
+		<lcom>32</lcom>
+		<ca>2</ca>
+		<ce>16</ce>
+		<npm>9</npm>
+		<lcom3>0.6212121212121212</lcom3>
+		<loc>348</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.26666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>27.5</amc>
+		<cc>
+			<method name="private okhttp3.Call createRawCall()">2</method>
+			<method name="public volatile synthetic retrofit2.Call clone()">1</method>
+			<method name="public retrofit2.Response execute()">6</method>
+			<method name="retrofit2.Response parseResponse(okhttp3.Response rawResponse)">5</method>
+			<method name="public void cancel()">2</method>
+			<method name="public void enqueue(retrofit2.Callback callback)">7</method>
+			<method name="public synchronized boolean isExecuted()">1</method>
+			<method name="public synchronized okhttp3.Request request()">4</method>
+			<method name="void _init_(retrofit2.ServiceMethod serviceMethod, Object[] args)">1</method>
+			<method name="public boolean isCanceled()">1</method>
+			<method name="public volatile synthetic Object clone()">1</method>
+			<method name="public retrofit2.OkHttpCall clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonQueryParameters$Json</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Callback</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>26</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>25</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.75</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract void onResponse(retrofit2.Call, retrofit2.Response)">1</method>
+			<method name="public abstract void onFailure(retrofit2.Call, Throwable)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.SingleHelper</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>4</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>10</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="static retrofit2.CallAdapter makeSingle(retrofit2.CallAdapter callAdapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Path</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+			<method name="public abstract boolean encoded()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.CallAdapter</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>27</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>26</ca>
+		<ce>1</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.75</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract Object adapt(retrofit2.Call)">1</method>
+			<method name="public abstract java.lang.reflect.Type responseType()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$Chunked</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorDelegate</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>9</cbo>
+		<rfc>9</rfc>
+		<lcom>1</lcom>
+		<ca>4</ca>
+		<ce>6</ce>
+		<npm>2</npm>
+		<lcom3>0.25</lcom3>
+		<loc>53</loc>
+		<dam>0.75</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.42857142857142855</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>15.333333333333334</amc>
+		<cc>
+			<method name="public Object returningResponse(Object response)">1</method>
+			<method name="public Object returning(retrofit2.Call call)">1</method>
+			<method name="void _init_(retrofit2.Retrofit retrofit, retrofit2.mock.NetworkBehavior behavior, java.util.concurrent.ExecutorService executor, Class service)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DynamicBaseUrl$HostSelectionInterceptor</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>13</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>7</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>36</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.666666666666666</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public void setHost(String host)">1</method>
+			<method name="public okhttp3.Response intercept(okhttp3.Interceptor$Chain chain)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.MockRetrofit</name>
+		<wmc>5</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>3</ce>
+		<npm>4</npm>
+		<lcom3>0.5</lcom3>
+		<loc>40</loc>
+		<dam>1.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.36</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.4</amc>
+		<cc>
+			<method name="public retrofit2.mock.BehaviorDelegate create(Class service)">1</method>
+			<method name="public retrofit2.mock.NetworkBehavior networkBehavior()">1</method>
+			<method name="public retrofit2.Retrofit retrofit()">1</method>
+			<method name="void _init_(retrofit2.Retrofit retrofit, retrofit2.mock.NetworkBehavior behavior, java.util.concurrent.ExecutorService executor)">1</method>
+			<method name="public java.util.concurrent.Executor backgroundExecutor()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$1</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>8</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>35</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.6</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.333333333333334</amc>
+		<cc>
+			<method name="volatile synthetic void apply(retrofit2.RequestBuilder, Object)">1</method>
+			<method name="void _init_(retrofit2.ParameterHandler this$0)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, Iterable values)">3</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Part</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+			<method name="public abstract String encoding()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters$Service</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract retrofit2.Call exampleJson()">1</method>
+			<method name="public abstract retrofit2.Call exampleXml()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$2</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>30</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>13.5</amc>
+		<cc>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object values)">3</method>
+			<method name="void _init_(retrofit2.ParameterHandler this$0)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.HttpException</name>
+		<wmc>4</wmc>
+		<dit>3</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>11</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>4</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>44</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.875</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.25</amc>
+		<cc>
+			<method name="public retrofit2.Response response()">1</method>
+			<method name="public int code()">1</method>
+			<method name="public String message()">1</method>
+			<method name="public void _init_(retrofit2.Response response)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$StringResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>6</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>21</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public String convert(okhttp3.ResponseBody value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>9</rfc>
+		<lcom>3</lcom>
+		<ca>0</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>56</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.6</mfa>
+		<cam>0.4166666666666667</cam>
+		<ic>1</ic>
+		<cbm>2</cbm>
+		<amc>17.666666666666668</amc>
+		<cc>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">5</method>
+			<method name="public static retrofit2.adapter.guava.GuavaCallAdapterFactory create()">1</method>
+			<method name="private void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.jackson.JacksonResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>30</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.666666666666666</amc>
+		<cc>
+			<method name="public Object convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="void _init_(com.fasterxml.jackson.databind.ObjectReader adapter)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ServiceMethod$Builder</name>
+		<wmc>14</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>41</cbo>
+		<rfc>107</rfc>
+		<lcom>51</lcom>
+		<ca>2</ca>
+		<ce>41</ce>
+		<npm>2</npm>
+		<lcom3>0.8294314381270903</lcom3>
+		<loc>1833</loc>
+		<dam>0.0</dam>
+		<moa>4</moa>
+		<mfa>0.0</mfa>
+		<cam>0.24404761904761904</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>128.28571428571428</amc>
+		<cc>
+			<method name="private retrofit2.CallAdapter createCallAdapter()">3</method>
+			<method name="private void validatePathName(int p, String name)">3</method>
+			<method name="private transient RuntimeException methodError(String message, Object[] args)">1</method>
+			<method name="public void _init_(retrofit2.Retrofit retrofit, java.lang.reflect.Method method)">1</method>
+			<method name="private retrofit2.ParameterHandler parseParameter(int p, java.lang.reflect.Type parameterType, java.lang.annotation.Annotation[] annotations)">5</method>
+			<method name="private void parseMethodAnnotation(java.lang.annotation.Annotation annotation)">16</method>
+			<method name="private void parseHttpMethodAndPath(String httpMethod, String value, boolean hasBody)">6</method>
+			<method name="private transient RuntimeException methodError(Throwable cause, String message, Object[] args)">1</method>
+			<method name="private transient RuntimeException parameterError(Throwable cause, int p, String message, Object[] args)">1</method>
+			<method name="private transient RuntimeException parameterError(int p, String message, Object[] args)">1</method>
+			<method name="private retrofit2.Converter createResponseConverter()">1</method>
+			<method name="public retrofit2.ServiceMethod build()">21</method>
+			<method name="private okhttp3.Headers parseHeaders(String[] headers)">6</method>
+			<method name="private retrofit2.ParameterHandler parseParameterAnnotation(int p, java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, java.lang.annotation.Annotation annotation)">62</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Field</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>2</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>2</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+			<method name="public abstract boolean encoded()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$StringConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>20</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.75</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public String convert(String value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.moshi.MoshiResponseBodyConverter</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>1</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>30</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>8.666666666666666</amc>
+		<cc>
+			<method name="void _init_(com.squareup.moshi.JsonAdapter adapter)">1</method>
+			<method name="public Object convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>8</cbo>
+		<rfc>6</rfc>
+		<lcom>1</lcom>
+		<ca>4</ca>
+		<ce>5</ce>
+		<npm>1</npm>
+		<lcom3>1.0</lcom3>
+		<loc>24</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.6</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>10.5</amc>
+		<cc>
+			<method name="void _init_(java.util.concurrent.Executor callbackExecutor)">1</method>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$MyCallAdapter$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>16</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>87</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>27.333333333333332</amc>
+		<cc>
+			<method name="void _init_(com.example.retrofit.ErrorHandlingCallAdapter$MyCallAdapter this$0, com.example.retrofit.ErrorHandlingCallAdapter$MyCallback)">1</method>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">8</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>10</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>35</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.333333333333334</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">2</method>
+			<method name="void _init_(retrofit2.adapter.guava.GuavaCallAdapterFactory$BodyCallAdapter$1 this$1)">1</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.QueryMap</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract boolean encoded()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.BuiltInConverters$ToStringConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>20</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.8333333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>3.75</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+			<method name="public String convert(Object value)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.CompletableHelper$CompletableCallOnSubscribe$1</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>4</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>3</ce>
+		<npm>1</npm>
+		<lcom3>0.5</lcom3>
+		<loc>17</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>6.5</amc>
+		<cc>
+			<method name="void _init_(retrofit2.adapter.rxjava.CompletableHelper$CompletableCallOnSubscribe this$0, retrofit2.Call)">1</method>
+			<method name="public void call()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters$Json</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.Calls</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>9</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>25</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.25</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.25</amc>
+		<cc>
+			<method name="public static retrofit2.Call response(Object successValue)">1</method>
+			<method name="private void _init_()">1</method>
+			<method name="public static retrofit2.Call response(retrofit2.Response response)">1</method>
+			<method name="public static retrofit2.Call failure(java.io.IOException failure)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>10</cbo>
+		<rfc>14</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>10</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>32</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>15.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$HttpBinService</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract com.example.retrofit.ErrorHandlingCallAdapter$MyCall getIp()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$BodyCallAdapter$1</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>5</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>1</npm>
+		<lcom3>0.5</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.9942196531791907</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.0</amc>
+		<cc>
+			<method name="public boolean cancel(boolean mayInterruptIfRunning)">2</method>
+			<method name="void _init_(retrofit2.adapter.java8.Java8CallAdapterFactory$BodyCallAdapter this$0, retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$ErrorHandlingCallAdapterFactory</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>8</rfc>
+		<lcom>1</lcom>
+		<ca>2</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>34</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>1</ic>
+		<cbm>2</cbm>
+		<amc>16.0</amc>
+		<cc>
+			<method name="public retrofit2.CallAdapter get(java.lang.reflect.Type returnType, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">3</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.java8.Java8CallAdapterFactory$BodyCallAdapter$2</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>9</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>39</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>11.333333333333334</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">2</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+			<method name="void _init_(retrofit2.adapter.java8.Java8CallAdapterFactory$BodyCallAdapter this$0, java.util.concurrent.CompletableFuture)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$MyCall</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>3</rfc>
+		<lcom>3</lcom>
+		<ca>4</ca>
+		<ce>1</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>3</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract void cancel()">1</method>
+			<method name="public abstract void enqueue(com.example.retrofit.ErrorHandlingCallAdapter$MyCallback)">1</method>
+			<method name="public abstract com.example.retrofit.ErrorHandlingCallAdapter$MyCall clone()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>3</ca>
+		<ce>6</ce>
+		<npm>2</npm>
+		<lcom3>0.5</lcom3>
+		<loc>36</loc>
+		<dam>0.0</dam>
+		<moa>2</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.333333333333334</amc>
+		<cc>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">1</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">1</method>
+			<method name="void _init_(retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall this$0, retrofit2.Callback)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.PATCH</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.SingleHelper$1</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>3</npm>
+		<lcom3>0.0</lcom3>
+		<loc>28</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>5.75</amc>
+		<cc>
+			<method name="void _init_(retrofit2.CallAdapter)">1</method>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public rx.Single adapt(retrofit2.Call call)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Utils$GenericArrayTypeImpl</name>
+		<wmc>5</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>12</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>1</ce>
+		<npm>5</npm>
+		<lcom3>0.25</lcom3>
+		<loc>42</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.4666666666666667</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>7.2</amc>
+		<cc>
+			<method name="public String toString()">1</method>
+			<method name="public int hashCode()">1</method>
+			<method name="public boolean equals(Object o)">3</method>
+			<method name="public void _init_(java.lang.reflect.Type componentType)">1</method>
+			<method name="public java.lang.reflect.Type getGenericComponentType()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarsConverterFactory</name>
+		<wmc>4</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>13</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>0</ca>
+		<ce>13</ce>
+		<npm>3</npm>
+		<lcom3>2.0</lcom3>
+		<loc>137</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.5</mfa>
+		<cam>0.5625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>33.25</amc>
+		<cc>
+			<method name="public static retrofit2.converter.scalars.ScalarsConverterFactory create()">1</method>
+			<method name="private void _init_()">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">18</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">18</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.HEAD</name>
+		<wmc>1</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>1</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>1</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>1.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract String value()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.DynamicBaseUrl</name>
+		<wmc>2</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>14</cbo>
+		<rfc>25</rfc>
+		<lcom>1</lcom>
+		<ca>0</ca>
+		<ce>14</ce>
+		<npm>2</npm>
+		<lcom3>2.0</lcom3>
+		<loc>80</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>39.0</amc>
+		<cc>
+			<method name="public static transient void main(String[] args)">1</method>
+			<method name="public void _init_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ChunkingConverter$ChunkingConverterFactory</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>7</cbo>
+		<rfc>5</rfc>
+		<lcom>1</lcom>
+		<ca>2</ca>
+		<ce>6</ce>
+		<npm>1</npm>
+		<lcom3>2.0</lcom3>
+		<loc>54</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>26.0</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">4</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.RxJavaCallAdapterFactory$ResultCallAdapter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>10</cbo>
+		<rfc>11</rfc>
+		<lcom>2</lcom>
+		<ca>3</ca>
+		<ce>9</ce>
+		<npm>3</npm>
+		<lcom3>0.5</lcom3>
+		<loc>48</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>10.5</amc>
+		<cc>
+			<method name="public java.lang.reflect.Type responseType()">1</method>
+			<method name="public rx.Observable adapt(retrofit2.Call call)">2</method>
+			<method name="void _init_(java.lang.reflect.Type responseType, rx.Scheduler scheduler)">1</method>
+			<method name="public volatile synthetic Object adapt(retrofit2.Call)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Converter$Factory</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>12</noc>
+		<cbo>23</cbo>
+		<rfc>5</rfc>
+		<lcom>6</lcom>
+		<ca>22</ca>
+		<ce>2</ce>
+		<npm>4</npm>
+		<lcom3>2.0</lcom3>
+		<loc>13</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.8125</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>2.25</amc>
+		<cc>
+			<method name="public void _init_()">1</method>
+			<method name="public retrofit2.Converter stringConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">1</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.adapter.rxjava.HttpException</name>
+		<wmc>4</wmc>
+		<dit>3</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>11</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>1</ce>
+		<npm>4</npm>
+		<lcom3>0.6666666666666666</lcom3>
+		<loc>44</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.875</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.25</amc>
+		<cc>
+			<method name="public retrofit2.Response response()">1</method>
+			<method name="public int code()">1</method>
+			<method name="public String message()">1</method>
+			<method name="public void _init_(retrofit2.Response response)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$IntegerResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="public Integer convert(okhttp3.ResponseBody value)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Retrofit$Builder</name>
+		<wmc>11</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>18</cbo>
+		<rfc>33</rfc>
+		<lcom>37</lcom>
+		<ca>9</ca>
+		<ce>9</ce>
+		<npm>10</npm>
+		<lcom3>0.8</lcom3>
+		<loc>206</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.18181818181818182</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>17.09090909090909</amc>
+		<cc>
+			<method name="public retrofit2.Retrofit$Builder addCallAdapterFactory(retrofit2.CallAdapter$Factory factory)">1</method>
+			<method name="void _init_(retrofit2.Platform platform)">1</method>
+			<method name="public retrofit2.Retrofit build()">4</method>
+			<method name="public retrofit2.Retrofit$Builder addConverterFactory(retrofit2.Converter$Factory factory)">1</method>
+			<method name="public retrofit2.Retrofit$Builder baseUrl(String baseUrl)">2</method>
+			<method name="public retrofit2.Retrofit$Builder baseUrl(okhttp3.HttpUrl baseUrl)">2</method>
+			<method name="public retrofit2.Retrofit$Builder validateEagerly(boolean validateEagerly)">1</method>
+			<method name="public void _init_()">1</method>
+			<method name="public retrofit2.Retrofit$Builder callFactory(okhttp3.Call$Factory factory)">1</method>
+			<method name="public retrofit2.Retrofit$Builder callbackExecutor(java.util.concurrent.Executor executor)">1</method>
+			<method name="public retrofit2.Retrofit$Builder client(okhttp3.OkHttpClient client)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Body</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>11</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>43</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.625</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>20.0</amc>
+		<cc>
+			<method name="void _init_(retrofit2.Converter converter)">1</method>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.JsonAndXmlConverters$QualifiedTypeConverterFactory</name>
+		<wmc>3</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>5</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>92</loc>
+		<dam>1.0</dam>
+		<moa>2</moa>
+		<mfa>0.6</mfa>
+		<cam>0.6666666666666666</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>29.0</amc>
+		<cc>
+			<method name="void _init_(retrofit2.Converter$Factory jsonFactory, retrofit2.Converter$Factory xmlFactory)">1</method>
+			<method name="public retrofit2.Converter responseBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] annotations, retrofit2.Retrofit retrofit)">4</method>
+			<method name="public retrofit2.Converter requestBodyConverter(java.lang.reflect.Type type, java.lang.annotation.Annotation[] parameterAnnotations, java.lang.annotation.Annotation[] methodAnnotations, retrofit2.Retrofit retrofit)">4</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.Utils$ParameterizedTypeImpl</name>
+		<wmc>7</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>21</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>7</npm>
+		<lcom3>0.5555555555555556</lcom3>
+		<loc>162</loc>
+		<dam>1.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.35714285714285715</cam>
+		<ic>1</ic>
+		<cbm>1</cbm>
+		<amc>21.714285714285715</amc>
+		<cc>
+			<method name="public String toString()">3</method>
+			<method name="public int hashCode()">1</method>
+			<method name="public boolean equals(Object other)">3</method>
+			<method name="public java.lang.reflect.Type getRawType()">1</method>
+			<method name="public transient void _init_(java.lang.reflect.Type ownerType, java.lang.reflect.Type rawType, java.lang.reflect.Type[] typeArguments)">7</method>
+			<method name="public java.lang.reflect.Type getOwnerType()">1</method>
+			<method name="public java.lang.reflect.Type[] getActualTypeArguments()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.ParameterHandler$Field</name>
+		<wmc>2</wmc>
+		<dit>2</dit>
+		<noc>0</noc>
+		<cbo>5</cbo>
+		<rfc>6</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>0</npm>
+		<lcom3>0.0</lcom3>
+		<loc>35</loc>
+		<dam>1.0</dam>
+		<moa>1</moa>
+		<mfa>0.75</mfa>
+		<cam>0.5833333333333334</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>15.0</amc>
+		<cc>
+			<method name="void apply(retrofit2.RequestBuilder builder, Object value)">2</method>
+			<method name="void _init_(String name, retrofit2.Converter valueConverter, boolean encoded)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>com.example.retrofit.ErrorHandlingCallAdapter$MyCallback</name>
+		<wmc>6</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>6</cbo>
+		<rfc>6</rfc>
+		<lcom>15</lcom>
+		<ca>5</ca>
+		<ce>1</ce>
+		<npm>6</npm>
+		<lcom3>2.0</lcom3>
+		<loc>6</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+			<method name="public abstract void unauthenticated(retrofit2.Response)">1</method>
+			<method name="public abstract void networkError(java.io.IOException)">1</method>
+			<method name="public abstract void clientError(retrofit2.Response)">1</method>
+			<method name="public abstract void serverError(retrofit2.Response)">1</method>
+			<method name="public abstract void success(retrofit2.Response)">1</method>
+			<method name="public abstract void unexpectedError(Throwable)">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.FormUrlEncoded</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>1</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.http.Body</name>
+		<wmc>0</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>2</cbo>
+		<rfc>0</rfc>
+		<lcom>0</lcom>
+		<ca>2</ca>
+		<ce>0</ce>
+		<npm>0</npm>
+		<lcom3>2.0</lcom3>
+		<loc>0</loc>
+		<dam>0.0</dam>
+		<moa>0</moa>
+		<mfa>0.0</mfa>
+		<cam>0.0</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>0.0</amc>
+		<cc>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.converter.scalars.ScalarResponseBodyConverters$BooleanResponseBodyConverter</name>
+		<wmc>4</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>3</cbo>
+		<rfc>7</rfc>
+		<lcom>6</lcom>
+		<ca>1</ca>
+		<ce>2</ce>
+		<npm>2</npm>
+		<lcom3>1.0</lcom3>
+		<loc>22</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5555555555555556</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>4.25</amc>
+		<cc>
+			<method name="void _init_()">1</method>
+			<method name="public Boolean convert(okhttp3.ResponseBody value)">1</method>
+			<method name="public volatile synthetic Object convert(Object)">1</method>
+			<method name="static void _clinit_()">1</method>
+		</cc>
+	</class>
+	<class>
+		<name>retrofit2.mock.BehaviorCall$1$1</name>
+		<wmc>3</wmc>
+		<dit>1</dit>
+		<noc>0</noc>
+		<cbo>4</cbo>
+		<rfc>7</rfc>
+		<lcom>0</lcom>
+		<ca>1</ca>
+		<ce>4</ce>
+		<npm>2</npm>
+		<lcom3>0.0</lcom3>
+		<loc>32</loc>
+		<dam>0.0</dam>
+		<moa>1</moa>
+		<mfa>0.0</mfa>
+		<cam>0.5333333333333333</cam>
+		<ic>0</ic>
+		<cbm>0</cbm>
+		<amc>9.333333333333334</amc>
+		<cc>
+			<method name="void _init_(retrofit2.mock.BehaviorCall$1 this$1)">1</method>
+			<method name="public void onResponse(retrofit2.Call call, retrofit2.Response response)">2</method>
+			<method name="public void onFailure(retrofit2.Call call, Throwable t)">2</method>
+		</cc>
+	</class>
+</ckjm>

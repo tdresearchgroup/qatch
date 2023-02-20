@@ -8,7 +8,7 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     flatDir {
-        dirs '/Users/guribhangu/javafx-sdk-15'
+        dirs '/Users/research/javafx-sdk-15'
     }
 }
 sourceSets {

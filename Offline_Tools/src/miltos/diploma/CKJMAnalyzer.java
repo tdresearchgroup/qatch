@@ -449,4 +449,33 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 			}
 		}
 	}
+
+	/**
+	 * Recursively takes a filepath, looks through all the subfolders and files held therein,
+	 * and finds every directory containing a .class file
+	 * @param basePath: the current filepath to check through recursively
+	 * @return a List of strings, each being the directory path to a folder contianing .class files
+	 * It is my hope that this can replace about 300 lines of hardcoded directories up top in here ~Bex
+	 */
+	public static List getClassPaths(File basePath){
+		// get a list of all the files in this directory
+		File[] flist = basePath.listFiles();
+		List<String> dirList = new ArrayList<String>();
+		if(flist != null) for(File file : flist) {
+			// if this file is another directory, recurse into it
+			if(file.isDirectory()){
+				// recurse and keep looking
+				dirList.addAll(getClassPaths(file));
+			} else if(file.isFile() && file.getName().endsWith(".class")){
+				// if the file is a file AND ends in .class
+				// check to see if basepath's string is in the list, if it isn't, add
+				if(!dirList.contains(basePath.getAbsolutePath())){
+					dirList.add(basePath.getAbsolutePath());
+				}
+			}
+		} else {
+			System.out.println("Whoops! Nothing there");
+		}
+		return dirList;
+	}
 }

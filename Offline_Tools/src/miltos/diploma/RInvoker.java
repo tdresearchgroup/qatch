@@ -30,7 +30,7 @@ public class RInvoker {
 	
 	//Fixed paths
 	public static final String BASE_DIR = System.getProperty("user.dir");
-	public static final String OFFLINE_BASE_DIR = "/Users/guribhangu/development/research/qatch/Offline_Tools";
+	public static final String OFFLINE_BASE_DIR = "/Users/research/IdeaProjects/qatch/Offline_Tools";
 	public static final String R_WORK_DIR = BASE_DIR + "/R_Working_Directory";
 	public static final String R_SCRIPTS_WORK_DIR = new File(OFFLINE_BASE_DIR + "/R_Working_Directory").getAbsolutePath();
 	public static final String R_THRES_SCRIPT = new File(R_SCRIPTS_WORK_DIR + "/thresholdsExtractor.R").getAbsolutePath();

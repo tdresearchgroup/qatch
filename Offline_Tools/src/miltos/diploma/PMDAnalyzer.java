@@ -39,7 +39,7 @@ public class PMDAnalyzer extends AbstractAnalyzer{
 		}
 
 		//Create the command that should be executed
-		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/pmd_build.xml\" " +
+		ProcessBuilder builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/research/qatch/Offline_Tools/pmd_build.xml\" " +
 				"-Dsrc.dir=" + src +" -Ddest.dir="+ dest + " -Druleset.path=" + ruleset + " -Dfilename=" + filename);
 		builder.redirectErrorStream(true);
 

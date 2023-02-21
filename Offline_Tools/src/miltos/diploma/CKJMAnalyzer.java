@@ -50,7 +50,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		}
 
 		//Configure the command that should be executed
-		builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/research/IdeaProject/qatch/Offline_Tools/build.xml\" " +
+		builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/research/IdeaProjects/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
 
 		if (src.toLowerCase().contains("guava")){

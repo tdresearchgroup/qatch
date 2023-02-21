@@ -326,6 +326,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		}
 
 
+
 		try (Stream<Path> paths = Files.walk(Paths.get("/Users/guribhangu/java_dependencies"))) {
 			paths.filter(Files::isRegularFile).forEach(this::addToClasspath);
 		} catch (IOException e) {

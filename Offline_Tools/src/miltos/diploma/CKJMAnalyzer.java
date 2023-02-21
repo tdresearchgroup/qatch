@@ -50,7 +50,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 		}
 
 		//Configure the command that should be executed
-		builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/guribhangu/development/research/qatch/Offline_Tools/build.xml\" " +
+		builder = new ProcessBuilder("sh","-c","ant -buildfile \"/Users/research/IdeaProject/qatch/Offline_Tools/build.xml\" " +
 				"-Dsrc.dir="+ src +" -Ddest.dir="+ dest);
 
 		if (src.toLowerCase().contains("guava")){
@@ -66,7 +66,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length()-1) + "/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/elasticsearch/nonZero/open_versions" +
+					+ ":" + "/Users/research/Documents/classFiles/elasticsearch/nonZero/open_versions" +
 					"/elasticsearch-6.0.0/classes");
 		}
 		if (src.toLowerCase().contains("commons-lang")){
@@ -161,7 +161,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 //		if (src.contains("dubbo-dubbo-2.7") || (src.contains("dubbo-dubbo-2.6") && !src.contains("dubbo-dubbo-2.6.0") && !src.contains("dubbo-dubbo-2.6.1")
 //				&& !src.contains("dubbo-dubbo-2.6.2"))) {
 //			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":" + "/Users/guribhangu/research/source_code/dubbo/nonZero/open_versions" +
+//					+ ":" + "/Users/research/Documents/classFiles/dubbo/nonZero/open_versions" +
 //					"/dubbo-dubbo-2.6.2/hessian-lite/target/classes");
 //		}
 
@@ -234,28 +234,28 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/nonZero/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/nonZero/" +
 					"in_between_versions/netty-netty-4.1.18.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-redis/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-smtp/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-unix-common/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-epoll/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/netty/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/" +
 					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
@@ -328,7 +328,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				e.printStackTrace();
 			}
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/springframework/zero/close_versions/" +
+					+ ":" + "/Users/research/Documents/classFiles/springframework/zero/close_versions/" +
 					"spring-framework-4.0.0.RC1/classes/spring-websocket");
 		}
 
@@ -343,9 +343,9 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 //				e.printStackTrace();
 			}
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/guribhangu/research/source_code/jenkins/nonZero/" +
+					+ ":" + "/Users/research/Documents/classFiles/jenkins/nonZero/" +
 					"close_versions/jenkins-jenkins-2.50/classes/remoting"
-					+ ":" + "/Users/guribhangu/research/source_code/jenkins/nonZero/" +
+					+ ":" + "/Users/research/Documents/classFiles/jenkins/nonZero/" +
 					"close_versions/jenkins-jenkins-2.61/classes/remoting");
 		}
 

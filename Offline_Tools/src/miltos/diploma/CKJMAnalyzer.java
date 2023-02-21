@@ -62,13 +62,6 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 					+ ":" + src.substring(1, src.length()-1) + "/guava-testlib/target/classes");
 		}
 
-		if (src.toLowerCase().contains("elasticsearch")){
-			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + src.substring(1, src.length()-1) + "/classes");
-			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/research/Documents/classFiles/elasticsearch/nonZero/open_versions" +
-					"/elasticsearch-6.0.0/classes");
-		}
 		if (src.toLowerCase().contains("commons-lang")){
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length()-1) + "/target/classes");
@@ -330,23 +323,6 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/springframework/zero/close_versions/" +
 					"spring-framework-4.0.0.RC1/classes/spring-websocket");
-		}
-
-		if (src.toLowerCase().contains("jenkins")) {
-			List<File> class_dirs = getDirs(new File(src.substring(1, src.length() - 1) + "/classes"), 0);
-			for (File file: class_dirs) {
-				addToClasspath(Paths.get(file.getAbsolutePath()));
-//			}
-//			try (Stream<Path> paths = Files.walk(Paths.get(src.substring(1, src.length() - 1) + "/classes"))) {
-//				paths.filter(Files::isDirectory).forEach(this::addToClasspath);
-//			} catch (IOException e) {
-//				e.printStackTrace();
-			}
-			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/research/Documents/classFiles/jenkins/nonZero/" +
-					"close_versions/jenkins-jenkins-2.50/classes/remoting"
-					+ ":" + "/Users/research/Documents/classFiles/jenkins/nonZero/" +
-					"close_versions/jenkins-jenkins-2.61/classes/remoting");
 		}
 
 

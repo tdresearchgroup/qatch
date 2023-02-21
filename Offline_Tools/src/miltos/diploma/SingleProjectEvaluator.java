@@ -104,17 +104,17 @@ public class SingleProjectEvaluator {
 
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
 
-        String nonZero_open = BENCHMARK_PROJECT_ROOT_PATH + "/nonZero/in_between_versions";
-        String nonZero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/in_between_versions";
-//        String zero_open = BENCHMARK_PROJECT_ROOT_PATH + "/zero/open_versions";
-//        String zero_close = BENCHMARK_PROJECT_ROOT_PATH + "/zero/close_versions";
+        String DD_open = BENCHMARK_PROJECT_ROOT_PATH + "/DD/in_between_versions";
+        String DD_close = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/in_between_versions";
+//        String NDD_open = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/open_versions";
+//        String NDD_close = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/close_versions";
 
         // load base quality model to get property and characteristic names
         QualityModel baseQualityModel = new QualityModelLoader(BASE_QUALITY_MODEL_PATH).importQualityModel();
         // build quality model
-        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, nonZero_open);
+        SingleProjectEvaluator.buildQuaityModel(baseQualityModel, DD_open);
 
-        String[] project_directories = {nonZero_open, nonZero_close};
+        String[] project_directories = {DD_open, DD_close};
 //        String[] project_directories = {BENCHMARK_PROJECT_ROOT_PATH};
         for (String projectPath : project_directories) {
             // load quality model

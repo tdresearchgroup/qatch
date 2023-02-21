@@ -154,7 +154,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 //		if (src.contains("dubbo-dubbo-2.7") || (src.contains("dubbo-dubbo-2.6") && !src.contains("dubbo-dubbo-2.6.0") && !src.contains("dubbo-dubbo-2.6.1")
 //				&& !src.contains("dubbo-dubbo-2.6.2"))) {
 //			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-//					+ ":" + "/Users/research/Documents/classFiles/dubbo/nonZero/open_versions" +
+//					+ ":" + "/Users/research/Documents/classFiles/dubbo/DD/open_versions" +
 //					"/dubbo-dubbo-2.6.2/hessian-lite/target/classes");
 //		}
 
@@ -227,29 +227,29 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/research/Documents/classFiles/netty/nonZero/" +
+					+ ":" + "/Users/research/Documents/classFiles/netty/DD/" +
 					"in_between_versions/netty-netty-4.1.18.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-redis/target/classes");
+					"DD/in_between_versions/netty-netty-4.1.21.Final/codec-redis/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"nonZero/in_between_versions/netty-netty-4.1.21.Final/codec-smtp/target/classes");
+					"DD/in_between_versions/netty-netty-4.1.21.Final/codec-smtp/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-unix-common/target/classes");
+					"NDD/in_between_versions/netty-netty-4.1.21.Final/transport-native-unix-common/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"zero/in_between_versions/netty-netty-4.1.21.Final/transport-native-epoll/target/classes");
+					"NDD/in_between_versions/netty-netty-4.1.21.Final/transport-native-epoll/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+					"NDD/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+					"NDD/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + "/Users/research/Documents/classFiles/netty/" +
-					"zero/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
+					"NDD/in_between_versions/netty-netty-4.1.21.Final/codec-haproxy/target/classes");
 
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
 					+ ":" + src.substring(1, src.length() - 1) + "/target/classes");
@@ -321,7 +321,7 @@ public class CKJMAnalyzer extends AbstractAnalyzer{
 				e.printStackTrace();
 			}
 			builder.environment().put("CLASSPATH", builder.environment().get("CLASSPATH")
-					+ ":" + "/Users/research/Documents/classFiles/springframework/zero/close_versions/" +
+					+ ":" + "/Users/research/Documents/classFiles/springframework/NDD/close_versions/" +
 					"spring-framework-4.0.0.RC1/classes/spring-websocket");
 		}
 

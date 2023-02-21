@@ -90,7 +90,7 @@
 	<property name="dest.dir" value="dest" />
 	<!--	 Set the classpath with all the APIs needed for the compilation-->
 	<path id="ckjm.classpath">
-		<fileset dir="/Users/guribhangu/development/research/qatch/Offline_Tools/com"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
+		<fileset dir="/Users/research/IdeaProjects/qatch/Offline_Tools/com"> <!-- Another path is C:\Users\Miltos\Desktop\jarito -->
 			<include name="**/*.jar"/>
 		</fileset>
 	</path>

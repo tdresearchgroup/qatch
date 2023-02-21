@@ -18,18 +18,18 @@ import java.util.stream.Collectors;
 
 public class SingleProjectEvaluator {
 
-    private static String BASE_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
+    private static String BASE_QUALITY_MODEL_PATH = "/Users/research/IdeaProject/qatch/Rules_Models_Descriptions/Models/qualityModel.xml";
 //    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/experiement";
-    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/guribhangu/research/source_code/retrofit";
-    private static String PROJECT_RESULT_PATH = "/Users/guribhangu/development/research/qatch/Results";
-    private static String BENCHMARKING_QUALITY_MODEL_PATH = "/Users/guribhangu/development/research/qatch/Bookmarking_Quality_Model_Results";
+    private static String BENCHMARK_PROJECT_ROOT_PATH = "/Users/research/Documents/classFiles/retrofit";
+    private static String PROJECT_RESULT_PATH = "/Users/research/IdeaProject/qatch/Results";
+    private static String BENCHMARKING_QUALITY_MODEL_PATH = "/Users/research/IdeaProject/qatch/Bookmarking_Quality_Model_Results";
     private static String CREATED_QUALITY_MODEL_PATH = BENCHMARKING_QUALITY_MODEL_PATH + "/qualityModel.xml";
 
     private static void buildQuaityModel(QualityModel baseQualityModel, String benchmarkDirectoryPath) throws CloneNotSupportedException, InterruptedException, IOException {
         // clear existing contents
         FileUtils.deleteDirectory(new File(BENCHMARKING_QUALITY_MODEL_PATH));
-        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/R_Working_Directory"));
-        FileUtils.deleteDirectory(new File("/Users/guribhangu/development/research/qatch/Results"));
+        FileUtils.deleteDirectory(new File("/Users/research/IdeaProject/qatch/R_Working_Directory"));
+        FileUtils.deleteDirectory(new File("/Users/research/IdeaProject/qatch/Results"));
 
         // get base model information
         PropertySet properties = baseQualityModel.getProperties();
@@ -94,12 +94,12 @@ public class SingleProjectEvaluator {
         qmExp.exportQualityModelToXML(baseQualityModel, new File(CREATED_QUALITY_MODEL_PATH).getAbsolutePath());
 
         // move file resulted from benchmarking process to results directory for re-use during project evaluation process
-        File benchmarkingRepo = new File("/Users/guribhangu/development/research/qatch/Results/Analysis/BenchmarkResults");
+        File benchmarkingRepo = new File("/Users/research/IdeaProject/qatch/Results/Analysis/BenchmarkResults");
         File[] resultFiles = benchmarkingRepo.listFiles();
         for (File resultFile: resultFiles) {
-            resultFile.renameTo(new File("/Users/guribhangu/development/research/qatch/Results/"+resultFile.getName()));
+            resultFile.renameTo(new File("/Users/research/IdeaProject/qatch/Results/"+resultFile.getName()));
         }
-        new File("/Users/guribhangu/development/research/qatch/Results/Analysis").deleteOnExit();
+        new File("/Users/research/IdeaProject/qatch/Results/Analysis").deleteOnExit();
     }
 
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {

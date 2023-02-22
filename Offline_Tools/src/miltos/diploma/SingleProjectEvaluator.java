@@ -104,8 +104,8 @@ public class SingleProjectEvaluator {
 
     public static void main(String[] args) throws CloneNotSupportedException, IOException, InterruptedException {
 
-        String DD_open = BENCHMARK_PROJECT_ROOT_PATH + "/DD/in_between_versions";
-        String DD_close = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/in_between_versions";
+        String DD_open = BENCHMARK_PROJECT_ROOT_PATH + "/DD/open_versions";  // open was once in_between
+        String DD_close = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/open_versions";  // open was once in_between
 //        String NDD_open = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/open_versions";
 //        String NDD_close = BENCHMARK_PROJECT_ROOT_PATH + "/NDD/close_versions";
 
